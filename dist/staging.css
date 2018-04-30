@@ -30,6 +30,16 @@ body {
   background-color: #08374a;
   color: #ffffff; }
 
+.skinny {
+  max-width: 690px;
+  margin: 40px auto !important;
+  float: none !important; }
+
+.wider {
+  max-width: 1080px;
+  margin: 40px auto !important;
+  float: none !important; }
+
 h1 {
   font-size: 64px;
   font-weight: 500; }
@@ -276,27 +286,6 @@ hr {
     min-height: 550px; }
     .parent-services .service-box-parent img {
       width: 200px; }
-
-.screenshot {
-  text-align: center;
-  color: #ffffff;
-  background-image: linear-gradient(rgba(183, 62, 67, 0.77), rgba(183, 62, 67, 0.77)), url(https://www.accelerance.com/hubfs/ACC2017/home/screenshotcompressed.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-  .screenshot .screenshottext {
-    text-align: left;
-    max-width: 1080px;
-    margin: 80px auto !important;
-    float: none !important; }
-    .screenshot .screenshottext .cta {
-      color: #b73e43;
-      text-decoration: none;
-      background-color: #ffffff;
-      border-radius: 3px;
-      padding: 10px 40px; }
-    .screenshot .screenshottext p {
-      font-weight: 500; }
 
 .browser {
   -webkit-box-shadow: 0 13px 35px rgba(98, 100, 112, 0.5);
@@ -1770,16 +1759,6 @@ blockquote p:first-letter {
         .events .listings .event-listing a .content h4 {
           text-transform: uppercase;
           font-weight: 500; }
-
-.skinny {
-  max-width: 690px;
-  margin: 40px auto !important;
-  float: none !important; }
-
-.wider {
-  max-width: 1080px;
-  margin: 40px auto !important;
-  float: none !important; }
 
 .events .center {
   text-align: center; }

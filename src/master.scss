@@ -104,83 +104,93 @@
     }
 
 //GENERAL
-    .hide {
-        display:none!important;
-    }
-        body {
-            font-family: Avenir, 'Avenir W01', sans-serif;
-            color: $black;
-            margin: 0;
-        }
 
-    .right {
-        float: right !important;
-        margin-bottom: 36px;
-    }
+.hide {
+    display:none!important;
+}
 
-    .center {
-        text-align: center;
-    }
+body {
+    font-family: Avenir, 'Avenir W01', sans-serif;
+    color: $black;
+    margin: 0;
+}
 
-    .as-seen-in {
-        @include teneighty-margin(36px);
-    }
+.right {
+    float: right !important;
+    margin-bottom: 36px;
+}
 
-    .hs-error-msgs {
-        color: red;
-    }
+.center {
+    text-align: center;
+}
 
-    .red {
+.as-seen-in {
+    @include teneighty-margin(36px);
+}
+
+.hs-error-msgs {
+    color: red;
+}
+
+.red {
     background-color: $red;
     color: $white;
-    }
+}
 
-    .blue {
-        background-color: $blue;
-        color: $white;
-    }
+.blue {
+    background-color: $blue;
+    color: $white;
+}
+
+.skinny {
+    @include sixninety-margin(40px);
+}
+
+.wider {
+    @include teneighty-margin(40px);
+}
 
 //TYPE
 
-    h1 {
-        font-size: 64px;
-        font-weight: 500;
-    }
+h1 {
+    font-size: 64px;
+    font-weight: 500;
+}
 
-    h2 {
-        font-size: 48px;
-        font-weight: 500;
-    }
+h2 {
+    font-size: 48px;
+    font-weight: 500;
+}
 
-    h3 {
-        font-size: 36px;
-        font-weight: 500;
-    }
+h3 {
+    font-size: 36px;
+    font-weight: 500;
+}
 
-    h4 {
-        font: {
-            size: 24px;
-            weight: 400;
-        }
+h4 {
+    font: {
+        size: 24px;
+        weight: 400;
     }
+}
 
-    p {
-        font-size: 18px;
-        font-weight: 400;
-    }
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
 
-    hr {
-        width: 40%;
-        margin: 0 auto;
-        height:3px;
-        border-width:0;
-        color:$dark-grey;
-        background-color:$dark-grey;
-    }
+hr {
+    width: 40%;
+    margin: 0 auto;
+    height:3px;
+    border-width:0;
+    color:$dark-grey;
+    background-color:$dark-grey;
+}
 
-    .widget-type-rich_text {
-        padding: 0px 20px;
-    }
+.widget-type-rich_text {
+    padding: 0px 20px;
+}
 
 //COS
 
@@ -474,34 +484,7 @@
         }
     }
 
-//screenshot section
-
-    .screenshot {
-        text-align: center;
-        color: $white;
-        background: {
-            image: linear-gradient(rgba(183,62,67,.77),rgba(183,62,67,.77)), url(https://www.accelerance.com/hubfs/ACC2017/home/screenshotcompressed.jpg);
-            position: center center;
-            size: cover;
-            repeat: no-repeat;
-        }
-        .screenshottext {
-            text-align: left;
-            @include teneighty-margin(80px);
-            .cta {
-                color: $red;
-                text-decoration: none;
-                background-color: $white; 
-                border-radius: 3px;
-                padding: 10px 40px;
-            }
-            p {
-                font-weight: 500;
-            }
-        }
-            }
-
-//browser -HMMMMMMMM testing
+//browser
 
  .browser {
             -webkit-box-shadow: 0 13px 35px rgba(98,100,112,0.50);
@@ -2262,15 +2245,6 @@
     }
 
 //event-child
-
-.skinny {
-    @include sixninety-margin(40px);
-}
-
-.wider {
-    @include teneighty-margin(40px);
-}
-
 
     .events {
         .center {
