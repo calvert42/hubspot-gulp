@@ -1,0 +1,33 @@
+.midsection h3 {
+  margin: 18px auto; }
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto !important;
+  float: none !important;
+  padding: 60px 18px; }
+  .container hr {
+    width: 85%;
+    margin: 50px auto 0px auto; }
+
+.upnext {
+  max-width: 1080px;
+  margin: 0 auto !important;
+  float: none !important;
+  text-align: center; }
+  .upnext img {
+    padding: 0px 20px; }
+  .upnext a {
+    color: #333333;
+    text-decoration: none; }
+
+.banner {
+  background-color: #b73e43;
+  text-align: center;
+  color: #ffffff;
+  margin: 50px auto;
+  padding: 30px; }
+  .banner p {
+    margin: 0px auto 20px auto; }
+
+/*# sourceMappingURL=3rowsoc.css.map */

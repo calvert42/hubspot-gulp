@@ -1,0 +1,21 @@
+.header-container-wrapper {
+  text-align: center;
+  color: #ffffff;
+  border-bottom: 4px solid #08374a;
+  background-image: url(http://www.accelerance.com/hubfs/ACC2017/bg2-compressor.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom; }
+
+.container img {
+  margin: 1.33em auto; }
+
+.sectionthree {
+  background-color: #d8d8d8; }
+  .sectionthree .container {
+    max-width: 1080px;
+    margin: 20px auto !important;
+    float: none !important; }
+
+/*# sourceMappingURL=technical-expertise.css.map */

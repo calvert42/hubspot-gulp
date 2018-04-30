@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAyBA,KAAM;EACF,MAAM,EAAE,iBAAiB;EACzB,KAAK,EAAC,eAAe;EACrB,SAAS,EAAE,iBAAiB;EAC5B,UAAK;IACD,KAAK,EAvBD,OAAO;IAwBX,gBAAgB,EA3Bb,OAAO;IA4BV,aAAa,EAAE,GAAG;IAClB,OAAO,EAAE,SAAS",
+"sources": ["outsourcingchild.scss"],
+"names": [],
+"file": "outsourcingchild.css"
+}

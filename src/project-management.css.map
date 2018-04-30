@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,yBAA0B;EACtB,UAAU,EAAE,MAAM;EACd,KAAK,ECED,OAAO;EDDX,aAAa,EAAE,iBAAe;EAE1B,gBAAK,EAAE,gEAAgE;EACvE,qBAAU,EAAE,KAAK;EACjB,iBAAM,EAAE,SAAS;EACjB,eAAI,EAAE,KAAK;EACX,mBAAQ,EAAE,aAAa",
+"sources": ["project-management.scss","variables.scss"],
+"names": [],
+"file": "project-management.css"
+}
