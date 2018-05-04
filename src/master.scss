@@ -579,73 +579,6 @@ hr {
         @include ninesixty-margin(30px);
     }
 
-    .news {
-        margin: 50px auto;
-        text-align: center;
-        a {
-            color: $white;
-        }
-        .newsheader {
-            margin: 0px auto 64px auto;
-        }
-        .articles {
-            color: $white;
-            .articleone {
-                text-align: center;
-                padding: 10px;
-                height: 400px;
-                background: {
-                    image: url(http://www.accelerance.com/hubfs/ACC2017/home/one.jpg);
-                    size: cover;
-                }
-                .aligner {
-                    height: 400px;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    }
-            }
-            .articletwo {
-                text-align: center;
-                padding: 10px;
-                height: 400px;
-                background: {
-                    image: url(https://www.accelerance.com/hubfs/ACC2017/newbg2.png);
-                    size: cover;
-                }
-                .aligner {
-                    height: 400px;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    }
-            }
-            .articlethree {
-                text-align: center;
-                padding: 10px;
-                height: 400px;
-                background: {
-                    image: url(http://www.accelerance.com/hubfs/ACC2017/home/three.jpg);
-                    size: cover;
-                }
-                .aligner {
-                    height: 400px;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    }
-            }
-
-        }
-
-    }
-
 //subscribe
 
     .subscribe {
@@ -1792,8 +1725,6 @@ hr {
                         -ms-transition: 2s;
                     }
                 }
-                .form-columns-1 {
-                }
                 .hs-form {
                     .multi-container {
                         text-align: left !important;
@@ -1899,6 +1830,7 @@ hr {
                     border-radius: 40px 0px 0px 40px;
                     -webkit-appearance: none;
                     -moz-appearance: none;
+                    appearance: none;
                     border: none;
                     font-family: $font-stack;
                     font-size: 18px;

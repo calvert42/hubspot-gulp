@@ -350,55 +350,6 @@ hr {
   margin: 30px auto !important;
   float: none !important; }
 
-.news {
-  margin: 50px auto;
-  text-align: center; }
-  .news a {
-    color: #ffffff; }
-  .news .newsheader {
-    margin: 0px auto 64px auto; }
-  .news .articles {
-    color: #ffffff; }
-    .news .articles .articleone {
-      text-align: center;
-      padding: 10px;
-      height: 400px;
-      background-image: url(http://www.accelerance.com/hubfs/ACC2017/home/one.jpg);
-      background-size: cover; }
-      .news .articles .articleone .aligner {
-        height: 400px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column; }
-    .news .articles .articletwo {
-      text-align: center;
-      padding: 10px;
-      height: 400px;
-      background-image: url(https://www.accelerance.com/hubfs/ACC2017/newbg2.png);
-      background-size: cover; }
-      .news .articles .articletwo .aligner {
-        height: 400px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column; }
-    .news .articles .articlethree {
-      text-align: center;
-      padding: 10px;
-      height: 400px;
-      background-image: url(http://www.accelerance.com/hubfs/ACC2017/home/three.jpg);
-      background-size: cover; }
-      .news .articles .articlethree .aligner {
-        height: 400px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column; }
-
 .subscribe {
   padding: 48px auto;
   margin: 30px 0px 0px 0px;
@@ -1462,6 +1413,7 @@ blockquote p:first-letter {
       border-radius: 40px 0px 0px 40px;
       -webkit-appearance: none;
       -moz-appearance: none;
+      appearance: none;
       border: none;
       font-family: Avenir, "Avenir W01", sans-serif;
       font-size: 18px;
