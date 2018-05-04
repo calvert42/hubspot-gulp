@@ -40,6 +40,29 @@ body {
   margin: 40px auto !important;
   float: none !important; }
 
+.border-box {
+  border: #d8d8d8 solid 1px;
+  border-radius: 3px; }
+
+.zoom {
+  transition: 200ms;
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in; }
+  .zoom:hover {
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.05);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05); }
+
+.border-top-purple {
+  border-top: 5px solid #8E2B7C; }
+
 h1 {
   font-size: 64px;
   font-weight: 500; }
@@ -260,33 +283,6 @@ hr {
     width: 20px;
     width: 1.25rem; }
 
-.parent-services {
-  max-width: 1080px;
-  margin: 30px auto !important;
-  float: none !important; }
-  .parent-services .service-box {
-    text-align: center;
-    border: #d8d8d8 solid 1px;
-    border-radius: 3px;
-    transition: all 200ms ease-in;
-    -webkit-transition: all 200ms ease-in;
-    -ms-transition: all 200ms ease-in;
-    -moz-transition: all 200ms ease-in; }
-    .parent-services .service-box:hover {
-      z-index: 2;
-      -webkit-transition: all 200ms ease-in;
-      -webkit-transform: scale(1.05);
-      -ms-transition: all 200ms ease-in;
-      -ms-transform: scale(1.05);
-      -moz-transition: all 200ms ease-in;
-      -moz-transform: scale(1.05);
-      transition: all 200ms ease-in;
-      transform: scale(1.05); }
-  .parent-services .service-box-parent {
-    min-height: 550px; }
-    .parent-services .service-box-parent img {
-      width: 200px; }
-
 .browser {
   -webkit-box-shadow: 0 13px 35px rgba(98, 100, 112, 0.5);
   -moz-box-shadow: 0 13px 35px rgba(98, 100, 112, 0.5);
@@ -355,9 +351,6 @@ hr {
   float: none !important; }
 
 .news {
-  max-width: 1080px;
-  margin: 64px auto !important;
-  float: none !important;
   margin: 50px auto;
   text-align: center; }
   .news a {

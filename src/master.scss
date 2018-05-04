@@ -37,61 +37,79 @@
 
 //mixins
 
-    @mixin teneighty {
-        max-width: 1080px;
-        margin: 0 auto !important;
-        float: none !important;
-    }
+@mixin teneighty {
+    max-width: 1080px;
+    margin: 0 auto !important;
+    float: none !important;
+}
 
-    @mixin teneighty-margin($margin) {
-        max-width: 1080px;
-        margin: $margin auto !important;
-        float: none !important;
-    }
+@mixin teneighty-margin($margin) {
+    max-width: 1080px;
+    margin: $margin auto !important;
+    float: none !important;
+}
 
-    @mixin vertical-align($position: relative) {
-    position: $position;
-    top: 30%;
-    transform: translateY(-30%);
-    }
+@mixin vertical-align($position: relative) {
+position: $position;
+top: 30%;
+transform: translateY(-30%);
+}
 
-    @mixin ninesixty-margin($margin) {
-        max-width: 960px;
-        margin: $margin auto !important;
-        float: none !important;
-    }
+@mixin ninesixty-margin($margin) {
+    max-width: 960px;
+    margin: $margin auto !important;
+    float: none !important;
+}
 
-    @mixin sixninety-margin($margin) {
-        max-width: 690px;
-        margin: $margin auto !important;
-        float: none !important;
-    }
+@mixin sixninety-margin($margin) {
+    max-width: 690px;
+    margin: $margin auto !important;
+    float: none !important;
+}
 
-    @mixin transition($time) {
-        transition: $time;
-        -webkit-transition: $time;
-        -moz-transition: $time;
-    }
+@mixin transition($time) {
+    transition: $time;
+    -webkit-transition: $time;
+    -moz-transition: $time;
+}
 
-    @mixin scale($seconds) {
-        -webkit-transition: all $seconds ease-in;
-                    -webkit-transform: scale(1); 
-                    -ms-transition: all $seconds ease-in;
-                    -ms-transform: scale(1); 
-                    -moz-transition: all $seconds ease-in;
-                    -moz-transform: scale(1);
-                    transition: all $seconds ease-in;
-                    transform: scale(1); 
-    }
+@mixin scale($seconds) {
+    -webkit-transition: all $seconds ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all $seconds ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all $seconds ease-in;
+    -moz-transform: scale(1);
+    transition: all $seconds ease-in;
+    transform: scale(1); 
+}
 
-    @mixin zoomSet($milliseconds) {
-        transition: all $milliseconds ease-in;
-        -webkit-transition: all $milliseconds ease-in;
-        -ms-transition: all $milliseconds ease-in;
-        -moz-transition: all $milliseconds ease-in;
-    }
+@mixin zoomSet($milliseconds) {
+    transition: all $milliseconds ease-in;
+    -webkit-transition: all $milliseconds ease-in;
+    -ms-transition: all $milliseconds ease-in;
+    -moz-transition: all $milliseconds ease-in;
 
-    @mixin zoomHover($milliseconds) {
+}
+
+@mixin zoomHover($milliseconds) {
+    z-index: 2;
+    -webkit-transition: all $milliseconds ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all $milliseconds ease-in;
+    -ms-transform: scale(1.05);
+    -moz-transition: all $milliseconds ease-in;
+    -moz-transform: scale(1.05);
+    transition: all $milliseconds ease-in;
+    transform: scale(1.05);
+}
+
+@mixin zoom($milliseconds) {
+    transition: $milliseconds;
+    -webkit-transition: all $milliseconds ease-in;
+    -ms-transition: all $milliseconds ease-in;
+    -moz-transition: all $milliseconds ease-in;
+    &:hover {
         z-index: 2;
         -webkit-transition: all $milliseconds ease-in;
         -webkit-transform: scale(1.05);
@@ -102,6 +120,7 @@
         transition: all $milliseconds ease-in;
         transform: scale(1.05);
     }
+}
 
 //GENERAL
 
@@ -148,6 +167,25 @@ body {
 
 .wider {
     @include teneighty-margin(40px);
+}
+
+//elements
+
+.border-box {
+    border: $grey solid 1px;
+    border-radius: 3px;    
+}
+
+//animations
+
+.zoom {
+    @include zoom(200ms);
+}
+
+//colors and modifiers
+
+.border-top-purple {
+    border-top: 5px solid $purple;
 }
 
 //TYPE
@@ -451,36 +489,6 @@ hr {
             margin: 1.25rem 0 1.875rem;
             width: 20px;
             width: 1.25rem;
-  }
-    }
-
-    .parent-services {
-        @include teneighty-margin(30px);
-        .service-box {
-            text-align: center;
-            border: $grey solid 1px;
-            border-radius: 3px;
-            transition: all 200ms ease-in;
-            -webkit-transition: all 200ms ease-in;
-            -ms-transition: all 200ms ease-in;
-            -moz-transition: all 200ms ease-in;
-            &:hover {
-                z-index: 2;
-                -webkit-transition: all 200ms ease-in;
-                -webkit-transform: scale(1.05);
-                -ms-transition: all 200ms ease-in;
-                -ms-transform: scale(1.05);
-                -moz-transition: all 200ms ease-in;
-                -moz-transform: scale(1.05);
-                transition: all 200ms ease-in;
-                transform: scale(1.05);
-            }
-        }
-        .service-box-parent {
-            min-height: 550px;
-            img {
-                width: 200px;
-            }
         }
     }
 
@@ -572,7 +580,6 @@ hr {
     }
 
     .news {
-        @include teneighty-margin(64px);
         margin: 50px auto;
         text-align: center;
         a {
