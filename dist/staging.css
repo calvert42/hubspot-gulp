@@ -1,4 +1,20 @@
 @charset "UTF-8";
+.article {
+  height: 580px;
+  margin: 10px auto;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  background-color: white; }
+  .article:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); }
+  .article-header {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 3px 3px 0px 0px; }
+  .article-content {
+    padding: 20px; }
+
 .hide {
   display: none !important; }
 
@@ -13,6 +29,8 @@ body {
 
 .center {
   text-align: center; }
+  .center-space {
+    margin: 30px auto; }
 
 .as-seen-in {
   max-width: 1080px;
@@ -33,6 +51,11 @@ body {
 .purple {
   background-color: #8E2B7C;
   color: white; }
+  .purple-shape {
+    background-image: url(https://www.accelerance.com/hubfs/ACC2017/home/purple.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom; }
 
 .skinny {
   max-width: 690px;
