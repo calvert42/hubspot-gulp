@@ -1,14 +1,20 @@
 //IMPORTS
 
+//pages
+
+@import 'partials/pages/_services';
+
 //variables
 
-@import 'partials/variables.scss';
+@import 'partials/variables';
 
 //footer
 
 @import 'partials/footer/news';
 
-//GENERAL
+//general
+
+@import 'partials/type/headers';
 
 .hide {
     display:none!important;
@@ -78,7 +84,13 @@ body {
 
 .border-box {
     border: $grey solid 1px;
-    border-radius: 3px;    
+    border-radius: 3px; 
+    &--top-purple {
+        border-top: 5px solid $purple;
+    }   
+    &--top-red {
+        border-top: 5px solid $red;
+    }
 }
 
 //animations
@@ -88,48 +100,6 @@ body {
 }
 
 //colors and modifiers
-
-.border-top-purple {
-    border-top: 5px solid $purple;
-}
-
-//TYPE
-
-h1 {
-    font-size: 64px;
-    font-weight: 500;
-}
-
-h2 {
-    font-size: 48px;
-    font-weight: 500;
-}
-
-h3 {
-    font-size: 36px;
-    font-weight: 500;
-}
-
-h4 {
-    font: {
-        size: 24px;
-        weight: 400;
-    }
-}
-
-p {
-    font-size: 18px;
-    font-weight: 400;
-}
-
-hr {
-    width: 40%;
-    margin: 0 auto;
-    height:3px;
-    border-width:0;
-    color:$dark-grey;
-    background-color:$dark-grey;
-}
 
 .widget-type-rich_text {
     padding: 0px 20px;
@@ -816,177 +786,6 @@ hr {
         @include teneighty-margin(30px);
         hr {
             margin: 60px auto 20px auto;
-        }
-    }
-
-//SERVICES
-
-    .services {
-        .mid {
-            @include ninesixty-margin(20px);
-        }
-        .body {
-            hr {
-                margin: 30px 0px;
-                text-align: left;
-            }
-            a {
-                color: $cyan;
-                font-weight: 600;
-                text-decoration: none;
-                @include transition(200ms);
-                &:hover {
-                    color: $cyan-hover;
-                }
-            }
-            .fifteen-risks {
-                background: {
-                    image: linear-gradient(rgba(8,55,74,.60),rgba(8,55,74,.60)),url(https://www.accelerance.com/hubfs/Landing_Page_Images/15%20risk%20indicators/bg.jpg);
-                    repeat: no-repeat;
-                    size: cover;
-                } 
-            }
-            .sor {
-                background: {
-                    image: linear-gradient(rgba(8,55,74,.60),rgba(8,55,74,.60)),url(https://www.accelerance.com/hubfs/Ebooks/SOR18/sorbg-1.png);
-                    repeat: no-repeat;
-                    size: cover;
-                    } 
-            }
-            .due-diligence {
-                background: {
-                    image: linear-gradient(rgba(8,55,74,.60),rgba(8,55,74,.60)),url(https://www.accelerance.com/hubfs/pillar-pages/choosing/ddbg.png);
-                    repeat: no-repeat;
-                    size: cover;
-                    }
-            }
-            .purple {
-                background: {
-                    image: none;
-                    color: $purple;
-                }
-            }
-            .general-cta {
-                text-align: center;
-                color: $white;
-                padding: 20px;
-                border-radius: 3px;
-                box-shadow: 0px 0px 5px #333333;
-                h3 {
-                    font-weight: 200;
-                    span {
-                        font-weight: 900;
-                        text-transform: uppercase;
-                    }
-                }
-                a {
-                    color: $white;
-                    @include transition(200ms);
-                    &:hover {
-                        color: $black;
-                        @include transition(200ms);
-                    }
-                }
-                .cta {
-                    margin: 100px;
-                }
-            }
-            .parent-services {
-                @include teneighty-margin(30px);
-            }
-            .child-services {
-                @include teneighty-margin(30px);
-                h2 {
-                    margin: 0px;
-                    padding: 0px;
-                }
-            }
-            .service-box {
-                text-align: center;
-                border: $grey solid 1px;
-                border-radius: 3px;
-                transition: all 200ms ease-in;
-                -webkit-transition: all 200ms ease-in;
-                -ms-transition: all 200ms ease-in;
-                -moz-transition: all 200ms ease-in;
-                &:hover {
-                    z-index: 2;
-                    -webkit-transition: all 200ms ease-in;
-                    -webkit-transform: scale(1.05);
-                    -ms-transition: all 200ms ease-in;
-                    -ms-transform: scale(1.05);
-                    -moz-transition: all 200ms ease-in;
-                    -moz-transform: scale(1.05);
-                    transition: all 200ms ease-in;
-                    transform: scale(1.05);
-                }
-                .cta {
-                    background-color: $red;
-                    color: $white;
-                    padding: 15px 30px;
-                    border-radius: 40px;
-                    
-                }
-            }
-            .service-box-parent {
-                min-height: 550px;
-                margin-top: 60px;
-                img {
-                    width: 200px;
-                }
-            }
-            .advisory-box {
-                text-align: center;
-                box-shadow: 0px 0px 10px 5px $cyan-trans;
-                padding: 20px;
-                border: $grey solid 1px;
-                border-radius: 3px;
-                transition: all 200ms ease-in;
-                -webkit-transition: all 200ms ease-in;
-                -ms-transition: all 200ms ease-in;
-                -moz-transition: all 200ms ease-in;
-                &:hover {
-                    z-index: 2;
-                    -webkit-transition: all 200ms ease-in;
-                    -webkit-transform: scale(1.05);
-                    -ms-transition: all 200ms ease-in;
-                    -ms-transform: scale(1.05);
-                    -moz-transition: all 200ms ease-in;
-                    -moz-transform: scale(1.05);
-                    transition: all 200ms ease-in;
-                    transform: scale(1.05);
-                }
-            }
-            .services-bullets {
-                border: $grey solid 1px;
-                border-radius: 3px;
-                margin: 30px auto;
-            }
-            .border {
-                border: 1px solid $grey;
-                border-radius: 3px;
-            }
-            .skinny {
-                @include sixninety-margin(20px);
-                
-            }
-            .fat {
-                @include teneighty-margin(20px);
-            }
-            .widget-type-rich_text {
-                li {
-                    list-style-image: url(https://www.accelerance.com/hubfs/a.svg);
-                    font-size: 20px;
-                    color: $cyan;
-                    line-height: 28px;
-                    margin: 20px auto;
-                    h4 {
-                        font-size: 24px;
-                        color: $dark-grey;
-                        font-weight: 450;
-                    }
-                }
-            }
         }
     }
 

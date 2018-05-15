@@ -1,34 +1,162 @@
 @charset "UTF-8";
-.hide {
-  display: none !important; }
-
-body {
-  font-family: Avenir, 'Avenir W01', sans-serif;
-  color: #333333;
-  margin: 0; }
-
-.right {
-  float: right !important;
-  margin-bottom: 36px; }
-
-.center {
-  text-align: center; }
-
-.as-seen-in {
-  max-width: 1080px;
-  margin: 36px auto !important;
-  float: none !important; }
-
-.hs-error-msgs {
-  color: red; }
-
-.red {
+.services .body .read-more {
+  cursor: pointer;
+  color: #1FBDE5; }
+.services .body hr {
+  margin: 30px 0px;
+  text-align: left; }
+.services .body a {
+  color: #1FBDE5;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 200ms;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms; }
+  .services .body a:hover {
+    color: #76CEE4; }
+  .services .body a h3 {
+    color: #333333; }
+.services .body .cta {
   background-color: #b73e43;
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 40px; }
+.services .body .fifteen-risks {
+  background-image: linear-gradient(rgba(8, 55, 74, 0.6), rgba(8, 55, 74, 0.6)), url(https://www.accelerance.com/hubfs/Landing_Page_Images/15%20risk%20indicators/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+.services .body .sor {
+  background-image: linear-gradient(rgba(8, 55, 74, 0.6), rgba(8, 55, 74, 0.6)), url(https://www.accelerance.com/hubfs/Ebooks/SOR18/sorbg-1.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+.services .body .due-diligence {
+  background-image: linear-gradient(rgba(8, 55, 74, 0.6), rgba(8, 55, 74, 0.6)), url(https://www.accelerance.com/hubfs/pillar-pages/choosing/ddbg.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+.services .body .purple {
+  background-image: none;
+  background-color: #8E2B7C; }
+.services .body .general-cta {
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px #333333; }
+  .services .body .general-cta h3 {
+    font-weight: 200; }
+    .services .body .general-cta h3 span {
+      font-weight: 900;
+      text-transform: uppercase; }
+  .services .body .general-cta a {
+    color: #ffffff;
+    transition: 200ms;
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms; }
+    .services .body .general-cta a:hover {
+      color: #333333;
+      transition: 200ms;
+      -webkit-transition: 200ms;
+      -moz-transition: 200ms; }
+  .services .body .general-cta .cta {
+    margin: 100px; }
+.services .body .parent-services {
+  max-width: 1080px;
+  margin: 30px auto !important;
+  float: none !important; }
+.services .body .child-services {
+  max-width: 1080px;
+  margin: 30px auto !important;
+  float: none !important; }
+  .services .body .child-services h2 {
+    margin: 0px;
+    padding: 0px; }
+.services .body .service-box {
+  text-align: center;
+  border: #d8d8d8 solid 1px;
+  border-radius: 3px;
+  transition: all 200ms ease-in;
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in; }
+  .services .body .service-box:hover {
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.05);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05); }
+.services .body .service-box-parent {
+  min-height: 550px;
+  margin-top: 60px; }
+  .services .body .service-box-parent img {
+    width: 200px; }
+.services .body .advisory-box {
+  text-align: center;
+  box-shadow: 0px 0px 10px 5px rgba(31, 189, 229, 0.2);
+  padding: 20px;
+  border: #d8d8d8 solid 1px;
+  border-radius: 3px;
+  transition: all 200ms ease-in;
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in; }
+  .services .body .advisory-box:hover {
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.05);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05); }
+.services .body .services-bullets {
+  border: #d8d8d8 solid 1px;
+  border-radius: 3px;
+  margin: 30px auto; }
+.services .body .border {
+  border: 1px solid #d8d8d8;
+  border-radius: 3px; }
+.services .body .skinny {
+  max-width: 690px;
+  margin: 20px auto !important;
+  float: none !important; }
+.services .body .fat {
+  max-width: 1080px;
+  margin: 20px auto !important;
+  float: none !important; }
+.services .body .widget-type-rich_text li {
+  list-style-image: url(https://www.accelerance.com/hubfs/a.svg);
+  font-size: 20px;
+  color: #333333;
+  line-height: 28px;
+  margin: 20px auto; }
+  .services .body .widget-type-rich_text li h4 {
+    font-size: 24px;
+    color: #545454;
+    font-weight: 450; }
 
-.blue {
-  background-color: #08374a;
-  color: #ffffff; }
+.article {
+  height: 580px;
+  margin: 10px auto;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  background-color: white; }
+  .article:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); }
+  .article-header {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 3px 3px 0px 0px; }
+  .article-content {
+    padding: 20px; }
+  @media screen and (max-width: 1024px) {
+    .article {
+      height: auto; } }
 
 h1 {
   font-size: 64px;
@@ -57,6 +185,87 @@ hr {
   border-width: 0;
   color: #545454;
   background-color: #545454; }
+
+.hide {
+  display: none !important; }
+
+body {
+  font-family: Avenir, 'Avenir W01', sans-serif;
+  color: #333333;
+  margin: 0; }
+
+.right {
+  float: right !important;
+  margin-bottom: 36px; }
+
+.center {
+  text-align: center; }
+  .center-space {
+    margin: 30px auto; }
+
+.as-seen-in {
+  max-width: 1080px;
+  margin: 36px auto !important;
+  float: none !important; }
+
+.hs-error-msgs {
+  color: red; }
+
+.red {
+  background-color: #b73e43;
+  color: #ffffff; }
+
+.blue {
+  background-color: #08374a;
+  color: #ffffff; }
+
+.purple {
+  background-color: #8E2B7C;
+  color: white; }
+  .purple-shape {
+    background-image: url(https://www.accelerance.com/hubfs/ACC2017/home/purple.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom; }
+
+.skinny {
+  max-width: 690px;
+  margin: 40px auto !important;
+  float: none !important; }
+
+.wide {
+  max-width: 960px;
+  margin: 40px auto !important;
+  float: none !important; }
+
+.wider {
+  max-width: 1080px;
+  margin: 40px auto !important;
+  float: none !important; }
+
+.border-box {
+  border: #d8d8d8 solid 1px;
+  border-radius: 3px; }
+  .border-box--top-purple {
+    border-top: 5px solid #8E2B7C; }
+  .border-box--top-red {
+    border-top: 5px solid #b73e43; }
+
+.zoom {
+  transition: 200ms;
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in; }
+  .zoom:hover {
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.05);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05); }
 
 .widget-type-rich_text {
   padding: 0px 20px; }
@@ -116,13 +325,6 @@ hr {
 
 .credibility-cta {
   margin: 45px auto; }
-
-.explainer-container {
-  text-align: center;
-  padding-bottom: 50px; }
-  .explainer-container h4 {
-    margin-top: 0;
-    padding-top: 0; }
 
 .contacttext a img {
   margin-right: 18px; }
@@ -250,208 +452,32 @@ hr {
     width: 20px;
     width: 1.25rem; }
 
-.parent-services {
-  max-width: 1080px;
-  margin: 30px auto !important;
-  float: none !important; }
-  .parent-services .service-box {
-    text-align: center;
-    border: #d8d8d8 solid 1px;
-    border-radius: 3px;
-    transition: all 200ms ease-in;
-    -webkit-transition: all 200ms ease-in;
-    -ms-transition: all 200ms ease-in;
-    -moz-transition: all 200ms ease-in; }
-    .parent-services .service-box:hover {
-      z-index: 2;
-      -webkit-transition: all 200ms ease-in;
-      -webkit-transform: scale(1.05);
-      -ms-transition: all 200ms ease-in;
-      -ms-transform: scale(1.05);
-      -moz-transition: all 200ms ease-in;
-      -moz-transform: scale(1.05);
-      transition: all 200ms ease-in;
-      transform: scale(1.05); }
-  .parent-services .service-box-parent {
-    min-height: 550px; }
-    .parent-services .service-box-parent img {
-      width: 200px; }
-
-.screenshot {
-  text-align: center;
-  color: #ffffff;
-  background-image: linear-gradient(rgba(183, 62, 67, 0.77), rgba(183, 62, 67, 0.77)), url(https://www.accelerance.com/hubfs/ACC2017/home/screenshotcompressed.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-  .screenshot .screenshottext {
-    text-align: left;
-    max-width: 1080px;
-    margin: 80px auto !important;
-    float: none !important; }
-    .screenshot .screenshottext .cta {
-      color: #b73e43;
-      text-decoration: none;
-      background-color: #ffffff;
-      border-radius: 3px;
-      padding: 10px 40px; }
-    .screenshot .screenshottext p {
-      font-weight: 500; }
-
-.browser {
-  -webkit-box-shadow: 0 13px 35px rgba(98, 100, 112, 0.5);
-  -moz-box-shadow: 0 13px 35px rgba(98, 100, 112, 0.5);
-  box-shadow: 0 13px 35px rgba(98, 100, 112, 0.5);
-  border: 1px solid #d5dadf;
-  border-radius: 3px;
-  margin: 10px auto;
-  overflow: hidden;
+.full-width-form .hs-button.primary, .full-width-form input[type="submit"], .full-width-form input[type="button"] {
+  display: inline;
+  background-color: transparent;
+  border: none;
+  color: #333333;
+  float: right;
   position: relative;
-  display: inline-block;
-  min-height: 150px;
-  background: #fff; }
-  .browser .top-bar {
-    background: #fff;
-    border-bottom: 1px solid #d5dadf;
-    height: 24px;
-    border-radius: 4px 4px 0 0; }
-    .browser .top-bar .lights {
-      list-style: none;
-      position: absolute;
-      padding: 0;
-      left: 10px;
-      top: -2px; }
-
-@media (max-width: 74.9em) {
-  .browser .frame img {
-    max-width: 100%;
-    width: 100%;
-    height: auto; } }
-@media (min-width: 48em) {
-  .browser .top-bar {
-    height: 43px; }
-    .browser .top-bar .lights {
-      left: 18px;
-      top: 0px; } }
-.browser .top-bar .lights li {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12);
-  display: inline-block;
-  margin-right: 6px;
-  height: 6px;
-  width: 6px;
-  border-radius: 100%;
-  border: 1px solid #da4b47; }
-
-.browser .top-bar .lights li:nth-child(1) {
-  background: #f66560; }
-
-.browser .top-bar .lights li:nth-child(2) {
-  background: #f9c964;
-  border-color: #dcac47; }
-
-.browser .top-bar .lights li:nth-child(3) {
-  background: #30c75d;
-  border-color: #1fa748; }
-
-@media (min-width: 48em) {
-  .browser .top-bar .lights li {
-    margin-right: 8px;
-    height: 10px;
-    width: 10px; } }
-.credibility-logos {
-  max-width: 960px;
-  margin: 30px auto !important;
-  float: none !important; }
-
-.news {
-  max-width: 1080px;
-  margin: 64px auto !important;
-  float: none !important;
-  margin: 50px auto;
-  text-align: center; }
-  .news a {
-    color: #ffffff; }
-  .news .newsheader {
-    margin: 0px auto 64px auto; }
-  .news .articles {
-    color: #ffffff; }
-    .news .articles .articleone {
-      text-align: center;
-      padding: 10px;
-      height: 400px;
-      background-image: url(http://www.accelerance.com/hubfs/ACC2017/home/one.jpg);
-      background-size: cover; }
-      .news .articles .articleone .aligner {
-        height: 400px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column; }
-    .news .articles .articletwo {
-      text-align: center;
-      padding: 10px;
-      height: 400px;
-      background-image: url(https://www.accelerance.com/hubfs/ACC2017/newbg2.png);
-      background-size: cover; }
-      .news .articles .articletwo .aligner {
-        height: 400px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column; }
-    .news .articles .articlethree {
-      text-align: center;
-      padding: 10px;
-      height: 400px;
-      background-image: url(http://www.accelerance.com/hubfs/ACC2017/home/three.jpg);
-      background-size: cover; }
-      .news .articles .articlethree .aligner {
-        height: 400px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column; }
-
-.subscribe {
-  padding: 48px auto;
-  margin: 30px 0px 0px 0px;
-  text-align: center;
-  background-color: #d8d8d8; }
-  .subscribe .subscribeform {
-    max-width: 1080px;
-    margin: 0 auto !important;
-    float: none !important; }
-    .subscribe .subscribeform .hs-button.primary, .subscribe .subscribeform input[type="submit"], .subscribe .subscribeform input[type="button"] {
-      display: inline;
-      background-color: transparent;
-      border: none;
-      color: #333333;
-      float: right;
-      position: relative;
-      top: -51px; }
-  .subscribe .hs-form {
-    margin: 0 auto;
-    max-width: 920px;
-    width: 100%; }
-    .subscribe .hs-form .hs-error-msgs {
-      color: #333333;
-      list-style: none;
-      margin: 0px auto;
-      text-align: center; }
-    .subscribe .hs-form input {
-      border-radius: 3px;
-      border: 1px solid #545454;
-      font-size: 18px;
-      line-height: 30px;
-      padding: 5px 10px;
-      margin: 5px auto; }
-    .subscribe .hs-form label {
-      display: none; }
+  top: -51px; }
+.full-width-form .hs-form {
+  margin: 0 auto;
+  max-width: 920px;
+  width: 100%; }
+  .full-width-form .hs-form .hs-error-msgs {
+    color: #333333;
+    list-style: none;
+    margin: 0px auto;
+    text-align: center; }
+  .full-width-form .hs-form input {
+    border-radius: 3px;
+    border: 1px solid #545454;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 5px 10px;
+    margin: 5px auto; }
+  .full-width-form .hs-form label {
+    display: none; }
 
 .startyourjourney {
   background: linear-gradient(rgba(142, 43, 124, 0.91), rgba(142, 43, 124, 0.91)), rgba(142, 43, 124, 0.91) url("https://www.accelerance.com/hubfs/ACC2017/home/ddcompressed.jpg") no-repeat center;
@@ -765,145 +791,6 @@ hr {
   float: none !important; }
   .providers-body hr {
     margin: 60px auto 20px auto; }
-
-.services .mid {
-  max-width: 960px;
-  margin: 20px auto !important;
-  float: none !important; }
-.services .body hr {
-  margin: 30px 0px;
-  text-align: left; }
-.services .body a {
-  color: #1FBDE5;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 200ms;
-  -webkit-transition: 200ms;
-  -moz-transition: 200ms; }
-  .services .body a:hover {
-    color: #76CEE4; }
-.services .body .fifteen-risks {
-  background-image: linear-gradient(rgba(8, 55, 74, 0.6), rgba(8, 55, 74, 0.6)), url(https://www.accelerance.com/hubfs/Landing_Page_Images/15%20risk%20indicators/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; }
-.services .body .sor {
-  background-image: linear-gradient(rgba(8, 55, 74, 0.6), rgba(8, 55, 74, 0.6)), url(https://www.accelerance.com/hubfs/Ebooks/SOR18/sorbg-1.png);
-  background-repeat: no-repeat;
-  background-size: cover; }
-.services .body .due-diligence {
-  background-image: linear-gradient(rgba(8, 55, 74, 0.6), rgba(8, 55, 74, 0.6)), url(https://www.accelerance.com/hubfs/pillar-pages/choosing/ddbg.png);
-  background-repeat: no-repeat;
-  background-size: cover; }
-.services .body .purple {
-  background-image: none;
-  background-color: #8E2B7C; }
-.services .body .general-cta {
-  text-align: center;
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 3px;
-  box-shadow: 0px 0px 5px #333333; }
-  .services .body .general-cta h3 {
-    font-weight: 200; }
-    .services .body .general-cta h3 span {
-      font-weight: 900;
-      text-transform: uppercase; }
-  .services .body .general-cta a {
-    color: #ffffff;
-    transition: 200ms;
-    -webkit-transition: 200ms;
-    -moz-transition: 200ms; }
-    .services .body .general-cta a:hover {
-      color: #333333;
-      transition: 200ms;
-      -webkit-transition: 200ms;
-      -moz-transition: 200ms; }
-  .services .body .general-cta .cta {
-    margin: 100px; }
-.services .body .parent-services {
-  max-width: 1080px;
-  margin: 30px auto !important;
-  float: none !important; }
-.services .body .child-services {
-  max-width: 1080px;
-  margin: 30px auto !important;
-  float: none !important; }
-  .services .body .child-services h2 {
-    margin: 0px;
-    padding: 0px; }
-.services .body .service-box {
-  text-align: center;
-  border: #d8d8d8 solid 1px;
-  border-radius: 3px;
-  transition: all 200ms ease-in;
-  -webkit-transition: all 200ms ease-in;
-  -ms-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in; }
-  .services .body .service-box:hover {
-    z-index: 2;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.05);
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.05);
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.05);
-    transition: all 200ms ease-in;
-    transform: scale(1.05); }
-  .services .body .service-box .cta {
-    background-color: #b73e43;
-    color: #ffffff;
-    padding: 15px 30px;
-    border-radius: 40px; }
-.services .body .service-box-parent {
-  min-height: 550px;
-  margin-top: 60px; }
-  .services .body .service-box-parent img {
-    width: 200px; }
-.services .body .advisory-box {
-  text-align: center;
-  box-shadow: 0px 0px 10px 5px rgba(31, 189, 229, 0.2);
-  padding: 20px;
-  border: #d8d8d8 solid 1px;
-  border-radius: 3px;
-  transition: all 200ms ease-in;
-  -webkit-transition: all 200ms ease-in;
-  -ms-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in; }
-  .services .body .advisory-box:hover {
-    z-index: 2;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.05);
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.05);
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.05);
-    transition: all 200ms ease-in;
-    transform: scale(1.05); }
-.services .body .services-bullets {
-  border: #d8d8d8 solid 1px;
-  border-radius: 3px;
-  margin: 30px auto; }
-.services .body .border {
-  border: 1px solid #d8d8d8;
-  border-radius: 3px; }
-.services .body .skinny {
-  max-width: 690px;
-  margin: 20px auto !important;
-  float: none !important; }
-.services .body .fat {
-  max-width: 1080px;
-  margin: 20px auto !important;
-  float: none !important; }
-.services .body .widget-type-rich_text li {
-  list-style-image: url(https://www.accelerance.com/hubfs/a.svg);
-  font-size: 20px;
-  color: #1FBDE5;
-  line-height: 28px;
-  margin: 20px auto; }
-  .services .body .widget-type-rich_text li h4 {
-    font-size: 24px;
-    color: #545454;
-    font-weight: 450; }
 
 .row-1 {
   background-color: #b73e43;
@@ -1480,6 +1367,7 @@ blockquote p:first-letter {
       border-radius: 40px 0px 0px 40px;
       -webkit-appearance: none;
       -moz-appearance: none;
+      appearance: none;
       border: none;
       font-family: Avenir, "Avenir W01", sans-serif;
       font-size: 18px;
@@ -1770,16 +1658,6 @@ blockquote p:first-letter {
         .events .listings .event-listing a .content h4 {
           text-transform: uppercase;
           font-weight: 500; }
-
-.skinny {
-  max-width: 690px;
-  margin: 40px auto !important;
-  float: none !important; }
-
-.wider {
-  max-width: 1080px;
-  margin: 40px auto !important;
-  float: none !important; }
 
 .events .center {
   text-align: center; }
@@ -2081,12 +1959,6 @@ blockquote p:first-letter {
 
   .logo-nav {
     padding: 5px 0px 0px 0px !important; }
-
-  .articleone {
-    margin-bottom: 20px !important; }
-
-  .articletwo {
-    margin-bottom: 20px !important; }
 
   .header-container h2 {
     font-size: 18px !important; }
