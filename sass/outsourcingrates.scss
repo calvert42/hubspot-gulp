@@ -1,0 +1,26 @@
+@import "partials/variables";
+
+.header-container-wrapper {
+    text-align: center;
+        color: $white;
+        border-bottom: 4px solid $blue;
+        background: {
+            image: url(http://www.accelerance.com/hubfs/ACC2017/bg7-compressor.jpg);
+            attachment: fixed;
+            repeat: no-repeat;
+            size: cover;
+        }
+}
+
+.sectiontwo {
+    background: {
+        color: $grey;
+    }
+}
+
+.sectionthree {
+    color: $white;
+    background: {
+        color: $blue;
+    }
+}

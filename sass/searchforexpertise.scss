@@ -1,0 +1,57 @@
+// SeArCh for expertise
+
+//imports (:
+
+@import "partials/variables";
+
+//header
+
+.header-container-wrapper {
+    text-align: center;
+        color: $white;
+        border-bottom: 4px solid $blue;
+        background: {
+            image: url(http://www.accelerance.com/hubfs/ACC2017/bg1-compressor.jpg);
+            attachment: fixed;
+            repeat: no-repeat;
+            size: cover;
+        }
+}
+
+//body
+
+.sectiontwo {
+    background: {
+        color: $grey;
+    }
+}
+
+.sectionthree {
+    color: $white;
+    padding: 20px auto;
+    background: {
+        color: $blue;
+    }
+}
+
+.side-left {
+    display: flex;
+    overflow: visible;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    img {
+        margin: 18px auto;
+    }
+}
+
+.side-right {
+    display:flex;
+    overflow: visible;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    img {
+        margin: 18px;
+    }
+}

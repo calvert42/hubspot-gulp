@@ -1,0 +1,123 @@
+//VARIABLES
+
+    //fonts
+
+    $font-stack: Avenir, 'Avenir W01', sans-serif;
+
+    //colors
+
+    $blue: #08374a;
+    $blue-hover: #136881;
+    $red: #b73e43;
+    $red-hover: #B36669;
+    $body: #333333;
+    $white: #ffffff;
+    $cyan: #1FBDE5;
+    $cyan-hover: #76CEE4;
+    $purple: #8E2B7C;
+    $purple-lighter: #AA559B;
+    $grey: #d8d8d8;
+    $link-grey: #999999;
+    $light-grey: #e8e8e8;
+    $black: #333333;
+    $dark-grey: #545454;
+    $green: #33CC66;
+    $trans-blue: rgba(9,81,110,.60);
+    $cyan-trans: rgba(31, 189, 229, 0.2);
+
+
+    $transparent-black: rgba(0,0,0,.70);
+
+    //breakpoints
+    $mobile: 425px;
+    $tablet: 768px;
+    $laptop-s: 1024px;
+    $laptop-l: 1440px;
+    $desktop: 2560px;
+
+//mixins
+
+@mixin teneighty {
+    max-width: 1080px;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+@mixin teneighty-margin($margin) {
+    max-width: 1080px;
+    margin: $margin auto !important;
+    float: none !important;
+}
+
+@mixin vertical-align($position: relative) {
+position: $position;
+top: 30%;
+transform: translateY(-30%);
+}
+
+@mixin ninesixty-margin($margin) {
+    max-width: 960px;
+    margin: $margin auto !important;
+    float: none !important;
+}
+
+@mixin sixninety-margin($margin) {
+    max-width: 690px;
+    margin: $margin auto !important;
+    float: none !important;
+}
+
+@mixin transition($time) {
+    transition: $time;
+    -webkit-transition: $time;
+    -moz-transition: $time;
+}
+
+@mixin scale($seconds) {
+    -webkit-transition: all $seconds ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all $seconds ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all $seconds ease-in;
+    -moz-transform: scale(1);
+    transition: all $seconds ease-in;
+    transform: scale(1); 
+}
+
+@mixin zoomSet($milliseconds) {
+    transition: all $milliseconds ease-in;
+    -webkit-transition: all $milliseconds ease-in;
+    -ms-transition: all $milliseconds ease-in;
+    -moz-transition: all $milliseconds ease-in;
+
+}
+
+@mixin zoomHover($milliseconds) {
+    z-index: 2;
+    -webkit-transition: all $milliseconds ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all $milliseconds ease-in;
+    -ms-transform: scale(1.05);
+    -moz-transition: all $milliseconds ease-in;
+    -moz-transform: scale(1.05);
+    transition: all $milliseconds ease-in;
+    transform: scale(1.05);
+}
+
+@mixin zoom($milliseconds) {
+    transition: $milliseconds;
+    -webkit-transition: all $milliseconds ease-in;
+    -ms-transition: all $milliseconds ease-in;
+    -moz-transition: all $milliseconds ease-in;
+    &:hover {
+        z-index: 2;
+        -webkit-transition: all $milliseconds ease-in;
+        -webkit-transform: scale(1.05);
+        -ms-transition: all $milliseconds ease-in;
+        -ms-transform: scale(1.05);
+        -moz-transition: all $milliseconds ease-in;
+        -moz-transform: scale(1.05);
+        transition: all $milliseconds ease-in;
+        transform: scale(1.05);
+    }
+}
