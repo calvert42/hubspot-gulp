@@ -30,8 +30,17 @@ body {
   background-color: #08374a;
   color: #ffffff; }
 
+.purple {
+  background-color: #8E2B7C;
+  color: white; }
+
 .skinny {
   max-width: 690px;
+  margin: 40px auto !important;
+  float: none !important; }
+
+.wide {
+  max-width: 960px;
   margin: 40px auto !important;
   float: none !important; }
 
@@ -276,108 +285,32 @@ hr {
     width: 20px;
     width: 1.25rem; }
 
-.browser {
-  -webkit-box-shadow: 0 13px 35px rgba(98, 100, 112, 0.5);
-  -moz-box-shadow: 0 13px 35px rgba(98, 100, 112, 0.5);
-  box-shadow: 0 13px 35px rgba(98, 100, 112, 0.5);
-  border: 1px solid #d5dadf;
-  border-radius: 3px;
-  margin: 10px auto;
-  overflow: hidden;
+.full-width-form .hs-button.primary, .full-width-form input[type="submit"], .full-width-form input[type="button"] {
+  display: inline;
+  background-color: transparent;
+  border: none;
+  color: #333333;
+  float: right;
   position: relative;
-  display: inline-block;
-  min-height: 150px;
-  background: #fff; }
-  .browser .top-bar {
-    background: #fff;
-    border-bottom: 1px solid #d5dadf;
-    height: 24px;
-    border-radius: 4px 4px 0 0; }
-    .browser .top-bar .lights {
-      list-style: none;
-      position: absolute;
-      padding: 0;
-      left: 10px;
-      top: -2px; }
-
-@media (max-width: 74.9em) {
-  .browser .frame img {
-    max-width: 100%;
-    width: 100%;
-    height: auto; } }
-@media (min-width: 48em) {
-  .browser .top-bar {
-    height: 43px; }
-    .browser .top-bar .lights {
-      left: 18px;
-      top: 0px; } }
-.browser .top-bar .lights li {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12);
-  display: inline-block;
-  margin-right: 6px;
-  height: 6px;
-  width: 6px;
-  border-radius: 100%;
-  border: 1px solid #da4b47; }
-
-.browser .top-bar .lights li:nth-child(1) {
-  background: #f66560; }
-
-.browser .top-bar .lights li:nth-child(2) {
-  background: #f9c964;
-  border-color: #dcac47; }
-
-.browser .top-bar .lights li:nth-child(3) {
-  background: #30c75d;
-  border-color: #1fa748; }
-
-@media (min-width: 48em) {
-  .browser .top-bar .lights li {
-    margin-right: 8px;
-    height: 10px;
-    width: 10px; } }
-.credibility-logos {
-  max-width: 960px;
-  margin: 30px auto !important;
-  float: none !important; }
-
-.subscribe {
-  padding: 48px auto;
-  margin: 30px 0px 0px 0px;
-  text-align: center;
-  background-color: #d8d8d8; }
-  .subscribe .subscribeform {
-    max-width: 1080px;
-    margin: 0 auto !important;
-    float: none !important; }
-    .subscribe .subscribeform .hs-button.primary, .subscribe .subscribeform input[type="submit"], .subscribe .subscribeform input[type="button"] {
-      display: inline;
-      background-color: transparent;
-      border: none;
-      color: #333333;
-      float: right;
-      position: relative;
-      top: -51px; }
-  .subscribe .hs-form {
-    margin: 0 auto;
-    max-width: 920px;
-    width: 100%; }
-    .subscribe .hs-form .hs-error-msgs {
-      color: #333333;
-      list-style: none;
-      margin: 0px auto;
-      text-align: center; }
-    .subscribe .hs-form input {
-      border-radius: 3px;
-      border: 1px solid #545454;
-      font-size: 18px;
-      line-height: 30px;
-      padding: 5px 10px;
-      margin: 5px auto; }
-    .subscribe .hs-form label {
-      display: none; }
+  top: -51px; }
+.full-width-form .hs-form {
+  margin: 0 auto;
+  max-width: 920px;
+  width: 100%; }
+  .full-width-form .hs-form .hs-error-msgs {
+    color: #333333;
+    list-style: none;
+    margin: 0px auto;
+    text-align: center; }
+  .full-width-form .hs-form input {
+    border-radius: 3px;
+    border: 1px solid #545454;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 5px 10px;
+    margin: 5px auto; }
+  .full-width-form .hs-form label {
+    display: none; }
 
 .startyourjourney {
   background: linear-gradient(rgba(142, 43, 124, 0.91), rgba(142, 43, 124, 0.91)), rgba(142, 43, 124, 0.91) url("https://www.accelerance.com/hubfs/ACC2017/home/ddcompressed.jpg") no-repeat center;
@@ -1998,12 +1931,6 @@ blockquote p:first-letter {
 
   .logo-nav {
     padding: 5px 0px 0px 0px !important; }
-
-  .articleone {
-    margin-bottom: 20px !important; }
-
-  .articletwo {
-    margin-bottom: 20px !important; }
 
   .header-container h2 {
     font-size: 18px !important; }
