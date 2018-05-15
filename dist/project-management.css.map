@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAIA,yBAA0B;EACtB,UAAU,EAAE,MAAM;EACd,KAAK,ECED,OAAO;EDDX,aAAa,EAAE,iBAAe;EAE1B,gBAAK,EAAE,gEAAgE;EACvE,qBAAU,EAAE,KAAK;EACjB,iBAAM,EAAE,SAAS;EACjB,eAAI,EAAE,KAAK;EACX,mBAAQ,EAAE,aAAa",
-"sources": ["../ACC2017/project-management.scss","../ACC2017/variables.scss"],
+"mappings": "AAIA,yBAA0B;EACtB,UAAU,EAAE,MAAM;EACd,KAAK,ECOD,OAAO;EDNX,aAAa,EAAE,iBAAe;EAE1B,gBAAK,EAAE,gEAAgE;EACvE,qBAAU,EAAE,KAAK;EACjB,iBAAM,EAAE,SAAS;EACjB,eAAI,EAAE,KAAK;EACX,mBAAQ,EAAE,aAAa",
+"sources": ["../sass/project-management.scss","../sass/partials/_variables.scss"],
 "names": [],
 "file": "project-management.css"
 }
