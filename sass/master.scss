@@ -4,6 +4,8 @@
 
 @import 'partials/pages/services';
 
+@import 'partials/pages/events';
+
 //variables
 
 @import 'partials/variables';
@@ -1702,86 +1704,6 @@ body {
                 }
         }
     }
-    }
-
-//events
-
-    .events {
-        .h1 {
-            text-align:left;
-            h1 {
-                margin-bottom: 0px!important;
-            }
-            h3 {
-                -webkit-margin-before: 0px!important;
-            }
-        }
-        .red {
-            img {
-                @media screen and (max-width: $tablet) {
-                    float: none!important;
-                    display: block; 
-                    margin-left: auto; 
-                    margin-right: auto;
-                }
-            }
-        }
-        .post {
-            a {
-                font-weight: 600;
-                text-decoration: none;
-                color: $cyan;
-                @include transition(200ms);
-                &:hover {
-                    color: $cyan-hover
-                }
-            }
-            @include ninesixty-margin(24px);
-            .event-map {
-                margin-top: 48px;
-            }
-        }
-        .listings {
-            @include teneighty-margin(64px);
-            .event-listing {
-                transition: all 200ms ease-in;
-                -webkit-transition: all 200ms ease-in;
-                -ms-transition: all 200ms ease-in;
-                -moz-transition: all 200ms ease-in;
-                &:hover {
-                    z-index: 2;
-                    -webkit-transition: all 200ms ease-in;
-                    -webkit-transform: scale(1.05);
-                    -ms-transition: all 200ms ease-in;
-                    -ms-transform: scale(1.05);
-                    -moz-transition: all 200ms ease-in;
-                    -moz-transform: scale(1.05);
-                    transition: all 200ms ease-in;
-                    transform: scale(1.05);
-                }
-                a {
-                    color: $white;
-                    text-decoration: none;
-                    &:hover {
-                        font-weight: 500;
-                    }
-
-                .content {
-                    color: $white;
-
-                    background-size: cover;
-                    background-repeat: none;
-                    padding: 10px!important;
-                    margin-bottom: 24px;
-                    height: 250px;
-                    h4 {
-                        text-transform: uppercase;
-                        font-weight: 500;
-                    }
-                }
-                }
-            }
-        }
     }
 
 //event-child
