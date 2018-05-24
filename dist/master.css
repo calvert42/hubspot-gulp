@@ -139,6 +139,8 @@
     color: #545454;
     font-weight: 450; }
 
+.events .logo-nav .custom-menu-primary .hs-menu-wrapper > ul li a {
+  color: white; }
 .events .h1 {
   text-align: left; }
   .events .h1 h1 {
