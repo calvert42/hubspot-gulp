@@ -1,31 +1,27 @@
 //IMPORTS
 
-//pages
-
-@import 'partials/pages/services';
-
-@import 'partials/pages/events';
-
 //variables
 
 @import 'partials/variables';
 
-//footer
+//pages
 
-@import 'partials/footer/news';
+@import 'partials/pages/pages';
+
+//modules
+
+@import 'partials/modules/modules';
 
 //general
 
 @import 'partials/type/headers';
 
+//elements
+
+@import 'partials/elements/elements';
+
 .hide {
     display:none!important;
-}
-
-body {
-    font-family: Avenir, 'Avenir W01', sans-serif;
-    color: $black;
-    margin: 0;
 }
 
 .right {
@@ -109,183 +105,183 @@ body {
 
 //COS
 
-    //header elements
+//header elements
 
-    .header-container-wrapper {
-        text-align: center;
-        color: $white;
-        background: {
-            image: linear-gradient(rgba(8,55,74,.60),rgba(8,55,74,.60)),url(http://www.accelerance.com/hubfs/ACC2017/Untitled-1_home.jpg?t=1494356908866);
-            attachment: fixed;
-            repeat: no-repeat;
-            size: cover;
-            }
-        .header-container {
-            .h1 {
-                padding: 0px 0px;
-                @include teneighty-margin(50px);
-                .subheader {
-                    margin: 64px 0px;
-                }
-                a {
-                color: $white;
-                text-decoration: none;
-                }
-                h2 {
-                    font-size: 24px;
-                }
-                .headercta {
-                    &:hover {
-                        color: $black;
-                    }
-                }
-            }
+.header-container-wrapper {
+    text-align: center;
+    color: $white;
+    background: {
+        image: linear-gradient(rgba(8,55,74,.60),rgba(8,55,74,.60)),url(http://www.accelerance.com/hubfs/ACC2017/Untitled-1_home.jpg?t=1494356908866);
+        attachment: fixed;
+        repeat: no-repeat;
+        size: cover;
         }
-    }
-
-    .loginbar {
-        display: none!important; //HACK
-        background-color: $blue;
-        text-align: right;
-        padding: 0px 20px;
-        a {
-            color: $white;
-            font-size: 14px;
-        }
-        .pill {
-            font: {
-            weight:300;
-            size: 16px;
+    .header-container {
+        .h1 {
+            padding: 0px 0px;
+            @include teneighty-margin(50px);
+            .subheader {
+                margin: 64px 0px;
             }
-            background-color: $red;
-            padding: 10px 25px;
-            text-align: right;
+            a {
             color: $white;
             text-decoration: none;
-            border-radius: 20px;
-
+            }
+            h2 {
+                font-size: 24px;
+            }
+            .headercta {
+                &:hover {
+                    color: $black;
+                }
+            }
         }
     }
+}
 
-    //body
-
-    .span {
-        padding: 20px;
+.loginbar {
+    display: none!important; //HACK
+    background-color: $blue;
+    text-align: right;
+    padding: 0px 20px;
+    a {
+        color: $white;
+        font-size: 14px;
     }
+    .pill {
+        font: {
+        weight:300;
+        size: 16px;
+        }
+        background-color: $red;
+        padding: 10px 25px;
+        text-align: right;
+        color: $white;
+        text-decoration: none;
+        border-radius: 20px;
 
-    .bodycta {
-        margin: 0px auto 36px auto;
     }
+}
 
-    .img-row {
-        margin: 30px auto;
-    }
+//body
 
-    .custom-image {
-        text-align: center;
-        float: none;
-    }
+.span {
+    padding: 20px;
+}
 
-    .credibility-cta {
-        margin: 45px auto;
-    }
+.bodycta {
+    margin: 0px auto 36px auto;
+}
+
+.img-row {
+    margin: 30px auto;
+}
+
+.custom-image {
+    text-align: center;
+    float: none;
+}
+
+.credibility-cta {
+    margin: 45px auto;
+}
 
 //CONTACT
 
-    .contacttext {
-        a {
-            img {
+.contacttext {
+    a {
+        img {
+            margin-right: 18px;
+        }
+    }
+}
+
+.contactform {
+    margin: 20px auto 50px auto;
+    .hs-button.primary, input[type="submit"], input[type="button"] {
+            display: inline;
+            background-color: $purple;
+            border: none;
+            color: $white;
+            float: none;
+            padding: 10px 20px;
+            text-align: left;
+            margin: 0px auto;
+            &:hover {
+                background-color: $purple-lighter;
+            }
+
+        }
+    .form-columns-1 {
+        max-width: 100%;
+    }
+    .hs-form {
+        margin: 0 auto;
+        max-width: 920px;
+        width: 100%;
+        label {
+            font-size: 18px;
+            font-weight: 500;
+
+        }
+        fieldset {
+            margin: 20px 0px;
+        }
+        input {
+            border-radius: 3px;
+            border: 1px solid $grey;
+            font-size: 18px;
+            line-height: 30px;
+            padding: 5px 10px;
+            margin: 20px auto;
+            select {
+                width: 100%;
+                height: 35px;
+            }
+        }
+        .hs-form-booleancheckbox {
+            input {
                 margin-right: 18px;
             }
         }
-    }
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin-top: 15px;
 
-    .contactform {
-        margin: 20px auto 50px auto;
-        .hs-button.primary, input[type="submit"], input[type="button"] {
-                display: inline;
-                background-color: $purple;
-                border: none;
-                color: $white;
-                float: none;
-                padding: 10px 20px;
-                text-align: left;
-                margin: 0px auto;
-                &:hover {
-                    background-color: $purple-lighter;
-                }
-
-            }
-        .form-columns-1 {
-            max-width: 100%;
         }
-        .hs-form {
-            margin: 0 auto;
-            max-width: 920px;
+        select {
+            font: {
+                size: 18px;
+            }
+            margin: 20px auto;
+        }
+        textarea {
             width: 100%;
-            label {
-                font-size: 18px;
-                font-weight: 500;
-
-            }
-            fieldset {
-                margin: 20px 0px;
-            }
-            input {
-                border-radius: 3px;
-                border: 1px solid $grey;
-                font-size: 18px;
-                line-height: 30px;
-                padding: 5px 10px;
-                margin: 20px auto;
-                select {
-                    width: 100%;
-                    height: 35px;
-                }
-            }
-            .hs-form-booleancheckbox {
-                input {
-                    margin-right: 18px;
-                }
-            }
-            ul {
-                list-style: none;
-                padding: 0px;
-                margin-top: 15px;
-
-            }
-            select {
-                font: {
-                    size: 18px;
-                }
-                margin: 20px auto;
-            }
-            textarea {
-                width: 100%;
-                border-radius: 3px;
-                border: 1px solid $grey;
-                font-size: 18px;
-                line-height: 30px;
-                padding: 5px 10px;
-                margin: 20px auto;
-            }
+            border-radius: 3px;
+            border: 1px solid $grey;
+            font-size: 18px;
+            line-height: 30px;
+            padding: 5px 10px;
+            margin: 20px auto;
         }
     }
+}
 
-    .hs-form-checkbox {
-            span {
-                font-size: 18px;
-                font-weight: 400;
-            }
-            input {
-                margin-right: 10px!important;
+.hs-form-checkbox {
+        span {
+            font-size: 18px;
+            font-weight: 400;
         }
-        .inputs-list {
-            .multi-container {
-                margin-top: 20px !important;
-            }
+        input {
+            margin-right: 10px!important;
+    }
+    .inputs-list {
+        .multi-container {
+            margin-top: 20px !important;
         }
     }
+}
 
 
 //section one
@@ -1425,39 +1421,6 @@ body {
                     cursor: pointer;
                 }
             }
-            .launcher {
-                margin: 40px auto;
-                padding: 20px;
-                input[type="text"] {
-                    float:left;
-                    border-radius: 40px 0px 0px 40px;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    border: none;
-                    font-family: $font-stack;
-                    font-size: 18px;
-                    padding: 10px 20px;
-                    outline: none;
-                }
-                input[type="button"] {
-                    border: none;
-                    height: 45px;
-                    width: 150px;
-                    border-radius: 0px 40px 40px 0px;
-                    background-color: $red;
-                    color: white;
-                    font-size: 16px;
-                    font-family: $font-stack;
-                    outline: none;
-                    cursor: pointer;
-                    @include transition(200ms);
-                    &:hover {
-                        @include transition(200ms);
-                        background-color: $red-hover;
-                    }
-                }
-            }
             .compressed {
                 margin: 10px auto;
                 padding: 0px 20px;
@@ -1472,143 +1435,6 @@ body {
                     padding:0;
                 }
             }
-        }
-        .popupoverlay {
-            overflow: scroll;
-            display: none;
-            text-align: left;
-            background-color: rgba(0,0,0,0.30);
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            .close-button {
-                color: $black;
-                float: left;
-                position: relative; 
-                top: -35px; 
-                left: -35px;
-                @media screen and (max-width: $tablet) {
-                    top: 0px;
-                    left: 0px;
-                }
-            }
-            .contactform {
-                margin: 20px;
-                @media screen and (max-width:$tablet) {
-                    margin: 0px;
-                }
-                .hs-button.primary, input[type="submit"], input[type="button"] {
-                        display: inline;
-                        background-color: $red;
-                        border: none;
-                        color: $white;
-                        float: none;
-                        padding: 10px 20px;
-                        text-align: center;
-                        width: 250px;
-                        max-width: 400px;
-                        margin: 0px auto;
-                        -webkit-appearance: none;
-                        &:hover {
-                            cursor: pointer;
-                            background-color: $red-hover;
-                        }
-        
-                    }
-                .form-columns-1 {
-                    max-width: 100%;
-                }
-                .hs-form {
-                    margin: 0 auto;
-                    max-width: 920px;
-                    width: 100%;
-                    label {
-                        font-size: 18px;
-                        font-weight: 500;
-        
-                    }
-                    fieldset {
-                        margin: 20px 0px;
-                    }
-                    ul input {
-                        width: unset;
-                    }
-    
-                    input {
-                        border-radius: 3px;
-                        border: 1px solid $grey;
-                        font-size: 18px;
-                        line-height: 30px;
-                        padding: 5px 10px;
-                        margin: 20px auto;
-                        width: 80%;
-                        select {
-                            width: 80%;
-                            height: 35px;
-                        }
-                    }
-    
-                    .hs-form-booleancheckbox {
-                        input {
-                            margin-right: 18px;
-                        }
-                    }
-                    ul {
-                        text-align: left;
-                        list-style: none;
-                        padding: 0px;
-                        margin: 15px 40px;
-                        li {
-                            font-size: 18px;
-                            margin: 0 auto;
-                            input {
-                                margin-right: 10px;
-                            }
-                        }
-                    }
-                    select {
-                        height: 48px;
-                        border: 1px solid #d8d8d8;
-                        font: {
-                            size: 18px;
-                        }
-                        margin: 20px auto;
-                    }
-                    textarea {
-                        width: 100%;
-                        border-radius: 3px;
-                        border: 1px solid $grey;
-                        font-size: 18px;
-                        line-height: 30px;
-                        padding: 5px 10px;
-                        margin: 20px auto;
-                    }
-                }
-            }
-    
-            .form-header {
-                h2 {
-                    margin: 0px;
-                }
-            }
-    
-            .popupform {
-                @include ninesixty-margin(0px);
-                border-radius: 0px 0px 3px 3px;
-                overflow: visible;
-                margin: 0px auto;
-                padding: 50px;
-                background: $white;
-                color: $black;
-                @media screen and (max-width: $tablet) {
-                    padding: 20px;
-                }
-    
-            }
-            
         }
         .redcta {
             padding: 10px 40px;
