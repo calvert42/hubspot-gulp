@@ -1,0 +1,9 @@
+.cta {
+    padding: 10px 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    &--red {
+        background-color: $red;
+        color: $white!important;
+    }
+}

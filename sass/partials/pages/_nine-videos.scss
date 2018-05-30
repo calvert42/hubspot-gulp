@@ -1,0 +1,68 @@
+.nine-videos {
+    img {
+        height: auto;
+    }
+    .listing-content {
+        text-align: center;
+        @include teneighty-margin(48px);
+        .breadcrumb {
+            text-decoration: none;
+            text-align: left;
+        }
+        .skinny {
+            @include ninesixty-margin(0px);
+            text-align: left;
+            ul {
+                list-style: none;
+                li {
+                    font-size: 18px;
+                    line-height: 36px;
+                }
+                li::before {
+                    font-size: 18px;
+                    content: "•"; 
+                    color: $cyan;
+                    width: 2em;
+                    margin-left: -2em;
+                    margin-right: 1em;
+                }
+            }
+
+        }
+        .video {
+            margin: 30px auto;
+            @include zoomSet(200ms);
+            &:hover {                    
+                @include zoomHover(200ms);
+            }
+            img {
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+        h4 {
+            font-weight: 800;
+            color: $cyan;
+            @include transition(200ms);
+            &:hover {
+                @include transition(200ms);
+                color: $cyan-hover;
+            }
+            span {
+                color: $dark-grey;
+                font-weight: 400;
+            }
+            a {
+                text-decoration: none;
+                color: $cyan;
+                @include transition(200ms);
+                &:hover {
+                    color: $cyan-hover;
+                }
+            }
+    }
+}
+}

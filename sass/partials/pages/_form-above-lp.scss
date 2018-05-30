@@ -1,0 +1,220 @@
+//form above landing page
+
+.lp-form-above {
+    .popupoverlay {
+        overflow: scroll;
+        display: none;
+        text-align: left;
+        background-color: rgba(0,0,0,0.30);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        .close-button {
+            color: $black;
+            float: left;
+            position: relative; 
+            top: -35px; 
+            left: -35px;
+            @media screen and (max-width: $tablet) {
+                top: 0px;
+                left: 0px;
+            }
+        }
+        .contactform {
+            margin: 20px;
+            @media screen and (max-width:$tablet) {
+                margin: 0px;
+            }
+            .hs-button.primary, input[type="submit"], input[type="button"] {
+                    display: inline;
+                    background-color: $red;
+                    border: none;
+                    color: $white;
+                    float: none;
+                    padding: 10px 20px;
+                    text-align: center;
+                    width: 250px;
+                    max-width: 400px;
+                    margin: 0px auto;
+                    -webkit-appearance: none;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $red-hover;
+                    }
+    
+                }
+            .form-columns-1 {
+                max-width: 100%;
+            }
+            .hs-form {
+                margin: 0 auto;
+                max-width: 920px;
+                width: 100%;
+                label {
+                    font-size: 18px;
+                    font-weight: 500;
+    
+                }
+                fieldset {
+                    margin: 20px 0px;
+                }
+                ul input {
+                    width: unset;
+                }
+    
+                input {
+                    border-radius: 3px;
+                    border: 1px solid $grey;
+                    font-size: 18px;
+                    line-height: 30px;
+                    padding: 5px 10px;
+                    margin: 20px auto;
+                    width: 80%;
+                    select {
+                        width: 80%;
+                        height: 35px;
+                    }
+                }
+    
+                .hs-form-booleancheckbox {
+                    input {
+                        margin-right: 18px;
+                    }
+                }
+                ul {
+                    text-align: left;
+                    list-style: none;
+                    padding: 0px;
+                    margin: 15px 40px;
+                    li {
+                        font-size: 18px;
+                        margin: 0 auto;
+                        input {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                select {
+                    height: 48px;
+                    border: 1px solid #d8d8d8;
+                    font: {
+                        size: 18px;
+                    }
+                    margin: 20px auto;
+                }
+                textarea {
+                    width: 100%;
+                    border-radius: 3px;
+                    border: 1px solid $grey;
+                    font-size: 18px;
+                    line-height: 30px;
+                    padding: 5px 10px;
+                    margin: 20px auto;
+                }
+            }
+        }
+    
+        .form-header {
+            h2 {
+                margin: 0px;
+            }
+        }
+    
+        .popupform {
+            @include ninesixty-margin(0px);
+            border-radius: 0px 0px 3px 3px;
+            overflow: visible;
+            margin: 0px auto;
+            padding: 50px;
+            background: $white;
+            color: $black;
+            @media screen and (max-width: $tablet) {
+                padding: 20px;
+            }
+    
+        }
+        
+    }
+    .value-offers {
+        h4 {
+            color: $cyan;
+            font-weight: 700;
+            a {
+                color: $cyan;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+    }
+    .sectionone {
+        @include sixninety-margin(30px);
+        a {
+            text-decoration: none;
+            color: $cyan;
+            font-weight: 700;
+        }
+    }
+    .footer {
+        h4 {
+            margin: 10px auto;
+            padding: 0px;
+        }
+        svg {
+            margin: 10px 20px 20px 20px;
+            font-size: 36px;
+        }
+    }
+    .logo-nonav {
+        margin: 30px auto;
+    }
+    .header-content {
+        @include teneighty-margin(30px);
+        text-align: left;
+        .featured-media {
+            margin-top: 20px;
+            #featured-image {
+                cursor: pointer;
+            }
+        }
+        .compressed {
+            margin: 10px auto;
+            padding: 0px 20px;
+        }
+        h1 {
+            font-size: 48px;
+             font-weight: 500;
+        }
+        .text {
+            h1, h2, h3 {
+                margin:0;
+                padding:0;
+            }
+        }
+    }
+    .redcta {
+        padding: 10px 40px;
+        background-color: $red;
+        color: $white!important;
+        border-radius: 40px;
+        text-decoration: none;
+    }
+    ul {
+        list-style: none;
+        li {
+            margin: 20px auto;
+            margin-left: 40px;
+            font-size: 20px;
+        }
+        li::before {
+            font-size: 24px;
+            content: "•"; 
+            color: $cyan;
+            width: 2em;
+            margin-left: -2em;
+            margin-right: 34px;
+        }
+    }
+}

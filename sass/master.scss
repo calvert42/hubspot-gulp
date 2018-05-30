@@ -1,4 +1,8 @@
-//IMPORTS
+/*
+This is the master stylesheet for Accelerance. 
+
+
+*/
 
 //variables
 
@@ -19,6 +23,10 @@
 //elements
 
 @import 'partials/elements/elements';
+
+//buttons
+
+@import 'partials/elements/buttons';
 
 .hide {
     display:none!important;
@@ -1377,160 +1385,7 @@
     }
 
 
-//form above landing page
 
-    .lp-form-above {
-        .value-offers {
-            h4 {
-                color: $cyan;
-                font-weight: 700;
-                a {
-                    color: $cyan;
-                    font-weight: 700;
-                    text-decoration: none;
-                }
-            }
-        }
-        .sectionone {
-            @include sixninety-margin(30px);
-            a {
-                text-decoration: none;
-                color: $cyan;
-                font-weight: 700;
-            }
-        }
-        .footer {
-            h4 {
-                margin: 10px auto;
-                padding: 0px;
-            }
-            svg {
-                margin: 10px 20px 20px 20px;
-                font-size: 36px;
-            }
-        }
-        .logo-nonav {
-            margin: 30px auto;
-        }
-        .header-content {
-            @include teneighty-margin(30px);
-            text-align: left;
-            .featured-media {
-                margin-top: 20px;
-                #featured-image {
-                    cursor: pointer;
-                }
-            }
-            .compressed {
-                margin: 10px auto;
-                padding: 0px 20px;
-            }
-            h1 {
-                font-size: 48px;
-                 font-weight: 500;
-            }
-            .text {
-                h1, h2, h3 {
-                    margin:0;
-                    padding:0;
-                }
-            }
-        }
-        .redcta {
-            padding: 10px 40px;
-            background-color: $red;
-            color: $white!important;
-            border-radius: 40px;
-            text-decoration: none;
-        }
-        ul {
-            list-style: none;
-            li {
-                margin: 20px auto;
-                margin-left: 40px;
-                font-size: 20px;
-            }
-            li::before {
-                font-size: 24px;
-                content: "•"; 
-                color: $cyan;
-                width: 2em;
-                margin-left: -2em;
-                margin-right: 34px;
-            }
-        }
-    }
-
-
-//9 videos landing page
-    .nine-videos {
-        img {
-            height: auto;
-        }
-        .listing-content {
-            text-align: center;
-            @include teneighty-margin(48px);
-            .breadcrumb {
-                text-decoration: none;
-                text-align: left;
-            }
-            .skinny {
-                @include ninesixty-margin(0px);
-                text-align: left;
-                ul {
-                    list-style: none;
-                    li {
-                        font-size: 18px;
-                        line-height: 36px;
-                    }
-                    li::before {
-                        font-size: 18px;
-                        content: "•"; 
-                        color: $cyan;
-                        width: 2em;
-                        margin-left: -2em;
-                        margin-right: 1em;
-                    }
-                }
-
-            }
-            .video {
-                margin: 30px auto;
-                @include zoomSet(200ms);
-                &:hover {                    
-                    @include zoomHover(200ms);
-                }
-                img {
-                    border-top-left-radius: 2px;
-                    border-top-right-radius: 2px;
-                }
-            }
-            a {
-                text-decoration: none;
-            }
-            h4 {
-                font-weight: 800;
-                color: $cyan;
-                @include transition(200ms);
-                &:hover {
-                    @include transition(200ms);
-                    color: $cyan-hover;
-                }
-                span {
-                    color: $dark-grey;
-                    font-weight: 400;
-                }
-                a {
-                    text-decoration: none;
-                    color: $cyan;
-                    @include transition(200ms);
-                    &:hover {
-                        color: $cyan-hover;
-                    }
-                }
-        }
-    }
-    }
 
 //event-child
 
@@ -1770,46 +1625,6 @@
                 transform: scale(1.05);
                 }
             }
-        }
-    }
-
-//forms
-// logo
-
-    .logo {
-        padding: 10px 20px;
-        float: left;
-        max-width: 304px;
-        width: 100%;
-    }
-
-    /* Navigation Menu */
-
-    .logo-nav {
-        display: inline-block;
-        background: $white;
-        color: $blue;
-        padding: 15px 0px 0px 0px;
-        .top-cta {
-            margin: 8px 20px;
-            float: right;
-            padding: 5px 20px;
-            border: 3px solid $blue;
-            color: $blue;
-            font-weight: 600;
-            text-decoration: none;
-            @include transition(500ms);
-            &:hover {
-                border-radius: 40px;
-                background-color: $blue;
-                color: $white;
-                @include transition(500ms);
-
-            }
-
-        }
-        .hs-menu-children-wrapper {
-            border-radius: 0px 0px 3px 3px;
         }
     }
 
