@@ -1,0 +1,185 @@
+//events
+
+.events {
+    .logo-nav .custom-menu-primary .hs-menu-wrapper > ul li a {
+        color: white;
+    }
+    .h1 {
+        text-align:left;
+        h1 {
+            margin-bottom: 0px!important;
+        }
+        h3 {
+            -webkit-margin-before: 0px!important;
+        }
+    }
+    .red {
+        .speaker {
+            @include ninesixty-margin(64px);
+        }
+        img {
+            @media screen and (max-width: $tablet) {
+                float: none!important;
+                display: block; 
+                margin-left: auto; 
+                margin-right: auto;
+            }
+        }
+    }
+    .post {
+        @include ninesixty-margin(24px);
+        a {
+            font-weight: 600;
+            text-decoration: none;
+            color: $cyan;
+            @include transition(200ms);
+            &:hover {
+                color: $cyan-hover
+            }
+        }
+        .event-map {
+            margin-top: 48px;
+        }
+        li {
+            font-size: 18px;
+            line-height: 2;
+        }
+    }
+    .listings {
+        @include teneighty-margin(64px);
+        .event-listing {
+            transition: all 200ms ease-in;
+            -webkit-transition: all 200ms ease-in;
+            -ms-transition: all 200ms ease-in;
+            -moz-transition: all 200ms ease-in;
+            &:hover {
+                z-index: 2;
+                -webkit-transition: all 200ms ease-in;
+                -webkit-transform: scale(1.05);
+                -ms-transition: all 200ms ease-in;
+                -ms-transform: scale(1.05);
+                -moz-transition: all 200ms ease-in;
+                -moz-transform: scale(1.05);
+                transition: all 200ms ease-in;
+                transform: scale(1.05);
+            }
+            a {
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    font-weight: 500;
+                }
+            .content {
+                color: $white;
+                background-size: cover;
+                background-repeat: none;
+                padding: 10px!important;
+                margin-bottom: 24px;
+                height: 250px;
+                h4 {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+            }
+            }
+        }
+    }
+    .center {
+        text-align: center;
+    }
+    .grey-section {
+        background-color: $grey;
+        color: $black;
+    
+    }
+    .wide {
+        @include ninesixty-margin(40px);
+    }
+    .wider {
+        @include teneighty-margin(40px);
+    }
+    .events-form {
+        @include sixninety-margin(40px);
+        margin:20px;
+        padding: 0px 20px;
+        fieldset {
+            margin: 10px auto;
+    
+        }
+        .hs-form-field {
+            margin: 20px auto;
+        }
+    
+        select {
+            width: 100%;
+            height: 48px;
+            border: 1px solid #d8d8d8;
+            font: {
+                size: 18px;
+            }
+            margin: 20px auto;
+        }
+        
+        ul input {
+            width: unset;
+        }
+    
+        li {
+            font-size: 18px;
+        }
+    
+        input {
+            margin: 10px auto;
+            width: 100%;
+            border: 1px solid #d8d8d8;
+            border-radius: 3px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            &[type="submit"]{
+                color: $white;
+                background-color: $cyan;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                @include transition(.5s);
+                &:hover {
+                    background-color: $cyan-hover;
+                    text-shadow:0px 0px 10px rgba(0, 0, 0, 0.20);
+    
+                }
+            }
+        }
+        label {
+            margin: 10px auto;
+        }
+        .hs_submit {
+            max-width: 500px;
+            margin: 0 auto;
+            
+        }
+    }
+    .cta {
+        margin: 64px auto 0px auto;
+    }
+    .details {
+        margin: 48px auto;
+        .event-image {
+            text-align: center;
+            max-width: 690px;
+            max-height: 400px;
+        }
+        .row {
+            .staggered {
+                margin-left: 0px !important;
+            }
+            h3 {
+                -webkit-margin-before: 0px !important;
+            }
+            img {
+                max-width: 200px;
+                text-align: center;
+            }
+        }
+    }
+}
