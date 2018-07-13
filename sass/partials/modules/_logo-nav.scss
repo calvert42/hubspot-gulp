@@ -11,25 +11,26 @@
     background: $white;
     color: $blue;
     padding: 15px 0px 0px 0px;
-    .top-cta {
-        margin: 8px 20px;
-        float: right;
-        padding: 5px 20px;
-        border: 3px solid $blue;
-        color: $blue;
-        font-weight: 600;
-        text-decoration: none;
-        @include transition(500ms);
-        &:hover {
-            border-radius: 40px;
-            background-color: $blue;
-            color: $white;
-            @include transition(500ms);
-
-        }
-
-    }
     .hs-menu-children-wrapper {
         border-radius: 0px 0px 3px 3px;
     }
+}
+
+.top-cta {
+    margin: 8px 20px;
+    float: right;
+    padding: 5px 20px;
+    border: 3px solid $blue;
+    color: $blue;
+    font-weight: 600;
+    text-decoration: none;
+    @include transition(500ms);
+    &:hover {
+        border-radius: 40px;
+        background-color: $blue;
+        color: $white;
+        @include transition(500ms);
+
+    }
+
 }

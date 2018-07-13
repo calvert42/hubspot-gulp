@@ -1,8 +1,11 @@
 @charset "UTF-8";
 /*
-This is the master stylesheet for Accelerance. 
+Author: Grant Foster
+Contact: gfoster92@gmail.com
 
+This is the master stylesheet for Accelerance. I'm sorry whoever comes after me - I'm new at this - please don't tell anyone how bad I am at coding. Reach out to me if you need some help.
 
+Now I'm using gulp!
 */
 .events .h1 {
   text-align: left; }
@@ -713,6 +716,14 @@ This is the master stylesheet for Accelerance.
       .popupoverlay .popupform {
         padding: 20px; } }
 
+#accordion h4 {
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  padding: 10px 0px 10px 0px;
+  font-size: 24px; }
+  #accordion h4 i {
+    float: right; }
+
 h1 {
   font-size: 64px;
   font-weight: 500; }
@@ -757,6 +768,21 @@ body {
 .hide {
   display: none !important; }
 
+.skinny {
+  max-width: 690px;
+  margin: 40px auto !important;
+  float: none !important; }
+
+.wide {
+  max-width: 960px;
+  margin: 40px auto !important;
+  float: none !important; }
+
+.wider {
+  max-width: 1080px;
+  margin: 40px auto !important;
+  float: none !important; }
+
 .right {
   float: right !important;
   margin-bottom: 36px; }
@@ -766,13 +792,8 @@ body {
   .center-space {
     margin: 30px auto; }
 
-.as-seen-in {
-  max-width: 1080px;
-  margin: 36px auto !important;
-  float: none !important; }
-
-.hs-error-msgs {
-  color: red; }
+.light-grey {
+  background-color: #e8e8e8; }
 
 .red {
   background-color: #b73e43;
@@ -791,20 +812,13 @@ body {
     background-repeat: no-repeat;
     background-position: bottom; }
 
-.skinny {
-  max-width: 690px;
-  margin: 40px auto !important;
-  float: none !important; }
-
-.wide {
-  max-width: 960px;
-  margin: 40px auto !important;
-  float: none !important; }
-
-.wider {
+.as-seen-in {
   max-width: 1080px;
-  margin: 40px auto !important;
+  margin: 36px auto !important;
   float: none !important; }
+
+.hs-error-msgs {
+  color: red; }
 
 .border-box {
   border: #d8d8d8 solid 1px;

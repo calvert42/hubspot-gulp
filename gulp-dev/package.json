@@ -1,0 +1,18 @@
+{
+  "name": "gulp-dev",
+  "version": "1.0.0",
+  "description": "My gulp taskrunner for Accelerance",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grant Foster",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^8.6.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}

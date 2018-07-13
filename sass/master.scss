@@ -1,8 +1,12 @@
 /*
-This is the master stylesheet for Accelerance. 
+Author: Grant Foster
+Contact: gfoster92@gmail.com
 
+This is the master stylesheet for Accelerance. I'm sorry whoever comes after me - I'm new at this - please don't tell anyone how bad I am at coding. Reach out to me if you need some help.
 
+Now I'm using gulp!
 */
+
 
 //variables
 
@@ -16,7 +20,7 @@ This is the master stylesheet for Accelerance.
 
 @import 'partials/modules/modules';
 
-//general
+//generals
 
 @import 'partials/type/headers';
 
@@ -28,78 +32,20 @@ This is the master stylesheet for Accelerance.
 
 @import 'partials/elements/buttons';
 
-.hide {
-    display:none!important;
-}
+//blocks
 
-.right {
-    float: right !important;
-    margin-bottom: 36px;
-}
+@import 'partials/elements/blocks';
 
-.center {
-    text-align: center;
-    &-space {
-        margin: 30px auto;
-    }
-}
 
 .as-seen-in {
     @include teneighty-margin(36px);
 }
 
 .hs-error-msgs {
-    color: red;
+    color: red; 
 }
 
-.red {
-    background-color: $red;
-    color: $white;
-}
-
-.blue {
-    background-color: $blue;
-    color: $white;
-}
-
-.purple {
-    background-color: $purple;
-    color: white;
-    &-shape {
-        background-image: url(https://www.accelerance.com/hubfs/ACC2017/home/purple.svg);
-        background-size:100%;
-        background-repeat: no-repeat;
-        background-position: bottom;
-    }
-}
-
-.skinny {
-    @include sixninety-margin(40px);
-}
-
-.wide {
-    @include ninesixty-margin(40px);
-}
-
-.wider {
-    @include teneighty-margin(40px);
-}
-
-
-//elements
-
-.border-box {
-    border: $grey solid 1px;
-    border-radius: 3px; 
-    &--top-purple {
-        border-top: 5px solid $purple;
-    }   
-    &--top-red {
-        border-top: 5px solid $red;
-    }
-}
-
-//animations
+//animations 
 
 .zoom {
     @include zoom(200ms);
