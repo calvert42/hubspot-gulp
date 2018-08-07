@@ -781,6 +781,10 @@ Now I'm using gulp!
 	color: #76CEE4;
 }
 
+.showcase-intro {
+	padding: 20px;
+}
+
 .launcher {
 	margin: 40px auto;
 	padding: 20px;
@@ -1057,6 +1061,22 @@ Now I'm using gulp!
 	float: right;
 }
 
+.tab-container {
+	font-size: 0;
+}
+
+.tab-container .tab {
+	display: inline-block;
+	text-align: center;
+	padding: 0px 20px;
+	border-right: 1px solid #d8d8d8;
+}
+
+.tab-container .tab--active {
+	-webkit-box-shadow: 0 -3px 0px 0px #1FBDE5 inset;
+	        box-shadow: 0 -3px 0px 0px #1FBDE5 inset;
+}
+
 h1 {
 	font-size: 64px;
 	font-weight: 500;
@@ -1116,6 +1136,14 @@ body {
 	margin-right: 34px;
 }
 
+p a {
+	color: #1FBDE5;
+}
+
+.no-margin {
+	margin: 0;
+}
+
 .cta {
 	padding: 10px 40px;
 	border-radius: 40px;
@@ -1160,6 +1188,11 @@ body {
 
 .center-space {
 	margin: 30px auto;
+}
+
+.vertical-space {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important;
 }
 
 .light-grey {
