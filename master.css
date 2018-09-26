@@ -880,7 +880,7 @@ Now I'm using gulp!
 
 .article-header {
 	height: 200px;
-	background-position: center;
+	background-position: top;
 	background-size: cover;
 	border-radius: 3px 3px 0px 0px;
 }
