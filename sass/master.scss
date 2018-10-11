@@ -70,6 +70,9 @@ Now I'm using gulp!
         repeat: no-repeat;
         size: cover;
         }
+        @media screen and (max-width:768px) {
+            background-attachment: scroll;
+        }
     .header-container {
         .h1 {
             padding: 0px 0px;
@@ -879,7 +882,6 @@ Now I'm using gulp!
     }
 
     .blogbody {
-        @include ninesixty-margin(48px);
         line-height: 2;
     }
 

@@ -1155,6 +1155,11 @@ p a {
 	color: white !important;
 }
 
+.cta--purple {
+	background-color: #8E2B7C;
+	color: white !important;
+}
+
 .hide {
 	display: none !important;
 }
@@ -1300,6 +1305,12 @@ p a {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+	.header-container-wrapper {
+		background-attachment: scroll;
+	}
 }
 
 .header-container-wrapper .header-container .h1 {
@@ -2173,9 +2184,6 @@ p a {
 }
 
 .blogbody {
-	max-width: 960px;
-	margin: 48px auto !important;
-	float: none !important;
 	line-height: 2;
 }
 
