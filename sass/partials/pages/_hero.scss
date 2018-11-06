@@ -1,0 +1,77 @@
+.hero-pages {
+    .resource-filters {
+        ul.filters {
+            padding: 0px;
+            li {
+                display: inline;
+                margin: 0px;
+                padding: 5px 10px;
+                cursor: pointer;
+                border: 1px solid $grey;
+                border-radius: 30px;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                font-weight: 500;
+                color: $link-grey;
+                @media screen and (max-width: $tablet) {
+                    display: block!important;
+                }
+                &.active {
+                    background-color: $cyan-hover;
+                    color: white;
+                    border: none;
+                }
+            }
+        }
+        ul.filters li::before  {
+            content: none;
+            margin: 0px;
+        }
+    }
+
+    .resource {
+        width: 161px;
+        margin-bottom: 10px;
+        @media screen and (max-width: $tablet) {
+            width: 100%!important;
+        }
+        .content {
+            padding: 20px;
+            @media screen and (max-width: $tablet) {
+                padding: 10px;
+            }
+            h4 {
+                margin: 10px auto;
+            }
+        }
+        .header-image-container {
+            overflow: hidden;
+            max-height: 350px;
+        }
+        &--width2 {
+            width: 161px * 2;
+        }
+        &--width3 {
+            width: 161px * 3;
+        }
+        &--width4 {
+            width: 161px * 4;
+        }
+        &--width5 {
+            width: 161px * 5;
+        }
+        &--width6 {
+            width: (161px * 6) + 20px;
+        }
+    }
+
+    .resource.stamp .content {
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: 20px;
+        }
+    }
+}

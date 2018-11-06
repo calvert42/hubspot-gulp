@@ -785,6 +785,103 @@ Now I'm using gulp!
 	padding: 20px;
 }
 
+.hero-pages .resource-filters ul.filters {
+	padding: 0px;
+}
+
+.hero-pages .resource-filters ul.filters li {
+	display: inline;
+	margin: 0px;
+	padding: 5px 10px;
+	cursor: pointer;
+	border: 1px solid #d8d8d8;
+	border-radius: 30px;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	font-weight: 500;
+	color: #999999;
+}
+
+@media screen and (max-width: 768px) {
+	.hero-pages .resource-filters ul.filters li {
+		display: block !important;
+	}
+}
+
+.hero-pages .resource-filters ul.filters li.active {
+	background-color: #76CEE4;
+	color: white;
+	border: none;
+}
+
+.hero-pages .resource-filters ul.filters li::before {
+	content: none;
+	margin: 0px;
+}
+
+.hero-pages .resource {
+	width: 161px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.hero-pages .resource {
+		width: 100% !important;
+	}
+}
+
+.hero-pages .resource .content {
+	padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.hero-pages .resource .content {
+		padding: 10px;
+	}
+}
+
+.hero-pages .resource .content h4 {
+	margin: 10px auto;
+}
+
+.hero-pages .resource .header-image-container {
+	overflow: hidden;
+	max-height: 350px;
+}
+
+.hero-pages .resource--width2 {
+	width: 322px;
+}
+
+.hero-pages .resource--width3 {
+	width: 483px;
+}
+
+.hero-pages .resource--width4 {
+	width: 644px;
+}
+
+.hero-pages .resource--width5 {
+	width: 805px;
+}
+
+.hero-pages .resource--width6 {
+	width: 986px;
+}
+
+.hero-pages .resource.stamp .content {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.hero-pages .resource.stamp .content img {
+	margin-right: 20px;
+}
+
 .launcher {
 	margin: 40px auto;
 	padding: 20px;
@@ -1146,7 +1243,7 @@ p a {
 
 @media screen and (max-width: 768px) {
 	.mobile-padding {
-		padding: 20px;
+		padding: 10px;
 	}
 }
 
