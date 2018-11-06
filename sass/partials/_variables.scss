@@ -121,3 +121,10 @@ transform: translateY(-30%);
         transform: scale(1.05);
     }
 }
+
+@mixin transition($seconds) {
+    transition: $seconds;
+    -webkit-transition: all $seconds ease-in;
+    -ms-transition: all $seconds ease-in;
+    -moz-transition: all $seconds ease-in;
+}

@@ -12,9 +12,6 @@ Now I'm using gulp!
 
 @import 'partials/variables';
 
-//pages
-
-@import 'partials/pages/pages';
 
 //modules
 
@@ -2767,3 +2764,5 @@ Now I'm using gulp!
                 background-color: $blue;
             }
         }
+
+@import 'partials/pages/pages';
