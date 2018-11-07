@@ -4341,7 +4341,10 @@ blockquote p:first-letter {
 
 @media screen and (max-width: 768px) {
 	.hero-pages .resource-filters ul.filters li {
-		display: block !important;
+		display: -webkit-inline-box !important;
+		display: -ms-inline-flexbox !important;
+		display: inline-flex !important;
+		margin-bottom: 5px;
 	}
 }
 
@@ -4359,6 +4362,16 @@ blockquote p:first-letter {
 .hero-pages .resource {
 	width: 161px;
 	margin-bottom: 10px;
+}
+
+.hero-pages .resource .mobile-filters {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.hero-pages .resource .mobile-filters {
+		display: block;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -4379,6 +4392,12 @@ blockquote p:first-letter {
 
 .hero-pages .resource .content h4 {
 	margin: 10px auto;
+}
+
+@media screen and (max-width: 768px) {
+	.hero-pages .resource .content .stamp-text {
+		width: 100%;
+	}
 }
 
 .hero-pages .resource .header-image-container {
@@ -4410,9 +4429,19 @@ blockquote p:first-letter {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+	.hero-pages .resource.stamp .content {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
 }
 
 .hero-pages .resource.stamp .content img {
@@ -4420,6 +4449,8 @@ blockquote p:first-letter {
 }
 
 .password-prompt {
+	background-image: url(https://www.accelerance.com/hubfs/password-page/bg.svg);
+	background-size: 100% auto;
 	background-color: #08374a;
 	color: white;
 }
@@ -4457,6 +4488,10 @@ blockquote p:first-letter {
 	width: initial;
 }
 
+.password-prompt .main .error-msg {
+	color: red;
+}
+
 .password-prompt .main input {
 	border: none;
 	background-image: none;
@@ -4472,7 +4507,7 @@ blockquote p:first-letter {
 	width: 85%;
 	font-size: 18px;
 	border-radius: 30px;
-	margin: 36px auto;
+	margin: 36px auto !important;
 }
 
 .password-prompt .main input[type=submit] {
@@ -4483,6 +4518,7 @@ blockquote p:first-letter {
 	background-color: #1FBDE5;
 	border-radius: 30px;
 	width: 50%;
+	-webkit-appearance: none;
 	cursor: pointer;
 	-webkit-transition: 0.2s;
 	transition: 0.2s;
@@ -4497,6 +4533,18 @@ blockquote p:first-letter {
 
 .password-prompt .main input:focus {
 	outline: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.password-prompt .main {
+		padding: 10px;
+	}
+	.password-prompt .main .logo-container img {
+		width: 300px;
+	}
+	.password-prompt .main input[type=submit] {
+		width: 70%;
+	}
 }
 
 /*# sourceMappingURL=maps/master.css.map */

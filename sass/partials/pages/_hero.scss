@@ -16,7 +16,8 @@
                 font-weight: 500;
                 color: $link-grey;
                 @media screen and (max-width: $tablet) {
-                    display: block!important;
+                    display: inline-flex!important;
+                    margin-bottom: 5px;
                 }
                 &.active {
                     background-color: $cyan-hover;
@@ -34,6 +35,12 @@
     .resource {
         width: 161px;
         margin-bottom: 10px;
+        .mobile-filters {
+            display: none;
+            @media screen and (max-width: $tablet) {
+                display: block;
+            }
+        }
         @media screen and (max-width: $tablet) {
             width: 100%!important;
         }
@@ -44,6 +51,11 @@
             }
             h4 {
                 margin: 10px auto;
+            }
+            .stamp-text {
+                @media screen and (max-width: $tablet) {
+                    width: 100%;    
+                }
             }
         }
         .header-image-container {
@@ -69,7 +81,11 @@
 
     .resource.stamp .content {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        @media screen and (max-width: $tablet) {
+            justify-content: center;
+        }
         img {
             margin-right: 20px;
         }
