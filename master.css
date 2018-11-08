@@ -4322,6 +4322,12 @@ blockquote p:first-letter {
 	padding: 20px;
 }
 
+.hero-pages .header-container-wrapper {
+	background-image: none;
+	background-image: none;
+	background-color: #08374a;
+}
+
 .hero-pages .resource-filters ul.filters {
 	padding: 0px;
 }
@@ -4405,6 +4411,15 @@ blockquote p:first-letter {
 	max-height: 350px;
 }
 
+.hero-pages .resource.meeting .header-image-container {
+	background-color: #1FBDE5;
+	background-image: url(https://www.accelerance.com/hubfs/hero%20pages/meetings.svg);
+	background-size: 75%;
+	background-repeat: no-repeat;
+	height: 250px;
+	background-position: left center;
+}
+
 .hero-pages .resource--width2 {
 	width: 322px;
 }
@@ -4423,6 +4438,10 @@ blockquote p:first-letter {
 
 .hero-pages .resource--width6 {
 	width: 986px;
+}
+
+.hero-pages .resource.stamp {
+	display: inline-block;
 }
 
 .hero-pages .resource.stamp .content {
@@ -4446,6 +4465,25 @@ blockquote p:first-letter {
 
 .hero-pages .resource.stamp .content img {
 	margin-right: 20px;
+}
+
+.hero-pages .equal-heights {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.hero-pages .equal-heights .stamp {
+	margin-right: 36px;
+}
+
+@media screen and (max-width: 768px) {
+	.hero-pages .equal-heights .stamp {
+		width: 100% !important;
+		margin: 0px 0px 10px 0px;
+	}
 }
 
 .password-prompt {

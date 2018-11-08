@@ -1,4 +1,9 @@
 .hero-pages {
+    .header-container-wrapper {
+        background-image: none;
+        background-image: none;
+        background-color: $blue;
+    }
     .resource-filters {
         ul.filters {
             padding: 0px;
@@ -62,6 +67,16 @@
             overflow: hidden;
             max-height: 350px;
         }
+        &.meeting {
+            .header-image-container {
+                background-color: $cyan;
+                background-image: url(https://www.accelerance.com/hubfs/hero%20pages/meetings.svg);
+                background-size: 75%;
+                background-repeat: no-repeat;
+                height: 250px;
+                background-position: left center;
+            }
+        }
         &--width2 {
             width: 161px * 2;
         }
@@ -79,15 +94,29 @@
         }
     }
 
-    .resource.stamp .content {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        @media screen and (max-width: $tablet) {
-            justify-content: center;
-        }
-        img {
-            margin-right: 20px;
+    .resource.stamp {
+        display: inline-block;
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            @media screen and (max-width: $tablet) {
+                justify-content: center;
+            }
+            img {
+                margin-right: 20px;
+            }
         }
     }
+    .equal-heights {
+        display: flex;
+        flex-wrap: wrap;
+        .stamp {
+            margin-right: 36px;
+            @media screen and (max-width: $tablet) {
+                width: 100%!important;
+                margin: 0px 0px 10px 0px;
+            }
+        }
+      }
 }
