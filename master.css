@@ -541,6 +541,26 @@ p a {
 	transform: scale(1.05);
 }
 
+.zoom-subtle {
+	-webkit-transition: 100ms;
+	transition: 100ms;
+	-webkit-transition: all 100ms ease-in;
+	-ms-transition: all 100ms ease-in;
+	-moz-transition: all 100ms ease-in;
+}
+
+.zoom-subtle:hover {
+	z-index: 2;
+	-webkit-transition: all 100ms ease-in;
+	-webkit-transform: scale(1.01);
+	-ms-transition: all 100ms ease-in;
+	-ms-transform: scale(1.01);
+	-moz-transition: all 100ms ease-in;
+	-moz-transform: scale(1.01);
+	transition: all 100ms ease-in;
+	transform: scale(1.01);
+}
+
 .widget-type-rich_text {
 	padding: 0px 20px;
 }
@@ -4330,6 +4350,7 @@ blockquote p:first-letter {
 
 .hero-pages .resource-filters ul.filters {
 	padding: 0px;
+	margin-bottom: 24px;
 }
 
 .hero-pages .resource-filters ul.filters li {
@@ -4394,6 +4415,36 @@ blockquote p:first-letter {
 	.hero-pages .resource .content {
 		padding: 10px;
 	}
+}
+
+.hero-pages .resource .content .tag {
+	color: white;
+	display: inline-block;
+	border-radius: 30px;
+	font-size: 14px;
+	padding: 5px 10px;
+	font-weight: 600;
+	margin: 7px 0px 0px 0px;
+}
+
+.hero-pages .resource .content .tag.ebook {
+	background-color: #08374a;
+}
+
+.hero-pages .resource .content .tag.blog {
+	background-color: #33CC66;
+}
+
+.hero-pages .resource .content .tag.guide {
+	background-color: #1FBDE5;
+}
+
+.hero-pages .resource .content .tag.note {
+	background-color: #b73e43;
+}
+
+.hero-pages .resource .content .tag.podcast {
+	background-color: #8E2B7C;
 }
 
 .hero-pages .resource .content h4 {
