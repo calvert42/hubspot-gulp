@@ -48,6 +48,10 @@ Now I'm using gulp!
     @include zoom(200ms);
 }
 
+.zoom-subtle {
+    @include zoom-subtle(100ms);
+}
+
 //colors and modifiers
 
 .widget-type-rich_text {

@@ -128,3 +128,21 @@ transform: translateY(-30%);
     -ms-transition: all $seconds ease-in;
     -moz-transition: all $seconds ease-in;
 }
+
+@mixin zoom-subtle($milliseconds) {
+    transition: $milliseconds;
+    -webkit-transition: all $milliseconds ease-in;
+    -ms-transition: all $milliseconds ease-in;
+    -moz-transition: all $milliseconds ease-in;
+    &:hover {
+        z-index: 2;
+        -webkit-transition: all $milliseconds ease-in;
+        -webkit-transform: scale(1.01);
+        -ms-transition: all $milliseconds ease-in;
+        -ms-transform: scale(1.01);
+        -moz-transition: all $milliseconds ease-in;
+        -moz-transform: scale(1.01);
+        transition: all $milliseconds ease-in;
+        transform: scale(1.01);
+    }
+}
