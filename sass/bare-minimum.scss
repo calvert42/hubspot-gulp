@@ -1,0 +1,91 @@
+@import 'partials/variables';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack;
+    p {
+        font-size: 1.1em;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    .blue {
+        background-color: $blue;
+        color: white;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        @for $i from 1 through 12 {
+            .span#{$i} { 
+                grid-column: span $i;
+            }
+        }
+        &.partner-grid {
+            margin: 20px auto;
+            border: 1px solid $light-grey;
+            .span3 {
+                padding: 10px;
+                border: 1px solid $light-grey;
+            }
+        }
+        &.skinny {
+            max-width: 690px;
+            margin: 0 auto;
+        }
+        &.wide {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        &.wider {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 690px) {
+            padding: 0px 10px;
+        }
+        .nav {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            .nav-menu {
+                @media screen and (max-width: 953px) {
+                    display: none;
+                }
+            }
+            ul {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0px 20px;;
+                li {
+                display: inline;
+                padding: 10px;
+                    // child li's of menu
+                    a {
+                        text-decoration: none;
+                        color: $blue;
+                        &:hover {
+                            color: $blue-hover;
+                        }
+                    }
+                    &.hs-menu-depth-2 {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .header {
+            padding: 20px 0px;
+        }
+        .main {
+            h2 {
+                font-size: 2em;
+                font-weight: 300;
+                color: $red;
+            }
+        }
+    }
+}

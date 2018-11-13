@@ -1,0 +1,158 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Avenir, "Avenir W01", sans-serif;
+}
+
+body p {
+	font-size: 1.1em;
+}
+
+body h1 {
+	font-size: 3em;
+}
+
+body .blue {
+	background-color: #08374a;
+	color: white;
+}
+
+body .container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+body .container .span1 {
+	grid-column: span 1;
+}
+
+body .container .span2 {
+	grid-column: span 2;
+}
+
+body .container .span3 {
+	grid-column: span 3;
+}
+
+body .container .span4 {
+	grid-column: span 4;
+}
+
+body .container .span5 {
+	grid-column: span 5;
+}
+
+body .container .span6 {
+	grid-column: span 6;
+}
+
+body .container .span7 {
+	grid-column: span 7;
+}
+
+body .container .span8 {
+	grid-column: span 8;
+}
+
+body .container .span9 {
+	grid-column: span 9;
+}
+
+body .container .span10 {
+	grid-column: span 10;
+}
+
+body .container .span11 {
+	grid-column: span 11;
+}
+
+body .container .span12 {
+	grid-column: span 12;
+}
+
+body .container.partner-grid {
+	margin: 20px auto;
+	border: 1px solid #e8e8e8;
+}
+
+body .container.partner-grid .span3 {
+	padding: 10px;
+	border: 1px solid #e8e8e8;
+}
+
+body .container.skinny {
+	max-width: 690px;
+	margin: 0 auto;
+}
+
+body .container.wide {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+body .container.wider {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 690px) {
+	body .container {
+		padding: 0px 10px;
+	}
+}
+
+body .container .nav {
+	background-color: white;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	padding: 10px;
+}
+
+@media screen and (max-width: 953px) {
+	body .container .nav .nav-menu {
+		display: none;
+	}
+}
+
+body .container .nav ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0px 20px;
+}
+
+body .container .nav ul li {
+	display: inline;
+	padding: 10px;
+}
+
+body .container .nav ul li a {
+	text-decoration: none;
+	color: #08374a;
+}
+
+body .container .nav ul li a:hover {
+	color: #136881;
+}
+
+body .container .nav ul li.hs-menu-depth-2 {
+	display: none;
+}
+
+body .container .header {
+	padding: 20px 0px;
+}
+
+body .container .main h2 {
+	font-size: 2em;
+	font-weight: 300;
+	color: #b73e43;
+}
+
+/*# sourceMappingURL=maps/bare-minimum.css.map */

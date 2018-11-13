@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 
 // CSS via Sass and Autoprefixer
 gulp.task('css', function() {
-	return gulp.src(scss + 'master.scss')
+	return gulp.src(scss + 'bare-minimum.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
 		outputStyle: 'expanded', 
