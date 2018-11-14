@@ -59,20 +59,33 @@ body {
                 display: flex;
                 list-style: none;
                 margin: 0;
-                padding: 0px 20px;;
+                padding: 0px 20px;
+                &.hs-menu-children-wrapper {
+                    position: absolute;
+                    display: block;
+                    display: none;
+                    padding: 0px;
+                    li {
+                        background-color: $blue;
+                        @include transition(100ms)
+                        &:hover {
+                            background-color: $blue-hover;
+                        }
+                        a {
+                            color: white;
+                            &:hover {
+                                color: white;
+                            }
+                            
+                        }
+                    }
+                }
                 li {
-                display: inline;
                 padding: 10px;
                     // child li's of menu
                     a {
                         text-decoration: none;
                         color: $blue;
-                        &:hover {
-                            color: $blue-hover;
-                        }
-                    }
-                    &.hs-menu-depth-2 {
-                        display: none;
                     }
                 }
             }

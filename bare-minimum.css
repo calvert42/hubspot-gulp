@@ -127,22 +127,41 @@ body .container .nav ul {
 	padding: 0px 20px;
 }
 
+body .container .nav ul.hs-menu-children-wrapper {
+	position: absolute;
+	display: block;
+	display: none;
+	padding: 0px;
+}
+
+body .container .nav ul.hs-menu-children-wrapper li {
+	background-color: #08374a;
+	-webkit-transition: 100ms;
+	transition: 100ms;
+	-webkit-transition: all 100ms ease-in;
+	-ms-transition: all 100ms ease-in;
+	-moz-transition: all 100ms ease-in;
+}
+
+body .container .nav ul.hs-menu-children-wrapper li:hover {
+	background-color: #136881;
+}
+
+body .container .nav ul.hs-menu-children-wrapper li a {
+	color: white;
+}
+
+body .container .nav ul.hs-menu-children-wrapper li a:hover {
+	color: white;
+}
+
 body .container .nav ul li {
-	display: inline;
 	padding: 10px;
 }
 
 body .container .nav ul li a {
 	text-decoration: none;
 	color: #08374a;
-}
-
-body .container .nav ul li a:hover {
-	color: #136881;
-}
-
-body .container .nav ul li.hs-menu-depth-2 {
-	display: none;
 }
 
 body .container .header {
