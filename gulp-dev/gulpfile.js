@@ -3,7 +3,9 @@ var gulp = require('gulp'),
 	autoprefixer = require('autoprefixer'),
 	postcss = require('gulp-postcss'),
 	sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
+	sourcemaps = require('gulp-sourcemaps'),
+	prompt = require('gulp-prompt'),
+	
 
 	// Only work with new or updated files
 	newer = require('gulp-newer'),
@@ -15,7 +17,7 @@ var gulp = require('gulp'),
 
 // CSS via Sass and Autoprefixer
 gulp.task('css', function() {
-	return gulp.src(scss + 'bare-minimum.scss')
+	return gulp.src(scss + 'master.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
 		outputStyle: 'expanded', 

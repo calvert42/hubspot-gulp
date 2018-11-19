@@ -4,6 +4,10 @@ body {
 	font-family: Avenir, "Avenir W01", sans-serif;
 }
 
+body a {
+	color: #1FBDE5;
+}
+
 body p {
 	font-size: 1.1em;
 }
@@ -26,48 +30,96 @@ body .container .span1 {
 	grid-column: span 1;
 }
 
+body .container .span1 img {
+	width: 100%;
+}
+
 body .container .span2 {
 	grid-column: span 2;
+}
+
+body .container .span2 img {
+	width: 100%;
 }
 
 body .container .span3 {
 	grid-column: span 3;
 }
 
+body .container .span3 img {
+	width: 100%;
+}
+
 body .container .span4 {
 	grid-column: span 4;
+}
+
+body .container .span4 img {
+	width: 100%;
 }
 
 body .container .span5 {
 	grid-column: span 5;
 }
 
+body .container .span5 img {
+	width: 100%;
+}
+
 body .container .span6 {
 	grid-column: span 6;
+}
+
+body .container .span6 img {
+	width: 100%;
 }
 
 body .container .span7 {
 	grid-column: span 7;
 }
 
+body .container .span7 img {
+	width: 100%;
+}
+
 body .container .span8 {
 	grid-column: span 8;
+}
+
+body .container .span8 img {
+	width: 100%;
 }
 
 body .container .span9 {
 	grid-column: span 9;
 }
 
+body .container .span9 img {
+	width: 100%;
+}
+
 body .container .span10 {
 	grid-column: span 10;
+}
+
+body .container .span10 img {
+	width: 100%;
 }
 
 body .container .span11 {
 	grid-column: span 11;
 }
 
+body .container .span11 img {
+	width: 100%;
+}
+
 body .container .span12 {
 	grid-column: span 12;
+}
+
+body .container .span12 img {
+	width: 100%;
 }
 
 body .container.partner-grid {
@@ -171,7 +223,59 @@ body .container .header {
 body .container .main h2 {
 	font-size: 2em;
 	font-weight: 300;
+}
+
+body .container .main h2.red {
 	color: #b73e43;
+}
+
+body .border-box {
+	background-color: white;
+	color: #333333;
+	border: #d8d8d8 solid 1px;
+	border-radius: 3px;
+	margin-bottom: 11px;
+}
+
+body .border-box--top-purple {
+	border-top: 5px solid #8E2B7C;
+}
+
+body .border-box--top-red {
+	border-top: 5px solid #b73e43;
+}
+
+body .border-box--top-blue {
+	border-top: 5px solid #08374a;
+}
+
+body .border-box--top-grey {
+	border-top: 5px solid #d8d8d8;
+}
+
+body .flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+body .padding {
+	padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+	body .padding {
+		padding: 10px;
+	}
+}
+
+body.rapid-referral .border-box h2 {
+	font-size: 1.5em;
 }
 
 /*# sourceMappingURL=maps/bare-minimum.css.map */

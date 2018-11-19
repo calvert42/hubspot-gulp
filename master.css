@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*
+AYEEEEEE!
 Author: Grant Foster
 Contact: gfoster92@gmail.com
 
@@ -4447,6 +4448,18 @@ blockquote p:first-letter {
 	background-color: #8E2B7C;
 }
 
+.hero-pages .resource .content .tag.proposal {
+	background-color: tomato;
+}
+
+.hero-pages .resource .content .tag.photo {
+	background-color: goldenrod;
+}
+
+.hero-pages .resource .content .tag.case-study {
+	background-color: lightseagreen;
+}
+
 .hero-pages .resource .content h4 {
 	margin: 10px auto;
 }
@@ -4520,6 +4533,10 @@ blockquote p:first-letter {
 
 .hero-pages .resource.stamp .content img {
 	margin-right: 20px;
+}
+
+.hero-pages .resource.stamp .content.top-resource {
+	display: block;
 }
 
 .hero-pages .equal-heights {

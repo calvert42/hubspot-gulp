@@ -16,6 +16,8 @@
     "gulp-sourcemaps": "^2.6.4"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-http-put": "^0.2.1",
+    "gulp-prompt": "^1.1.0"
   }
 }

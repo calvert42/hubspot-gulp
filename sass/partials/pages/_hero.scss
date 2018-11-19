@@ -78,6 +78,15 @@
                 &.podcast {
                     background-color: $purple;
                 }
+                &.proposal {
+                    background-color: tomato;
+                }
+                &.photo {
+                    background-color: goldenrod;
+                }
+                &.case-study {
+                    background-color: lightseagreen;
+                }
             }
             h4 {
                 margin: 10px auto;
@@ -131,6 +140,9 @@
             }
             img {
                 margin-right: 20px;
+            }
+            &.top-resource {
+                display: block;
             }
         }
     }
