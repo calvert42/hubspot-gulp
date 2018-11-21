@@ -1,0 +1,40 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "HubL",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"brackets": [
+		["{%", "%}"],
+		["{{", "}}"]
+	],
+	"autoClosingPairs": [
+		{ "open": "{%", "close": "%}" },
+		{ "open": "{{", "close": "}}" }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.hubl",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.hubl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hubl",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.HTML"
+}

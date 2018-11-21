@@ -1,0 +1,12 @@
+.body {
+  margin: 0 auto !important;
+  float: none !important;
+  max-width: 1080px !important;
+}
+
+.body .cta {
+  color: white;
+  background-color: #08374a;
+  border-radius: 3px;
+  padding: 10px 40px;
+}

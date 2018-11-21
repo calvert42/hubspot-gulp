@@ -1,0 +1,10 @@
+.header-container-wrapper {
+  text-align: center;
+  color: white;
+  border-bottom: 4px solid #08374a;
+  background-image: url(http://www.accelerance.com/hubfs/ACC2017/bg4-compressor.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
