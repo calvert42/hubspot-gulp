@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,yBAA0B;EACtB,UAAU,EAAE,MAAM;EACd,KAAK,ECSD,OAAO;EDRX,aAAa,EAAE,iBAAe;EAE1B,gBAAK,EAAE,gEAAgE;EACvE,qBAAU,EAAE,KAAK;EACjB,iBAAM,EAAE,SAAS;EACjB,eAAI,EAAE,KAAK;;AAIvB,WAAY;EAEJ,gBAAK,ECEF,OAAO;;ADElB,aAAc;EACV,KAAK,ECRG,OAAO;EDUX,gBAAK,ECfF,OAAO",
-"sources": ["../sass/outsourcingrates.scss","../sass/partials/_variables.scss"],
-"names": [],
-"file": "outsourcingrates.css"
-}
