@@ -1,3 +1,4 @@
+/* reeeeeepepepepeppepepepe */
 @import 'partials/variables';
 
 body {
@@ -11,10 +12,78 @@ body {
         font-size: 1.1em;
     }
     h1 {
+
         font-size: 3em;
     }
     h3 {
         font-size: 1.5em;
+    }
+    .nav {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        @media screen and (max-width: 953px) {
+            justify-content: space-between;
+        }
+        .nav-menu {
+            @media screen and (max-width: 953px) {
+                display: block;
+                display: none;
+                width: 100%;
+            }
+            ul {
+                @media screen and (max-width: 953px) {
+                    display: block;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .mobile-menu {
+            display: none;
+            padding: 7px;
+            background-color: $blue;
+            color: white;
+            margin-right: 20px;
+            border-radius: 3px;
+            @media screen and (max-width: 953px) {
+                display: block;
+            }
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0px 20px;
+            &.hs-menu-children-wrapper {
+                position: absolute;
+                display: block;
+                display: none;
+                padding: 0px;
+                li {
+                    background-color: $blue;
+                    @include transition(100ms);
+                    &:hover {
+                        background-color: $blue-hover;
+                    }
+                    a {
+                        color: white;
+                        &:hover {
+                            color: white;
+                        }
+                        
+                    }
+                }
+            }
+            li {
+            padding: 10px;
+                // child li's of menu
+                a {
+                    text-decoration: none;
+                    color: $blue;
+                }
+            }
+        }
     }
     .blue {
         background-color: $blue;
@@ -63,51 +132,6 @@ body {
         }
         @media screen and (max-width: 690px) {
             padding: 0px 10px;
-        }
-        .nav {
-            background-color: white;
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            .nav-menu {
-                @media screen and (max-width: 953px) {
-                    display: none;
-                }
-            }
-            ul {
-                display: flex;
-                list-style: none;
-                margin: 0;
-                padding: 0px 20px;
-                &.hs-menu-children-wrapper {
-                    position: absolute;
-                    display: block;
-                    display: none;
-                    padding: 0px;
-                    li {
-                        background-color: $blue;
-                        @include transition(100ms);
-                        &:hover {
-                            background-color: $blue-hover;
-                        }
-                        a {
-                            color: white;
-                            &:hover {
-                                color: white;
-                            }
-                            
-                        }
-                    }
-                }
-                li {
-                padding: 10px;
-                    // child li's of menu
-                    a {
-                        text-decoration: none;
-                        color: $blue;
-                    }
-                }
-            }
         }
         .header {
             padding: 20px 0px;
