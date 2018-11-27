@@ -3,7 +3,7 @@
 
 require('dotenv').config();
 
-const { src, dest, watch, parallel } = require('gulp');
+const { src, dest, watch } = require('gulp');
 var sass = require('gulp-sass');
 var request = require('request');
 var fs = require('fs');
@@ -45,7 +45,7 @@ async function init(done) {
       }
     );
 
-    await fs.readFile('/Users/grantfoster/Documents/sites/accelerance/' + file.value.source, 'utf-8', function read(err, data) {
+    await fs.readFile('/Users/grantfoster/Documents/sites/accelerance/dist/' + file.value.source, 'utf-8', function read(err, data) {
       if (err) {
         throw err;
       }
@@ -80,10 +80,9 @@ async function init(done) {
   };
 
 function compile(done) {
-
     return src('../sass/*.scss')
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(dest('../'));
+    .pipe(dest('../dist/'));
     done();
 };
 
@@ -91,7 +90,7 @@ watch(['../sass/*.scss'], compile, function (done){
     done();
 });
 
-watch(['../*.css', '../*.html'], init, function (done){
+watch(['../dist/*.css', '../dist/*.html'], init, function (done){
     done();
 });
 
