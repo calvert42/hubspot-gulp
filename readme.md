@@ -55,6 +55,10 @@ Rapid Referral Master (html)
 Private Partner (html)
 Resources (html)
 ```
-Then simply use your arrows keys or start typing to search for any files that were added to the list in the gulpfile. Hit enter and your file will be submitted to the API. If you need to roll things back, for now, just do it from the Design Manager and then copy that code back into here.
+Then simply use your arrows keys or start typing to search for any files that were added to the list in the gulpfile. Hit enter and your file will be submitted to the API. If you need to roll things back, for now just do it from the Design Manager and then copy the rolled back code back into here.
+
+#### LiveReload
+
+As an extra bonus you can use this Chrome extension: [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) - for easy live reloading of tabs. Just get the extension and run the gulpfile. Once your gulpfile is running, click on the LiveReload extension icon in Chrome. The page will reload whenever a file is uploaded to Hubspot.
 
 If you are confused - I'm sorry and my email is gfoster92@gmail.com if you need some help.
