@@ -10,6 +10,7 @@ const { src, dest, watch } = require('gulp');
   var colors = require('colors');
   var prompts = require('prompts');
   var livereload = require('gulp-livereload');
+  var sourcemaps = require('gulp-sourcemaps');
 
   livereload({start: true});
 
@@ -42,6 +43,13 @@ async function init(done) {
           id:'6642203884',
           source: 'private-partner.html'
         }
+      },
+      {
+        title: 'Resources (html)',
+        value: {
+          id:'6692189355',
+          source: 'resources.html'
+        }
       }
     ];
 
@@ -55,7 +63,7 @@ async function init(done) {
       }
     );
 
-    await fs.readFile('/Users/grantfoster/Documents/sites/accelerance/dist/' + file.value.source, 'utf-8', function read(err, data) {
+    await fs.readFile('../dist/' + file.value.source, 'utf-8', function read(err, data) {
       if (err) {
         throw err;
       }
@@ -94,7 +102,9 @@ async function init(done) {
 
 function compile(done) {
     return src('../sass/*.scss')
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sourcemaps.init())
+      .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(dest('../dist/'));
     done();
 };
