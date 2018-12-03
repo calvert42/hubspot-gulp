@@ -1,0 +1,154 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+
+{% include "ACC2018/Showcase/head.html" %}
+  
+<body class="private-partner">
+  
+  {% include "ACC2018/Showcase/header.html" %}
+
+  <!--#region body-->
+  <div class="body-container-wrapper">
+    <div class="body-container container-fluid wider">
+      <div class="flex border-box">
+          <div class="row-fluid-wrapper intro">
+            <div class="row-fluid">
+              <div class="span4">
+                {% linked_image "module_1460101814728165478" overrideable=False, height='auto', src='http://cdn2.hubspot.net/hubfs/396606/Accelerance_Private_Partners/logo_2.png', width='200', label='Image', export_to_template_context=True %}
+                <img src='{{ widget_data.module_1460101814728165478.src }}?noresize' alt=''>
+              </div><!--end widget-span -->
+              <div class="span2">
+                <h4>Founded</h4>
+                <p>{% text "module_146009659560559174" overrideable=True, value='2004', label='Founded' %}</p>
+              </div><!--end widget-span -->
+              <div class="span2">
+                <h4>FTE Count</h4>
+                <p>{% text "module_146009660511863130" overrideable=True, value='150 devs', label='FTE Count' %}</p>
+              </div>
+              <div class="span2">
+                <h4>Location</h4>
+                <p>{% text "module_146009661128866750" overrideable=True, value='Mexico', label='Location' %}</p>
+              </div>
+              <div class="span2">
+                <h4>Partner Since</h4>
+                <p>{% text "module_146009661812469485" overrideable=True, value='2015', label='Partner Since' %}</p>
+              </div>
+            </div><!--end row-->
+          </div>
+      </div>
+
+      <div class="border-box">
+        <div class="row-fluid">
+          <h4>Partner Description</h4>
+          {% widget_block rich_text "module_1460101833575172680" overrideable=True, cell=False, cells='[]', root=False, row=False, wrapping_html='', label='Rich Text' %}
+            {% widget_attribute "html" %}<p>ArkusNexus was founded in 2004 and joined the ACE Partner Network in 2015. Based in San Diego, California, ArkusNexus also maintains development offices in Tijuana, Mexico. This allows for seamless communication with the development team, as well as providing an outstanding option for clients looking for a convenient timezone and culture match to the United States.</p>
+              <p>&nbsp;</p>
+              <p>Working with technologies such as Android, AngularJS, iOS, C#, HTML5, JAVA, and RoR, ArkusNexus puts a strong focus on user experience, ensuring their software is visually appealing and highly usable. ArkusNexus is deadline focused while adhering to Agile best practices and giving their clients full visibility of the process as it’s happening. With more than 100 developers in constant communication, ArkusNexus has the ability to cater a team to your specific needs as a client.</p>
+              <p>&nbsp;</p>
+              <p>Regardless of scale, ArkusNexus provides their clients with well-written software and pride themselves on their quick time-to-market. With experience in both mobile and web products in industries such as insurance, marketing, education, and entertainment, the services ArkusNexus provide span all phases of the software development lifecycle.</p>
+            {% end_widget_attribute %}
+          {% end_widget_block %}
+        </div><!--end row-->
+      </div>
+
+      {% boolean "php" label='PHP', value = True, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "api" label='API', value=False, no_wrapper=True ,export_to_template_context=True  %}
+      {% boolean "xml" label='XML', value=False, no_wrapper=True ,export_to_template_context=True  %}
+      {% boolean "python" label='Python', value=False, no_wrapper=True ,export_to_template_context=True  %}
+      {% boolean "asp" label='ASP', value=False, no_wrapper=True ,export_to_template_context=True  %}
+      {% boolean "html" label='HTML', value=False, no_wrapper=True ,export_to_template_context=True  %}
+      {% boolean "rails" label='Rails', value=False, no_wrapper=True ,export_to_template_context=True  %}
+      {% boolean "oracle" label='Oracle', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "watson" label='IBM Watson', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "sharepoint" label='SharePoint', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "android" label='Android', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "ios" label='iOS', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "bigdata" label='BigData', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "wordpress" label='Wordpress', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "api" label='API', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "arvr" label='AR/VR', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "devops" label='DevOps', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "ecommerce" label='eCommerce', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "java" label='Java', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "mongodb" label='mongoDB', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "mean" label='MEAN', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "uiux" label='UI/UX', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "microsoftnet" label='Microsoft.NET', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "embeddedsystems" label='EmbeddedSystems', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "gaming" label='Gaming', value = False, no_wrapper=True, export_to_template_context=True  %}
+      {% boolean "gamification" label='Gamification', value = False, no_wrapper=True, export_to_template_context=True  %}
+
+      {% set techArray = [
+        widget_data.php,
+        widget_data.api,
+        widget_data.xml,
+        widget_data.python,
+        widget_data.asp,
+        widget_data.html,
+        widget_data.rails,
+        widget_data.oracle,
+        widget_data.watson,
+        widget_data.sharepoint,
+        widget_data.android,
+        widget_data.ios,
+        widget_data.bigdata,
+        widget_data.wordpress,
+        widget_data.api,
+        widget_data.arvr,
+        widget_data.devops,
+        widget_data.ecommerce,
+        widget_data.java,
+        widget_data.mongodb,
+        widget_data.mean,
+        widget_data.uiux,
+        widget_data.microsoftnet,
+        widget_data.embeddedsystems,
+        widget_data.gaming,
+        widget_data.gamification
+       ] %}
+
+      <div class="border-box">
+        <p><a class='#tech'>View all technologies</a></p>
+      </div>
+
+      
+      <div id="all-technologies" style="display: none">
+          <ul>
+              {% for technology in techArray %}
+                <li>{{ technology.name }}</li>
+              {% endfor %}
+          </ul>  
+      </div>
+
+      
+
+    </div><!--end body -->
+    
+    <div class='lp-form-above'>
+      {% include "ACC2018/Showcase/footer.html" %}
+    </div>
+
+
+    </div>
+  <!--#endregion-->
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+  <script>
+      tippy('#tech', {
+        arrow: true,
+        trigger: 'click',
+        html: '#all-technologies',
+        theme: 'light',
+        maxWidth: '690px'
+      });
+
+      $('#tech').click(function() {
+        console.log('hi');
+      });
+  </script>
+  {{ standard_footer_includes }}
+  </body>
+</html>

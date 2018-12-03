@@ -2,7 +2,7 @@
 ####################
 *.env
 
-# .vscode #
+# .vscode personal stuff #
 .vscode/
 
 # OS generated files #

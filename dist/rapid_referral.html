@@ -194,10 +194,10 @@
   <script>
   	$( document ).ready(function() {
       
-      //my new menu code! simple dimple!
-    	$('.hs-menu-depth-1').on('mouseenter click', function() {
+    	$('.hs-menu-depth-1').on('mouseover click', function() {
       	$(this).find('.hs-menu-children-wrapper').show(100);
       });
+      
       $('.hs-menu-depth-1, .hs-menu-children-wrapper').on('mouseleave click', function() {
       	$(this).find('.hs-menu-children-wrapper').hide(100);
       });

@@ -58,7 +58,7 @@ body {
             &.hs-menu-children-wrapper {
                 position: absolute;
                 display: block;
-                display: none;
+                visibility: hidden;
                 padding: 0px;
                 li {
                     background-color: $blue;

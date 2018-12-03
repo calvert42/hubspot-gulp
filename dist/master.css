@@ -4,6 +4,7 @@ yeet
 Author: Grant Foster
 Contact: gfoster92@gmail.com
 
+??????
 This is the master stylesheet for Accelerance. I'm sorry whoever comes after me - I'm new at this - please don't tell anyone how bad I am at coding. Reach out to me if you need some help.
 
 Now I'm using gulp!
@@ -4587,5 +4588,24 @@ blockquote p:first-letter {
   }
   .password-prompt .main input[type=submit] {
     width: 70%;
+  }
+}
+
+.private-partner .intro h4 {
+  margin-top: 0px;
+}
+
+.private-partner .intro img {
+  max-height: 110px;
+}
+
+.private-partner .border-box {
+  padding: 20px;
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .private-partner .border-box {
+    padding: 10px;
   }
 }

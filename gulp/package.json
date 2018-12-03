@@ -13,7 +13,9 @@
     "dotenv": "^6.1.0",
     "fs": "0.0.1-security",
     "gulp": "^4.0.0",
+    "gulp-livereload": "^4.0.1",
     "gulp-sass": "^4.0.2",
+    "livereload": "^0.7.0",
     "prompts": "^1.2.1",
     "request": "^2.88.0"
   }

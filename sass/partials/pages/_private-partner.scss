@@ -1,0 +1,18 @@
+.private-partner {
+    //hello! ???
+    .intro {
+        h4 {
+            margin-top: 0px;
+        }
+        img {
+            max-height: 110px;
+        } 
+    }
+    .border-box {
+        padding: 20px;
+        @media screen and (max-width:$tablet) {
+            padding: 10px;
+        }
+        margin-bottom: 12px;
+    }
+}

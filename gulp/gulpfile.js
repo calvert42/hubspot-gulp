@@ -4,11 +4,14 @@
 require('dotenv').config();
 
 const { src, dest, watch } = require('gulp');
-var sass = require('gulp-sass');
-var request = require('request');
-var fs = require('fs');
-var colors = require('colors');
-var prompts = require('prompts');
+  var sass = require('gulp-sass');
+  var request = require('request');
+  var fs = require('fs');
+  var colors = require('colors');
+  var prompts = require('prompts');
+  var livereload = require('gulp-livereload');
+
+  livereload({start: true});
 
 async function init(done) {
     var files = [
@@ -31,6 +34,13 @@ async function init(done) {
         value: {
           id:'6488464985',
           source: 'rapid_referral.html'
+        }
+      },
+      {
+        title: 'Private Partner (html)',
+        value: {
+          id:'6642203884',
+          source: 'private-partner.html'
         }
       }
     ];
@@ -74,6 +84,9 @@ async function init(done) {
         var seconds = "0" + date.getSeconds();
         var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
         console.log(colors.italic('Updated:' + formattedTime.toString()));
+        if (response.statusCode == 200) {
+          livereload.reload();
+        }
       });
     });
     done();
@@ -86,12 +99,12 @@ function compile(done) {
     done();
 };
 
-watch(['../sass/*.scss'], compile, function (done){
+watch(['../sass/**/*.scss'], compile, function (done){
     done();
 });
 
 watch(['../dist/*.css', '../dist/*.html'], init, function (done){
-    done();
+  done();
 });
 
 
