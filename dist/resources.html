@@ -81,113 +81,18 @@
   <div class="blue">
     <div class='container skinny'>
       <div class='header span12'>
-        {% rich_text 'header_content' html='<h1>Global Partner Introductions</h1><h2>for Spotify</h2>', label='Header Content' %}
+        {% rich_text 'header_content' html='<h1>Resources</h1>', label='Header Content' %}
       </div>
     </div>
   </div>
-  <div class='container skinny'>
+  <div class='container wider'>
     <div class='main span12'>
-      <h2 class='red'>{% text 'section_header1' label='Section Header 1', value='Situational Summary' %}</h2>
-      {% rich_text "section1" html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>", label="Section 1" %}
-      <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_iz8y40hbc7 videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/iz8y40hbc7/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
-      <h2 class='red'>{% text 'section_header2' label='Section Header 2', value='Our Reccomendations' %}</h2>
-      {% rich_text "our_recomendations" html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>", label="Section 2 (Above Grid)" %}
-    </div>
-  </div>
-  {% module "picker" module_id="4332969" label="Partner Chooser", export_to_template_context=True %}
-  {% set firstChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[0]) %}
-  {% set secondChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[1]) %}
-  {% set thirdChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[2]) %}
-  {% set choiceArray = [firstChoice, secondChoice, thirdChoice] %}
-  
-  <div class="container wider partner-grid" id='showcase-links'>
-    <div class='span3'>
-    </div>
-    {% for choice in choiceArray %}
-      <div class='span3'>
-        <p><strong>{{ choice.name }}</strong></p>
-      </div>
-    {% endfor %}
-    
-    <div class='span3 row-title'>
-      <p>Location</p>
-    </div>
-    {% for choice in choiceArray %}
-      <div class='span3'>
-        <p>{{ choice.country}}</p>
-      </div>
-    {% endfor %}
-    
-    <div class='span3 row-title'>
-      <p>UTC Timezone</p>
-    </div>
-    {% for choice in choiceArray %}
-      <div class='span3 flex'>
-        <p>{% if choice.time_zone > 0 %} + {% endif %} {{ choice.time_zone }}</p>
-      </div>
-    {% endfor %}
-    
-    <div class='span3 row-title'>
-      <p>Devloper Count</p>
-    </div>
-    {% for choice in choiceArray %}
-      <div class='span3'>
-        <p>{{ choice.number_of_developers }}</p>
-      </div>
-    {% endfor %}
-    
-    <div class='span3 row-title'>
-      <p>Showcase Page</p>
-    </div>
-    {% for choice in choiceArray %}
-      <div class='span3 flex'style='justify-content: center;'>
-        <a href='{{ choice.partner_page }}' class='cta cta--cyan'>Learn More &rarr;</a>
-      </div>
-    {% endfor %}
-  </div>
-  
-  <div class='container skinny'>
-    <div class='main span12'>
-      <div style='text-align: center;'>
-        {% module "module_1542742244550111" module_id="4332805" label="Omitted Partner Count" %}
-        
-        <p><a class='cta cta--red' style='cursor: pointer;' id='matrix-button'>View the Partner Matrix</a></p>
-      </div>
-      <div id="myTemplate">
-        {% module "module_1542646757595719" module_id="4321697" label="Matrix Image" no_wrapper=True %}
-      </div>
-      <p>&nbsp;</p>
-      
-      {% rich_text "section2below" label="Section 2 (Below Grid)", html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>" %}
-      <h2 class='red'>{% text 'section_header3' label='Section Header 3', value='Partner Information and Other Relevant Materials' %}</h2>
-      {% rich_text "section3" label="Section 3", html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>" %}
-      
-      {% for partner in choiceArray %}
-      	<div class='border-box padding'>
-        	<div class="container">
-            <div class='span2 flex'><a href='http://{{ partner.website }}' target='_blank' rel="noopener"> <img alt="{{ partner.name }}" src="{{ partner.logo }}"></a></div>
-            <div class='span10 padding'><h2>What <a href='{{ partner.website }}'>{{ partner.name }}</a> has to say about your project</h2></div>
-            <div class='span12'>{% rich_text "partner_comments" field="partner_comments" html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>", label="Partner Comments", unique_in_loop=True %}<p><a href='{{ choice.partner_page }}' class='cta cta--cyan'>Learn More &rarr;</a></p></div>
-          </div>
-        </div>
-      {% endfor %}
-      
-      <h3>The Showcase Page</h3>
-      <p>Above are our recommended outsourced software development companies for your project. Included in these reccomendations are links to our Showcase Pages. These pages are a wealth of information created from our trips to meet the partner in question. Be sure to visit these pages for an in depth look at each individual partner.</p>
-      <a href="#showcase-links"><div class="browser"><div class='top-bar'><div class='lights'><ul><li></li><li></li><li></li></ul></div></div><img src='https://www.accelerance.com/hubfs/Rapid_Referral_Images/page.jpg' width='100%'></div></a>
-      
-      <h2 class='red'>{% text 'section_header4' label='Section Header 4', value='Recommended Reading' %}</h2>
-      {% rich_text "section4" label="Section 4", html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>" %}
-
-      <h2 class='red'>{% text 'section_header5' label='Section Header 5', value='Conclusion' %}</h2>
-      {% rich_text "section5" label="Conclusion", html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>" %}
-      <div class='container center'>
-      	{% module "module_1542645150081309" module_id="4322703" label="AE Selector" value='Alex' no_wrapper=True %}
-        
-      </div>
+      {% module "module_153979002171857" overrideable=True, name='Resources', module_id=4143484, resources='[{"image":{"src":"https://www.accelerance.com/hubfs/webinar-6.png","alt":"webinar-6","width":600,"height":314},"title":"Ask the Experts: Software Outsourcing Panel Discussion Webinar","landing_page":5938162869,"tags":["webinar"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/south%20asia/bookcover@620x.png","alt":"bookcover@620x","width":620,"height":470},"title":"Software Outsourcing in South Asia","landing_page":5647592089,"tags":["ebook","region-guide"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/Southeast%20Asia%20Region%20Guide/bookcover@620x.png","alt":"bookcover@620x","width":620,"height":470},"title":"Software Outsourcing In Southeast Asia","landing_page":2258498939,"tags":["region-guide","ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/latin%20america/bookcover@620x.png","alt":"bookcover@620x","width":620,"height":470},"title":"Software Outsourcing in Latin America","landing_page":2098586921,"tags":["ebook","region-guide"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/Eastern%20Europe%20Region%20Guide/EasternEurope620.png","alt":"EasternEurope620","width":620,"height":471},"title":"Software Outsourcing In Eastern Europe","landing_page":2137045616,"tags":["ebook","region-guide"]},{"image":{"src":"https://www.accelerance.com/hubfs/Landing_Page_Images/15%20risk%20indicators/15riskindicatorsscaled2.png","alt":"15riskindicatorsscaled2","width":600,"height":349},"title":"15 Potential Risk Areas in Software Development Outsourcing","landing_page":5583420652,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/SOR18/SOR18.png","alt":"The 2018 Guide to Global Software Outsourcing Rates","width":1207,"height":916},"title":"The 2018 Guide to Global Software Outsourcing Rates","landing_page":5501409281,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/SoftwareSurvey@2x.png","alt":"Are You Winning Or Losing With Software Outsourcing?","width":467,"height":593},"title":"Are You Winning Or Losing With Software Outsourcing?","landing_page":5417614125,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebook_Renders/cto-cfo-ebook-render.png","alt":"What Your CFO Needs To Know About Outsourcing Software Development","width":453,"height":342},"title":"What Your CFO Needs To Know About Outsourcing Software Development","landing_page":5390286230,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/Landing_Page_Images/DueDiligence/SODD.png","alt":"SODD","width":933,"height":708},"title":"Software Outsourcing Due Diligence","landing_page":4654974314,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/7keys-3.png","alt":"7keys-3","width":508,"height":644},"title":"The 7 Keys to Outsourcing Success","landing_page":4489298977,"tags":[""]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebook_Renders/outsourceorelseLP.png","alt":"Outsource or Else! How a VP of Software Saved His Company","width":747,"height":1100},"title":"Outsource or Else! How a VP of Software Saved His Company","landing_page":4697359423,"tags":["ebook","book"]},{"image":{"src":"https://www.accelerance.com/hs-fs/hub/396606/file-1261255542.png","alt":"Essential Guide to Outsourcing Software Development","width":800,"height":800},"title":"Essential Guide to Outsourcing Software Development","landing_page":1196859007,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/social-suggested-images/Fearless-Outsourcing.png","alt":"Fearless-Outsourcing","width":600,"height":689},"title":"Fearless Software Outsourcing","landing_page":1489307336,"tags":["ebook"]}]', label='Resources' %}
     </div>
   </div>
   
+  
+  {{ standard_footer_includes }}
   <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
   <script src="https://fast.wistia.com/embed/medias/iz8y40hbc7.jsonp" async></script>
   <script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
@@ -205,10 +110,48 @@
         $('.mobile-menu').on('click',function(){
             $('.nav-menu').toggle();
         });
+
+        tippy('#matrix-button', { 
+          html: document.querySelector('#myTemplate'),
+          theme: 'light',
+          size: 'large',
+          trigger: 'click',
+          maxWidth: '1080px;',
+          placement: 'top'
+        });
+
+        var resources = $('.resources').isotope({
+          // options
+          itemSelector: '.resource',
+          stamp: '.stamp',
+          stagger: 100,
+          masonry: {
+            gutter: 5
+          }
+        });
+
+        $('#book').click(function() {
+          resources.isotope({filter: '.book'});
+        });
+
+        $('#ebook').click(function() {
+          resources.isotope({filter: '.ebook'});
+        });
+
+        $('#region-guide').click(function() {
+          resources.isotope({filter: '.region-guide'});
+        });
+
+        $('#webinar').click(function() {
+          resources.isotope({filter: '.webinar'});
+        });
+
+        $('#show-all').click(function() {
+          resources.isotope({filter: ''});
+          });
       
     });
   </script>
-  {{ standard_footer_includes }}
 </body>
 </html>
 

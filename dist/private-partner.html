@@ -4,7 +4,49 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
 
-{% include "ACC2018/Showcase/head.html" %}
+{% boolean "badge_toggle" label='Badge page?', value=False, export_to_template_context=True %}
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="author" content="{{ meta_author }}">
+  <meta name="description" content="{{ page_meta.meta_description }}">
+  <meta name="generator" content="HubSpot">
+  <title>{{ page_meta.html_title }}</title>
+  {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+  {% if widget_data.badge_toggle.value == false %}<meta name="robots" content="noindex" />{% endif %}
+
+  {{ required_head_tags }}
+  
+  {{ require_css("https://cdn2.hubspot.net/hubfs/327485/Designers_Docs_2015/layout.css") }}
+  
+    <!-- master.css -->
+	{{ include_attached_css( [{"id":4724625226,"type":"cos_extension_resource"},{"id":5631661384,"type":"cos_extension_resource"}]) }}
+  
+  <!-- slick stylesheet for photo/video gallery -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  <!-- c3 stylesheet for charts -->
+  <link rel='stylesheet' type="text/css" src="{{ get_public_template_url('ACC2018/Showcase/css/c3.css') }}"/>
+  
+  <style>
+    {% include "hubspot/styles/responsive/modules.css" %}
+    {% include "hubspot/styles/patches/recommended.css" %}
+  
+    .tippy-popper[x-placement^=top] .tippy-tooltip.light-theme .tippy-arrow{border-top:7px solid #fff;border-right:7px solid transparent;border-left:7px solid transparent}.tippy-popper[x-placement^=bottom] .tippy-tooltip.light-theme .tippy-arrow{border-bottom:7px solid #fff;border-right:7px solid transparent;border-left:7px solid transparent}.tippy-popper[x-placement^=left] .tippy-tooltip.light-theme .tippy-arrow{border-left:7px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent}.tippy-popper[x-placement^=right] .tippy-tooltip.light-theme .tippy-arrow{border-right:7px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent}.tippy-tooltip.light-theme{color:#26323d;box-shadow:0 0 20px 4px rgba(154,161,177,.15),0 4px 80px -8px rgba(36,40,47,.25),0 4px 4px -2px rgba(91,94,105,.15);background-color:#fff}.tippy-tooltip.light-theme .tippy-backdrop{background-color:#fff}.tippy-tooltip.light-theme .tippy-roundarrow{fill:#fff}.tippy-tooltip.light-theme[data-animatefill]{background-color:transparent}
+
+    .tippy-content {
+    text-align: left;
+      padding: 20px;
+    
+    }
+    
+    
+  </style>
+  
+  {{ user_head_overrides }}
+
+</head>
   
 <body class="private-partner">
   
@@ -141,12 +183,7 @@
         arrow: true,
         trigger: 'click',
         html: '#all-technologies',
-        theme: 'light',
         maxWidth: '690px'
-      });
-
-      $('#tech').click(function() {
-        console.log('hi');
       });
   </script>
   {{ standard_footer_includes }}
