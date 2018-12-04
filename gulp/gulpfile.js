@@ -50,6 +50,13 @@ async function init(done) {
           id:'6692189355',
           source: 'resources.html'
         }
+      },
+      {
+        title: 'Resources (js)',
+        value: {
+          id:'6704097553',
+          source: 'resources.js'
+        }
       }
     ];
 
@@ -113,7 +120,7 @@ watch(['../sass/**/*.scss'], compile, function (done){
     done();
 });
 
-watch(['../dist/*.css', '../dist/*.html'], init, function (done){
+watch(['../dist/*.css', '../dist/*.html', '../dist/*.js'], init, function (done){
   done();
 });
 

@@ -1,0 +1,61 @@
+.resources-page {
+    .resources {
+        img {
+            width: 100%;
+           }
+    
+        p {
+            font-size: 16px;
+        }
+    
+        .filter  {
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    
+        .resource {
+            width: 240px;
+            padding: 5px;
+            margin: 5px;
+            @media screen and (max-width: 548px) {
+                width: 148px;
+            }
+            .resource-title {
+                padding: 0px 10px;
+            }
+        }
+        
+        h4 {
+        font-size: 18px;
+        font-weight: 800;
+        margin: 10px auto;
+        }
+    }
+    
+    #filter-buttons {
+        list-style: none;
+        display: block;
+        padding: 5px;
+        @media screen and (max-width: 553px) {
+            text-align: center;
+            li {
+                margin-bottom: 10px;
+            }
+        }
+        li {
+            display: inline-block;
+            border: 1px solid $cyan;
+            border-radius: 3px;
+            padding: 5px 10px;
+            @include transition(200ms);
+            &.active {
+                color: white;
+                background-color: $cyan;
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}

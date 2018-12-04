@@ -44,9 +44,12 @@ gulp
 This will begin the task that watches the /dist directory for changes.
 
 #### SASS
-Sass files are located in /sass. Gulp looks for any filechanges to `.scss` files and partials in that directory and will compile them with a sourcemap to `/dist`
+Sass files are located in /sass. Gulp looks for any filechanges to `.scss` files and partials in that directory and will compile them with a sourcemap to `/dist`. 
 
-Then you'll be prompted with something like this
+NOTE: In Hubspot when using dev tools, you'll need to add the query "hsDebug=True" to your URL in order to see sourcemaps.
+
+#### Upload
+This gulp recipe watches for changes in `/dist`. Once it sees something change, you'll be prompted with something like this
 ```shell
 ? Pick a file ›
 Bare Minimum(css)
@@ -55,7 +58,7 @@ Rapid Referral Master (html)
 Private Partner (html)
 Resources (html)
 ```
-Then simply use your arrows keys or start typing to search for any files that were added to the list in the gulpfile. Hit enter and your file will be submitted to the API. If you need to roll things back, for now just do it from the Design Manager and then copy the rolled back code back into here.
+Simply use your arrows keys or start typing to search for any files that were added to the list in the gulpfile. Hit enter and your file will be submitted to the API. If you need to roll things back, for now just do it from the Design Manager and then copy the rolled back code back into here.
 
 #### LiveReload
 

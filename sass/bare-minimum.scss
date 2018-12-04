@@ -1,6 +1,8 @@
 /* reeeeeepepepepeppepepepe */
 @import 'partials/variables';
 
+@import 'partials/pages/resources-page';
+
 body {
     margin: 0;
     padding: 0;
@@ -44,7 +46,7 @@ body {
             padding: 7px;
             background-color: $blue;
             color: white;
-            margin-right: 20px;
+            margin-right: 10px;
             border-radius: 3px;
             @media screen and (max-width: 953px) {
                 display: block;
@@ -127,7 +129,7 @@ body {
             margin: 0 auto;
         }
         &.wider {
-            max-width: 960px;
+            max-width: 1080px;
             margin: 0 auto;
         }
         @media screen and (max-width: 690px) {
@@ -303,3 +305,12 @@ body {
         width: 10px
     }
 }
+
+footer {
+    background-color: $dark-grey;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 48px;
+}
+
