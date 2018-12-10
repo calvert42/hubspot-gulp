@@ -187,25 +187,16 @@
       </div>
     </div>
   </div>
+  <footer>
+    &copy; Accelerance 2018
+  </footer>
   
   <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
   <script src="https://fast.wistia.com/embed/medias/iz8y40hbc7.jsonp" async></script>
   <script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+  <script src="{{ get_public_template_url('ACC2018/js/menu.js') }}"></script>
   <script>
   	$( document ).ready(function() {
-      
-    	$('.hs-menu-depth-1').on('mouseover click', function() {
-      	$(this).find('.hs-menu-children-wrapper').show(100);
-      });
-      
-      $('.hs-menu-depth-1, .hs-menu-children-wrapper').on('mouseleave click', function() {
-      	$(this).find('.hs-menu-children-wrapper').hide(100);
-      });
-      
-      $('.mobile-menu').on('click',function(){
-      	$('.nav-menu').toggle();
-      });
-      
       tippy('#matrix-button', { 
         html: document.querySelector('#myTemplate'),
         theme: 'light',

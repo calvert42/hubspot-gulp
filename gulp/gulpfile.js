@@ -33,7 +33,7 @@ async function init(done) {
       }
       var source = data;
       var options = {
-        url: 'http://api.hubapi.com/content/api/v2/templates/' + file.value.id,
+        url: 'http://api.hubapi.com/content/api/v2/templates/' + file.value.id/* + '/buffer'*/,
         qs: {
           "hapikey": process.env.HAPI_KEY
         },
@@ -45,6 +45,7 @@ async function init(done) {
           "source": source,
         }
       };
+
       request.put(options, function (error, response, body) {
         if (error) {
           console.log('error:', error);

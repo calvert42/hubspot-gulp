@@ -47,6 +47,13 @@ const files = [
         id: '6127910166',
         source: 'showcase/processes.html'
       }
+    },
+    {
+      title: 'Menu (js)',
+      value: {
+        id: '6745581805',
+        source: 'menu.js'
+      }
     }
   ];
 

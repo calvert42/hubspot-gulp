@@ -1,0 +1,68 @@
+<!--#region reviews-->
+         <div class='tabcontent'id="reviews">
+            <div class="equal-heights row-fluid-wrapper">
+              <div class="row-fluid">
+                
+                <div class="span6 border-box padding assesment-depth">
+                  <h3>Our Process</h3>
+                  <p>It’s important to work with a development partner you can trust to deliver. Accelerance validates claims of successful case studies and checks references for each partner in our Global Network.</p>
+                </div><!--end widget-span -->
+                
+                <div class="span6 border-box">
+                  <script src="https://fast.wistia.com/embed/medias/{{ partner.reviews_top_video_id }}.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ partner.reviews_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.reviews_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+                </div><!--end widget-span -->
+              </div><!--end row-->
+            </div><!--end row-wrapper -->
+           
+           {% if badgePage == true %}<div class="container-overlay"><div class='cta-overlay center'><i style="font-size: 64px; color:#d8d8d8; " class="fa fa-lock" aria-hidden="true"></i><h4>We'd love to unlock our full assessment and interviews with {{ partner.name }}. Talk to an outsourcing advisor from Accelerance today.</h4><p><a id="open" class="cta cta--grey">Learn more</a></p></div></div><div class='blur-all' style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on" onselectstart="return false;" onmousedown="return false;">{% endif %}
+          
+           <div class="row-fluid-wrapper equal-heights">
+            <div class="row-fluid ">
+              <div class="span4 center border-box padding">
+              
+                <h3>References Checked</h3>
+                <h2 class='counter' style="display: inline-block;font-weight: 900; font-size:64px; margin: 20px;margin-bottom: 0px;" data-count="{{ partner.references_checked_count }}">0</h2>
+                
+              </div><!--end widget-span -->
+              <div class="span8 border-box padding">
+                
+                <h3>Client Feedback</h3>
+                {{ partner.quotes }}
+                
+              </div><!--end widget-span -->
+            </div><!--end row-->
+          </div><!--end row-wrapper -->
+           
+           <div class="row-fluid-wrapper equal-heights">
+            <div class="row-fluid ">
+              <div class="span12 padding case-studies" style="padding-top: 20px;">
+                <a target="_blank" style="color: white; text-decoration: none;" href="{{ partner.case_studies_link }}">
+                  <div class="zoom" style="max-width: 690px;background-color:#1FBDE5;border-radius: 3px;margin: 15px auto;padding:15px 15px;">
+                  	<h4 style="margin: 0px;">Learn more about {{ partner.name }} <i style="float:right;" class="fas fa-external-link-alt"></i></h4>
+                	</div>
+                </a>
+              </div><!--end widget-span -->
+            </div><!--end row-->
+          </div><!--end row-wrapper -->
+          
+           <div class="row-fluid-wrapper equal-heights">
+            <div class="row-fluid ">
+              <div class="span12 padding border-box">
+                <h3>Our Take</h3>
+                {{ partner.our_take|truncate(350) }}
+                
+                {% if partner.our_take|length > 349 %}
+                  <div id="allourtake" style="display: none;text-align: left!important;">
+                      {{partner.our_take}}
+                  </div>
+                  <a id="ourtake-button">See all &rarr;</a>
+                {% endif %}
+                  
+              </div><!--end widget-span -->
+            </div><!--end row-->
+          </div><!--end row-wrapper -->
+           
+          {% if badgePage == true %}</div>{% endif %}
+  
+          </div>
+          <!--#endregion-->

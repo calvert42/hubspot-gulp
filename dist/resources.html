@@ -16,7 +16,6 @@
 
   {{ required_head_tags }}
   {{ standard_header_includes }}
-  {{ require_js(get_public_template_url('ACC2018/Resources/resources.js'), "footer") }}
 
   <!-- master.css -->
   {{ require_css(get_public_template_url("ACC2018/Website_Pages/Rapid_Referral/New_Rapid_Referral/bare-minimum.css")) }}
@@ -76,7 +75,7 @@
       </g>
     </svg>
     <i class="fas fa-bars mobile-menu"></i>
-    {% menu "main-navigation" id="5641683778" extra_classes='nav-menu' overrideable=False %}
+    {% menu "main-navigation" id="5641683778" extra_classes='nav-menu' overrideable=False, flyouts=False%}
   </div>
   <div class="blue">
     <div class='container wider'>
@@ -100,10 +99,11 @@
   <footer>
     	&copy; Accelerance 2018
   </footer>
-  
+  {{ require_js(get_public_template_url('ACC2018/Resources/resources.js'), "footer") }}
   <script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="{{ get_public_template_url('ACC2018/js/menu.js') }}"></script>
 
   {{ standard_footer_includes }}
 

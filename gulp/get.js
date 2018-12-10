@@ -1,10 +1,10 @@
 require('dotenv').config();
 
 var request = require('request');
-var { files } = require('./files');
 var prompts = require('prompts');
 var colors = require('colors');
 var fs = require('fs');
+var { files } = require('./files');
 
 (async function() {
 
@@ -19,7 +19,7 @@ var fs = require('fs');
       );
 
     var options = {
-        url: 'http://api.hubapi.com/content/api/v2/templates/' + file.value.id,
+        url: 'http://api.hubapi.com/content/api/v2/templates/' + file.value.id + '/buffer',
         qs: {
         "hapikey": process.env.HAPI_KEY
         },
@@ -47,9 +47,11 @@ var fs = require('fs');
             if (err) {
                 throw err;
             } else {
-                console.log('got HS code for ' + file.title);
+                console.log(file.value.source);
             }
         });
 
     });
 })();
+
+exports.files = files;
