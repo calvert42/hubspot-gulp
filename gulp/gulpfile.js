@@ -14,6 +14,11 @@ var sourcemaps = require('gulp-sourcemaps');
 
 livereload({start: true});
 
+var write;
+function publish(done) {
+  return write = true;
+}
+
 
 async function init(done) {
 
@@ -32,8 +37,9 @@ async function init(done) {
         throw err;
       }
       var source = data;
+      var urlRoot = 'http://api.hubapi.com/content/api/v2/templates/' + file.value.id;
       var options = {
-        url: 'http://api.hubapi.com/content/api/v2/templates/' + file.value.id/* + '/buffer'*/,
+        url: (write == true ? urlRoot : urlRoot + '/buffer'),
         qs: {
           "hapikey": process.env.HAPI_KEY
         },
@@ -51,6 +57,7 @@ async function init(done) {
           console.log('error:', error);
         }
         console.log((response && response.statusCode).toString().green);
+        console.log(options.url);
         var date = new Date(body.updated);
         var hours = date.getHours();
         var minutes = "0" + date.getMinutes();
@@ -82,7 +89,7 @@ watch(['../dist/*.css', '../dist/*.html', '../dist/*.js', '../dist/*/*.html'], i
   done();
 });
 
-
+exports.publish = publish;
 exports.default = compile;
 exports.compile = compile;
 exports.init = init;

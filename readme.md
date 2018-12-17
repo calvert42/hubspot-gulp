@@ -36,12 +36,18 @@ var files = [{
  Within `value` - you'll need to set the `id` to the corresponding Hubspot ID of the file you wish to connect in the Hubspot Design Manager. `source` should be the sourcefile name on your local machine that you wish to target to push to Hubspot.
 
 ### Usage
-To use the gulp recipe
+To use the gulp recipe to write to the current file's buffer (save changes to Hubspot, but don't "Publish" the file).
 ```shell
 cd gulp
 gulp
 ```
-This will begin the task that watches the /dist directory for changes.
+Or to use the gulp recipe to write and publish the current file upon save.
+```shell
+cd gulp
+gulp publish init
+```
+
+This will begin the task that watches the /dist directory for changes. 
 
 #### SASS
 Sass files are located in /sass. Gulp looks for any filechanges to `.scss` files and partials in that directory and will compile them with a sourcemap to `/dist`. 
