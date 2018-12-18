@@ -57,7 +57,6 @@ async function init(done) {
           console.log('error:', error);
         }
         console.log((response && response.statusCode).toString().green);
-        console.log(options.url);
         var date = new Date(body.updated);
         var hours = date.getHours();
         var minutes = "0" + date.getMinutes();
@@ -66,6 +65,10 @@ async function init(done) {
         console.log(colors.italic('Updated:' + formattedTime.toString()));
         if (response.statusCode == 200) {
           livereload.reload();
+          console.log((write  == true ? "Published".bgGreen.white : "Saved".bgYellow.grey));
+          if (write != true) {
+            console.log('https://app.hubspot.com/design-previewer/396606/code/' + file.value.id);
+          }
         }
       });
     });

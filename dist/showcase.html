@@ -579,7 +579,7 @@
         </div><!--end row-wrapper -->
 
         </div>
-      <!--#endregion overview-->
+      <!--#endregion-->
 
       <!--#region capabilities-->
         <div class="tabcontent" id="capabilities">
@@ -590,7 +590,16 @@
                 <p>Rapid access to technologies, best practices and methodologies is a significant benefit of outsourcing software development. Our research analysts investigated and verified the technical and industry expertise of {{ partner.name }}.</p>
               </div><!--end widget-span -->
               <div class="span6 border-box">
-                                <script src="https://fast.wistia.com/embed/medias/{{ partner.capabilities_top_video_id }}.jsonp" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div id="capabilities-top-video" class="wistia_embed wistia_async_{{ partner.capabilities_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.capabilities_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+                  <script src="https://fast.wistia.com/embed/medias/{{ partner.capabilities_top_video_id }}.jsonp" async></script>
+                  <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                    <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                      <div id="capabilities-top-video" class="wistia_embed wistia_async_{{ partner.capabilities_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                        <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                          <img src="https://fast.wistia.com/embed/medias/{{ partner.capabilities_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div><!--end widget-span -->
             </div><!--end row-->
           </div><!--end row-wrapper -->
@@ -672,6 +681,7 @@
                 {% if badgePage == true %}
                   <img src="https://www.accelerance.com/hubfs/Badge%20Program/CapabilitiesPlaylist.png">
                 {% else %}
+                  <!-- capabilitiesPlaylist -->
                   <div id="wistia_{{ partner.capabilities_wistia_id }}" class="wistia_embed" style="width:947px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
                 {% endif %}
               </div><!--end widget-span -->
@@ -743,7 +753,7 @@
       {% if badgePage == true %}</div>{% endif %}
 
           </div>
-  <!--#endregion capabilities-->
+      <!--#endregion capabilities-->
       
       <!--#region people -->
         <div class="tabcontent" id="people">
@@ -755,7 +765,16 @@
      						<p>How an outsourcing company operates on a day-to-day basis defines its development culture and is an indicator of how well they’ll work with global clients. Accelerance looks for healthy hiring, training, and retention practices.</p>
               </div><!--end widget-span -->
               <div class="span6 border-box">
-                <script src="https://fast.wistia.com/embed/medias/{{ partner.people_top_video_id }}.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ partner.people_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.people_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+                <script src="https://fast.wistia.com/embed/medias/{{ partner.people_top_video_id }}.jsonp" async></script>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                    <div id="people-top-video" class="wistia_embed wistia_async_{{ partner.people_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                      <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                        <img src="https://fast.wistia.com/embed/medias/{{ partner.people_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div><!--end widget-span -->
             </div><!--end row-->
           </div><!--end row-wrapper -->  
@@ -783,7 +802,16 @@
               {% else %}
               
                 <h3 style="text-align: center;">Ownership</h3>
-              	<script src="https://fast.wistia.com/embed/medias/{{ partner.ownership_video_id }}.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ partner.ownership_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.ownership_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+                <script src="https://fast.wistia.com/embed/medias/{{ partner.ownership_video_id }}.jsonp" async></script>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                    <div id="ownership-video" class="wistia_embed wistia_async_{{ partner.ownership_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                      <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                        <img src="https://fast.wistia.com/embed/medias/{{ partner.ownership_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               
               {% endif %}
               
@@ -841,7 +869,16 @@
               {% else %}
               
                 <h3 style="text-align: center;">Hiring and Retention Practices</h3>
-              	<script src="https://fast.wistia.com/embed/medias/{{ partner.hiring_video_id }}.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ partner.hiring_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.hiring_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+                <script src="https://fast.wistia.com/embed/medias/{{ partner.hiring_video_id }}.jsonp" async></script>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                    <div id="hiring-video" class="wistia_embed wistia_async_{{ partner.hiring_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                      <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                        <img src="https://fast.wistia.com/embed/medias/{{ partner.hiring_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               
               {% endif %}
             </div><!--end widget-span -->
@@ -856,35 +893,43 @@
       <!--#region processes-->
         <div class="tabcontent" id="processes">
 
-  <div class="equal-heights row-fluid-wrapper">
-    <div class="row-fluid">
-      <div class="span6 border-box padding assesment-depth">
-        <h3>Our Process</h3>
-         <p>Accelerance investigates methodologies and management styles of each Certified Partner in our Global Network. We look for best practices you’ll need for short-term wins and long-term success.</p>
-      </div><!--end widget-span -->
-      <div class="span6 border-box">
-        <script src="https://fast.wistia.com/embed/medias/{{ partner.processes_top_video_id }}.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ partner.processes_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.processes_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
-      </div><!--end widget-span -->
-    </div><!--end row-->
-  </div><!--end row-wrapper -->
+        <div class="equal-heights row-fluid-wrapper">
+          <div class="row-fluid">
+            <div class="span6 border-box padding assesment-depth">
+              <h3>Our Process</h3>
+              <p>Accelerance investigates methodologies and management styles of each Certified Partner in our Global Network. We look for best practices you’ll need for short-term wins and long-term success.</p>
+            </div><!--end widget-span -->
+            <div class="span6 border-box">
+              <script src="https://fast.wistia.com/embed/medias/{{ partner.processes_top_video_id }}.jsonp" async></script>
+              <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                  <div id="process-top-video" class="wistia_embed wistia_async_{{ partner.processes_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                    <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                      <img src="https://fast.wistia.com/embed/medias/{{ partner.processes_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!--end widget-span -->
+          </div><!--end row-->
+        </div><!--end row-wrapper -->
   
-  {% if badgePage == true %}<div class="container-overlay"><div class="cta-overlay center"><i style="font-size: 64px; color:#d8d8d8; " class="fa fa-lock" aria-hidden="true"></i><h4>We'd love to unlock our full assessment and interviews with {{ partner.name }}. Talk to an outsourcing advisor from Accelerance today.</h4><p><a id="open" class="cta cta--grey">Learn more</a></p></div></div><div class="blur-all" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on" onselectstart="return false;" onmousedown="return false;">{% endif %}
+        {% if badgePage == true %}<div class="container-overlay"><div class="cta-overlay center"><i style="font-size: 64px; color:#d8d8d8; " class="fa fa-lock" aria-hidden="true"></i><h4>We'd love to unlock our full assessment and interviews with {{ partner.name }}. Talk to an outsourcing advisor from Accelerance today.</h4><p><a id="open" class="cta cta--grey">Learn more</a></p></div></div><div class="blur-all" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on" onselectstart="return false;" onmousedown="return false;">{% endif %}
 
-  <div class="row-fluid-wrapper equal-heights">
-    <div class="row-fluid ">
-      <div class="span12 border-box center">
+        <div class="row-fluid-wrapper equal-heights">
+          <div class="row-fluid ">
+            <div class="span12 border-box center">
 
-        <h3>Videos</h3>
-        {% if badgePage == true %}
-        	<img src="https://www.accelerance.com/hubfs/Badge%20Program/ProcessPlaylist.png">
-        {% else %}
-          <div id="wistia_{{ partner.processes_wistia_id }}" class="wistia_embed" style="width:947px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-        {% endif %}
-        
-
-      </div><!--end widget-span -->
-    </div><!--end row-->
-  </div><!--end row-wrapper -->
+              <h3>Videos</h3>
+              {% if badgePage == true %}
+                <img src="https://www.accelerance.com/hubfs/Badge%20Program/ProcessPlaylist.png">
+              {% else %}
+                <div id="wistia_{{ partner.processes_wistia_id }}" class="wistia_embed" style="width:947px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+              {% endif %}
+            
+            </div><!--end widget-span -->
+          </div><!--end row-->
+        </div><!--end row-wrapper -->
 
   <div class="row-fluid-wrapper equal-heights">
     <div class="row-fluid ">
@@ -895,7 +940,16 @@
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.</p>
           {% elif partner.ramp_up_video_id %}
             <h3 style="text-align: center;">Ramp Up</h3>
-            <script src="https://fast.wistia.com/embed/medias/{{ partner.ramp_up_video_id }}.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ partner.ramp_up_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.ramp_up_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+            <script src="https://fast.wistia.com/embed/medias/{{ partner.ramp_up_video_id }}.jsonp" async></script>
+            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+              <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                <div id="ramp-up-video" class="wistia_embed wistia_async_{{ partner.ramp_up_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                  <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                    <img src="https://fast.wistia.com/embed/medias/{{ partner.ramp_up_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                  </div>
+                </div>
+              </div>
+            </div>
           {% else %}
             <h3>Ramp Up</h3>
             {{partner.ramp_up|truncate(400)}}
@@ -918,7 +972,16 @@
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.</p>
           {% elif partner.client_support_video_id %}
             <h3 style="text-align: center;">Client Support</h3>
-            <script src="https://fast.wistia.com/embed/medias/{{ partner.client_support_video_id }}.jsonp" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ partner.client_support_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.client_support_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+            <script src="https://fast.wistia.com/embed/medias/{{ partner.client_support_video_id }}.jsonp" async></script>
+            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+              <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                <div id="client-support-video" class="wistia_embed wistia_async_{{ partner.client_support_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                  <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                    <img src="https://fast.wistia.com/embed/medias/{{ partner.client_support_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                  </div>
+                </div>
+              </div>
+            </div>
           {% else %}
             <h3>Client Support</h3>
             {{partner.client_support|truncate(400)}}
@@ -949,7 +1012,12 @@
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.</p>
           {% elif partner.project_management_video_id %}
             <h3 style="text-align: center;">Project Management Process</h3>
-            <script src="https://fast.wistia.com/embed/medias/{{ partner.project_management_video_id }}=.jsonp" async></script><div class="wistia_embed wistia_async_{{ partner.project_management_video_id }}" style="height:388px;position:relative;width:690px; margin: 0 auto;"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.project_management_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div>
+            <script src="https://fast.wistia.com/embed/medias/{{ partner.project_management_video_id }}=.jsonp" async></script>
+            <div id="project-management-video" class="wistia_embed wistia_async_{{ partner.project_management_video_id }}" style="height:388px;position:relative;width:690px; margin: 0 auto;">
+              <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                <img src="https://fast.wistia.com/embed/medias/{{ partner.project_management_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+              </div>
+            </div>
           {% else %}
             <h3>Project Management Process</h3>
             {{partner.project_management_process}}
@@ -970,7 +1038,16 @@
       <a id="communication-button">Read more &rarr;</a>
       {% elif partner.sdlc_video_id %}
         <h3 style="text-align: center;">Software Development Lifecycle Process</h3>
-        <script src="https://fast.wistia.com/embed/medias/{{ partner.sdlc_video_id }}.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div id="sdlc-video" class="wistia_embed wistia_async_{{ partner.sdlc_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.sdlc_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+        <script src="https://fast.wistia.com/embed/medias/{{ partner.sdlc_video_id }}.jsonp" async></script>
+        <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+          <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+            <div id="sdlc-video" class="wistia_embed wistia_async_{{ partner.sdlc_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+              <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                <img src="https://fast.wistia.com/embed/medias/{{ partner.sdlc_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+              </div>
+            </div>
+          </div>
+        </div>
       {% else %}
       
         <h3>Software Development Lifecycle Process</h3>
@@ -992,7 +1069,16 @@
       <a id="communication-button">Read more &rarr;</a>
       {% elif partner.communication_video_id %}
         <h3 style="text-align: center;">Communication and Collaboration</h3>
-        <script src="https://fast.wistia.com/embed/medias/{{ partner.communication_video_id }}.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div id="communication-video" class="wistia_embed wistia_async_{{ partner.communication_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.communication_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+        <script src="https://fast.wistia.com/embed/medias/{{ partner.communication_video_id }}.jsonp" async></script>
+        <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+          <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+            <div id="communication-video" class="wistia_embed wistia_async_{{ partner.communication_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+              <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                <img src="https://fast.wistia.com/embed/medias/{{ partner.communication_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+              </div>
+            </div>
+          </div>
+        </div>
       {% else %}
         <h3>Communication and Collaboration</h3>
         {{partner.communication|truncate(400)}}
@@ -1015,7 +1101,7 @@
       <!--#endregion processes-->
 
       <!--#region reviews-->
-        <div class='tabcontent'id="reviews">
+        <div class="tabcontent" id="reviews">
           <div class="equal-heights row-fluid-wrapper">
             <div class="row-fluid">
 
@@ -1025,7 +1111,16 @@
               </div><!--end widget-span -->
 
               <div class="span6 border-box">
-                <script src="https://fast.wistia.com/embed/medias/{{ partner.reviews_top_video_id }}.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ partner.reviews_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ partner.reviews_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+                <script src="https://fast.wistia.com/embed/medias/{{ partner.reviews_top_video_id }}.jsonp" async></script>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                    <div id="reviews-top-video" class="wistia_embed wistia_async_{{ partner.reviews_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                      <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                        <img src="https://fast.wistia.com/embed/medias/{{ partner.reviews_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div><!--end widget-span -->
             </div><!--end row-->
           </div><!--end row-wrapper -->
@@ -1089,30 +1184,30 @@
     
     <!--#region footer-->
     <div class='lp-form-above'>
-  <div class='footer'>
-    <div class="row-fluid-wrapper">
-      <div class="row-fluid ">
-        <div class="span12">
-          <h4>Follow Us</h4>
-          <a href="https://www.facebook.com/Accelerance/" target="_blank"><i class="fab fa-facebook-square"></i></a> 
-          <a href="https://twitter.com/accelerance" target="_blank"><i class="fab fa-twitter-square"></i></a> 
-          <a href="https://www.linkedin.com/company/accelerance-inc/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div><!--end widget-span -->
-      </div><!--end row-->
-    </div><!--end row-wrapper -->
+      <div class='footer'>
+        <div class="row-fluid-wrapper">
+          <div class="row-fluid ">
+            <div class="span12">
+              <h4>Follow Us</h4>
+              <a href="https://www.facebook.com/Accelerance/" target="_blank"><i class="fab fa-facebook-square"></i></a> 
+              <a href="https://twitter.com/accelerance" target="_blank"><i class="fab fa-twitter-square"></i></a> 
+              <a href="https://www.linkedin.com/company/accelerance-inc/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div><!--end widget-span -->
+          </div><!--end row-->
+        </div><!--end row-wrapper -->
 
-    <div class="row-fluid-wrapper">
-      <div class="row-fluid ">
-        <div class="span12 widget-span widget-type-page_footer " style="" data-widget-type="page_footer" data-x="0" data-w="12">
-          <footer>
-            <a href='https://www.accelerance.com/showcase-disclaimer' style='text-decoration: underline;'>Disclaimer</a> <span>© 2018 Accelerance</span>
-          </footer>
-        </div><!--end widget-span -->
-      </div><!--end row-->
-    </div><!--end row-wrapper -->
+        <div class="row-fluid-wrapper">
+          <div class="row-fluid ">
+            <div class="span12 widget-span widget-type-page_footer " style="" data-widget-type="page_footer" data-x="0" data-w="12">
+              <footer>
+                <a href='https://www.accelerance.com/showcase-disclaimer' style='text-decoration: underline;'>Disclaimer</a> <span>© 2018 Accelerance</span>
+              </footer>
+            </div><!--end widget-span -->
+          </div><!--end row-->
+        </div><!--end row-wrapper -->
 
-  </div><!--end widget-span -->
-</div><!--end row-wrapper -->
+      </div><!--end widget-span -->
+    </div><!--end row-wrapper -->
     <!--#endregion footer-->
 
     </div>
@@ -1388,25 +1483,25 @@
       slidesToShow: 1,
       adaptiveHeight: false
     });
-  });      
 
-  // SWITCHES TAB BASED ON HASH VALUE IN URL
-  (function () {
+    // SWITCHES TAB BASED ON HASH VALUE IN URL
+    (function () {
 
-    var allTabs = document.getElementsByClassName('tabcontent');
+      var allTabs = document.getElementsByClassName('tabcontent');
 
-    for (i = 0; i < allTabs.length; i++ ) {
-      if (window.location.hash == ('#' + allTabs[i].id)) {
-          //all <a><a/> tags that are to be used for nav must have id="tabname-button"
-          document.getElementById(allTabs[i].id + '-button').click();
+      for (i = 0; i < allTabs.length; i++ ) {
+        if (window.location.hash == ('#' + allTabs[i].id)) {
+            //all <a><a/> tags that are to be used for nav must have id="tabname-button"
+            document.getElementById(allTabs[i].id + '-button').click();
+        }
       }
-    }
 
-    if (window.location.hash == "") {
-          document.getElementById("overview-button").click();
-    }
+      if (window.location.hash == "") {
+            document.getElementById("overview-button").click();
+      }
 
-  }());
+    }());
+  });      
 
   {% if badgePage != true %}
     // CAPABILITIES VIDEO PLAYLIST - https://wistia.com/support/developers/playlist-api#how-to-use-the-api
@@ -1449,6 +1544,7 @@
       }
     });
   {% endif %}
+
 
   // TOOLTIPS tippy v2.5.4 https://atomiks.github.io/tippyjs/v2/index.html
   tippy('.btn', {
@@ -1598,9 +1694,11 @@
 
   });
 
-  // TAB NAVIGATION 
+  // TAB NAVIGATION
+  currentVideos = [];
   function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
+    
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
@@ -1618,10 +1716,24 @@
     $(window).one('scroll', function () {
        window.scrollTo(x, y);
     });
-
     if (tabName == 'overview') {
-        initMap();
+      initMap();
     }
+
+    /*var allVideos = [Wistia.api('overview-top-video'),Wistia.api('capabilities-top-video'),Wistia.api('people-top-video'),Wistia.api('ownership-video'),Wistia.api('hiring-video'),Wistia.api('process-top-video'),Wistia.api('ramp-up-video'),Wistia.api('client-support-video'),Wistia.api('project-management-video'),Wistia.api('sdlc-video'),Wistia.api('communication-video'),Wistia.api('reviews-top-video'), processesPlaylist, capabilitiesPlaylist];
+    for (i = 0; i < allVideos.length; i++) {
+      if (allVideos[i]){
+        allVideos[i].bind('play', function() {
+          for (i = 0; i < allVideos.length; i++) {
+            if (allVideos[i]){
+              allVideos[i].pause();
+              this.play;
+            }   
+         };
+        });
+      }   
+   };
+    return currentVideos = allVideos;*/
   };
 
   //POPUP FORM FOR BADGE VERSION
