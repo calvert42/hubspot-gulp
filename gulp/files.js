@@ -42,10 +42,11 @@ const files = [
       }
     },
     {
-      title: 'Showcase',
+      title: 'Showcase (html)',
       value: {
         id: '6024828019',
-        source: 'showcase.html'
+        source: 'showcase.html',
+        hs_path: 'ACC2018/Showcase/showcase.html'
       }
     },
     {

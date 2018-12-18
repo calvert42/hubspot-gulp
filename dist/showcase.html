@@ -30,6 +30,8 @@
   <!-- c3 stylesheet for charts -->
   <link rel="stylesheet" type="text/css" src="{{ get_public_template_url('ACC2018/Showcase/css/c3.css') }}"/>
   
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  
   <style>
     {% include "hubspot/styles/responsive/modules.css" %}
     {% include "hubspot/styles/patches/recommended.css" %}
@@ -93,16 +95,10 @@
          fill: #333333;
         }
     
-    .c3-texts-data1 > .c3-text {
+    .c3-text {
           font-size: 36px;
 					font-weight: 900;
-          fill: #ffffff!important;
         }
-    
-    .c3-texts-data2 > .c3-text {
-      font-size: 36px;
-      font-weight: 900;
-    }
     
     .wistia_bento_menu {
     	border: none!important;
@@ -300,9 +296,7 @@
     #map {
         height: 100%;
       }
-    
-    
-    
+  
   </style>
   
   {{ user_head_overrides }}
@@ -312,7 +306,7 @@
 <!--#region hubL-->
 {% choice "partner_picker" 
 	label="Choose what partner this page will pull it's data from",
-	value="5560286418" 
+	value="6178482816" 
   choices='[
     [\"5560286413\", \"Arcanys\"], 
     [\"5560039842\", \"ArkusNexus\"], 
@@ -350,7 +344,7 @@
 {% endmacro %}
 <!--#endregion hubl-->
   
-<body class=" {{ builtin_body_classes }}">
+<body class="showcase-page">
   
   <!--#region header-->
   <div class="header-container-wrapper">
@@ -392,6 +386,7 @@
       
       <!--#region intro-->
       <div class="flex border-box">
+        <div class="intro-header" style="background-image: linear-gradient(rgba(8, 55, 74, 0.6), rgba(8, 55, 74, 0.6)), url({{ partner.intro_background_image ? partner.intro_background_image.url : 'https://cdn2.hubspot.net/hubfs/396606/Landing_Page_Images/15%20risk%20indicators/bg.jpg' }});"></div>
         <div class="row-fluid-wrapper showcase-intro">
           <div class="row-fluid">
             <div class="span2 partner-logo">
@@ -832,8 +827,8 @@
               <h4 style="margin-top:0px">FULL TIME DEVELOPERS</h4>
               
             </div><!--end widget-span -->
-            <div class="span8 border-box">
-              <h3 class="padding">Developer Breakdown</h3>
+            <div class="span8 border-box developer-breakdown">
+              <h3>Developer Breakdown</h3>
               <div id="developer_breakdown" style="text-align: center;"></div>
 							
             </div><!--end widget-span -->
@@ -1221,7 +1216,6 @@
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
 
 {% if partner.location1 %}
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH2X17yoVfBAhkDtjtKTg1qQfqA03c6Og&callback=initMap" async></script>
@@ -1256,56 +1250,116 @@
   }(window, document));
 
   // ALL CAHRTS ARE CREATED WITH c3.js - https://c3js.org/
-  var chart = c3.generate({
-    bindto: '#developer_breakdown',
-    data: {
-        names: {
-          data1: 'Junior Developers',
-          data2: 'Senior Developers'
+  {% if partner.intermediate_developers %}
+    //THIS IS THE VERSION FOR INTERMEDIATE DEV
+    var chart = c3.generate({
+      bindto: '#developer_breakdown',
+      size: {
+        height: 240
+      },
+      data: {
+          names: {
+            data1: 'Junior Developers',
+            data2: 'Intermediate Developers',
+            data3: 'Senior Developers'
+          },
+          order: null,
+          colors: {
+            data1: '#91BC63',
+            data2: '#ffae42',
+            data3: '#1FBDE5'
+          },
+          columns: [
+              ['data1', 0],
+              ['data2', 0],
+              ['data3', 0]
+          ],
+          type: 'bar',
+          groups: [['data1', 'data2', 'data3']],
+          tooltip: {
+            show: false
+          },
+          labels: {
+              format: function (v, id, i, j) { return v; }
+            }
         },
-        order: null,
-        colors: {
-          data1: '#91BC63',
-          data2: '#1FBDE5'
-        },
-        columns: [
-            ['data1', 0],
-            ['data2', 0]
-        ],
-        type: 'bar',
-        groups: [['data1', 'data2']],
-        tooltip: {
+      axis: {
+        x: {
           show: false
         },
-        labels: {
-        //format: function (v, id, i, j) { return "Default Format"; },
-          format: function (v, id, i, j) { return v; },
-              //data1: function (v, id, i, j) { return "Format for data1"; },
+        y: {
+          show: false
+        },
+        rotated: true
+      },
+      bar: {
+          width: {
+              ratio: 0.5 // this makes bar width 50% of length between ticks
           }
+          // or
+          //width: 100 // this makes bar width 100px
       },
-    axis: {
-      x: {
+      transition: {
+        duration: 600
+      },
+      tooltip: {
         show: false
+      }
+    });
+  {% else %}
+    //THIS IS THE VERSION WITHOUT INTERMEDIATE DEVS
+    var chart = c3.generate({
+      bindto: '#developer_breakdown',
+      size: {
+        height: 240
       },
-      y: {
+      data: {
+          names: {
+            data1: 'Junior Developers',
+            data2: 'Senior Developers',
+          },
+          order: null,
+          colors: {
+            data1: '#91BC63',
+            data2: '#1FBDE5'
+          },
+          columns: [
+              ['data1', 0],
+              ['data2', 0]
+          ],
+          type: 'bar',
+          groups: [['data1', 'data2']],
+          tooltip: {
+            show: false
+          },
+          labels: {
+            format: function (v, id, i, j) { return v; }
+          }
+        },
+      axis: {
+        x: {
+          show: false
+        },
+        y: {
+          show: false
+        },
+        rotated: true
+      },
+      bar: {
+          width: {
+              ratio: 0.5 // this makes bar width 50% of length between ticks
+          }
+          // or
+          //width: 100 // this makes bar width 100px
+      },
+      transition: {
+        duration: 600
+      },
+      tooltip: {
         show: false
-      },
-      rotated: true
-    },
-    bar: {
-        width: {
-            ratio: 0.5 // this makes bar width 50% of length between ticks
-        }
-        // or
-        //width: 100 // this makes bar width 100px
-    },
-    transition: {
-      duration: 600
-    },
-    tooltip: {
-      show: false
-    }
-  });
+      }
+    });
+  {% endif %}
 
   var total = {{ partner.projectManagerCount }} + {{ partner.productManagerCount }} + {{ partner.businessAnalystCount }} + {{ partner.devopsCount }} +  {{ partner.systemArchitectCount }} + {{ partner.uxUICount }} + {{ partner.qaTeamCount }} + {{ partner.developerEngineerCount }};
 
@@ -1421,23 +1475,52 @@
   });
 
   // LOADS DATA INTO People - Developer Breakdown and People - Employee Distribution USING c3.js
-  $('#people-button').click(function() {
+    $('#people-button').click(function() {
 
-    setTimeout(function () {
-      chart.load({
-        columns: [
-            ['data1', {{ partner.junior_developers }}]
-        ]
-      });
-    }, 100);
+      {% if partner.intermediate_developers %}
+        setTimeout(function () {
+          chart.load({
+            columns: [
+                ['data1', {{ partner.junior_developers }}]
+            ]
+          });
+        }, 100);
 
-    setTimeout(function () {
-      chart.load({
-        columns: [
-            ['data2', {{ partner.senior_developers }}]
-        ]
-      });
-    }, 800);
+        {% if partner.intermediate_developers %}
+          setTimeout(function () {
+            chart.load({
+              columns: [
+                  ['data2', {{ partner.intermediate_developers }}]
+              ]
+            });
+          }, 800);
+        {% endif %}
+
+        setTimeout(function () {
+          chart.load({
+            columns: [
+                ['data3', {{ partner.senior_developers }}]
+            ]
+          });
+        }, 800);
+      {% else %}
+        setTimeout(function () {
+          chart.load({
+            columns: [
+                ['data1', {{ partner.junior_developers }}]
+            ]
+          });
+        }, 100);
+
+          setTimeout(function () {
+            chart.load({
+              columns: [
+                  ['data2', {{ partner.senior_developers }}]
+              ]
+            });
+          }, 800);
+      {% endif %}
+    
 
     var loadedColumns = [
       {% if partner.projectManagerCount %}
@@ -1482,6 +1565,12 @@
       variableWidth: true,
       slidesToShow: 1,
       adaptiveHeight: false
+    });
+
+    $(window).load(function() {
+      $('.mobile-menu').click(function() {
+        $('.tab-container').toggle();
+      });
     });
 
     // SWITCHES TAB BASED ON HASH VALUE IN URL
@@ -1779,10 +1868,6 @@
         close();
     });
   {% endif %}
-
-  $('.mobile-menu').click(function() {
-    $('.tab-container').slideToggle();
-  });
 
   // GOOGLE MAPS FOR MULTIPLE MARKERS
   {% if partner.location1 %}
