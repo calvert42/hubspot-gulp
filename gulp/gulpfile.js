@@ -66,11 +66,7 @@ async function init(done) {
         if (response.statusCode == 200) {
           livereload.reload();
           console.log((write  == true ? "Published".bgGreen.white : "Saved".bgYellow.grey));
-          if (write != true) {
-            console.log('https://app.hubspot.com/design-previewer/396606/code/' + file.value.id);
-          } else {
-            (file.value.hs_path ? console.log("https://preview.hs-sites.com/_hcms/preview/template/multi?portalId=396606&template_file_path=" + file.value.hs_path) : null);
-          }
+          console.log("https://preview.hs-sites.com/_hcms/preview/template/multi?portalId=396606&template_file_path=" + file.value.hs_path);
         }
       });
     });
