@@ -33,5 +33,11 @@
             margin: 0px;
         }
     }
+
+    .container-map {
+        @media screen and (max-width:$tablet) {
+            height: 300px;
+        }
+    }
         
 }

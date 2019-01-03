@@ -92,12 +92,13 @@
     .c3-chart-arcs-title  {
         	font-size: 36px;
           font-weight: 900;
-         fill: #333333;
+          fill: #333333;
         }
     
     .c3-text {
           font-size: 36px;
-					font-weight: 900;
+          font-weight: 900;
+          
         }
     
     .wistia_bento_menu {
@@ -231,6 +232,10 @@
     }
     
     @media screen and (max-width:768px) {
+      .c3-text {
+        font-size: 14px;
+      }
+
       .nav-info i {
       	font-size: 24px;
         margin: 0px 5px;
@@ -320,7 +325,8 @@
     [\"6204819325\", \"Euvic\"],
     [\"6119422514\", \"Q Software\"],
     [\"5560286418\", \"Skelia\"],
-    [\"5560039875\", \"Tekton Labs\"]
+    [\"5560039875\", \"Tekton Labs\"],
+    [\"6742893287\", \"Savvycom\"]
   ]', 
   export_to_template_context=true %}
 
@@ -626,7 +632,7 @@
                         {% endfor %}
                       </ul>
                     </div>
-                    <div class="span3">
+                    <div class="span3 tablethide">
                       <ul>
                         {% for technology in partner.technologies %}
                           {% if loop.index > 4 and loop.index < 9 %}
@@ -635,7 +641,7 @@
                         {% endfor %}
                       </ul>
                     </div>
-                    <div class="span3">
+                    <div class="span3 tablethide">
                       <ul>
                         {% for technology in partner.technologies %}
                           {% if loop.index > 8 and loop.index < 13 %}
@@ -644,7 +650,7 @@
                         {% endfor %}
                       </ul>
                     </div>
-                    <div class="span3">
+                    <div class="span3 tablethide">
                       <ul>
                         {% for technology in partner.technologies %}
                           {% if loop.index > 12 and loop.index < 17 %}
@@ -720,7 +726,7 @@
                   	{% endif %}
                   {% endfor %}
                 </div>
-                <div class="span6">
+                <div class="span6 tablethide">
                 {% for certification in partner.certifications %}
                   {% if loop.index > 4 and loop.index < 9 %}
                     <div style="background-color:#F4F4F4;border-radius: 3px; border: 1px solid #979797;margin: 15px 0px;padding:0px 15px;">
@@ -1410,7 +1416,7 @@
       type : 'donut'
     },
     legend: {
-        position: 'right'
+        position: (screen.width < 767 ? 'bottom' : 'right')
     },
     donut: {
       label: {
@@ -1550,6 +1556,7 @@
     ];
 
     setTimeout(function () {
+      donut.flush();
       donut.load({
           columns: loadedColumns,
       });
@@ -1609,9 +1616,12 @@
       media_0_0: {
         controlsVisibleOnLoad: false
       },
-       slide: {
+      slide: {
         ears: false
-       }
+      },
+      bento: {
+        menuPosition: (screen.width > 768 ? "right" : "bottom")
+      }
     });
 
     var processesPlaylist = Wistia.playlist("{{ partner.processes_wistia_id }}", {
@@ -1630,6 +1640,9 @@
       media_0_0: {
         autoPlay: false,
         controlsVisibleOnLoad: false
+      },
+      bento: {
+        menuPosition: (screen.width > 768 ? "right" : "bottom")
       }
     });
   {% endif %}
@@ -1784,7 +1797,6 @@
   });
 
   // TAB NAVIGATION
-  currentVideos = [];
   function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     
@@ -1808,21 +1820,9 @@
     if (tabName == 'overview') {
       initMap();
     }
-
-    /*var allVideos = [Wistia.api('overview-top-video'),Wistia.api('capabilities-top-video'),Wistia.api('people-top-video'),Wistia.api('ownership-video'),Wistia.api('hiring-video'),Wistia.api('process-top-video'),Wistia.api('ramp-up-video'),Wistia.api('client-support-video'),Wistia.api('project-management-video'),Wistia.api('sdlc-video'),Wistia.api('communication-video'),Wistia.api('reviews-top-video'), processesPlaylist, capabilitiesPlaylist];
-    for (i = 0; i < allVideos.length; i++) {
-      if (allVideos[i]){
-        allVideos[i].bind('play', function() {
-          for (i = 0; i < allVideos.length; i++) {
-            if (allVideos[i]){
-              allVideos[i].pause();
-              this.play;
-            }   
-         };
-        });
-      }   
-   };
-    return currentVideos = allVideos;*/
+    if ($('.mobile-menu').not(":hidden") && screen.width < 767) {
+      $('.tab-container').hide();
+    }
   };
 
   //POPUP FORM FOR BADGE VERSION
@@ -1895,8 +1895,6 @@
       map.fitBounds(bounds);
     }
   {% endif %}
-
-      
 </script>
 
   </body>
