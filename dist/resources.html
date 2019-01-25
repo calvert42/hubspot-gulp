@@ -14,16 +14,10 @@
 
   {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
 
-  {{ required_head_tags }}
   {{ standard_header_includes }}
-
-  <!-- master.css -->
+  
   {{ require_css(get_public_template_url("ACC2018/Website_Pages/Rapid_Referral/New_Rapid_Referral/bare-minimum.css")) }}
   {{ require_css('https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.4/themes/light.css') }}
-  <!-- avenir we pay for -->
-  <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/3547a7c9-bc96-4a7c-bcb7-a2b26604d522.css"/>
-  <!-- fontawesome -->
-  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
 </head>
 <body class='resources-page'>
   <div class="nav flex">

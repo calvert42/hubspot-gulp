@@ -55,6 +55,20 @@ const files = [
         id: '6745581805',
         source: 'menu.js'
       }
+    },
+    {
+      title: 'Careers (html)',
+      value: {
+        id: '6959089084',
+        source: 'careers.html'
+      }
+    },
+    {
+      title: 'Providers (html)',
+      value: {
+        id: '7244532859',
+        source: 'providers.html'
+      }
     }
   ];
 

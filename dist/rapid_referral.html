@@ -141,7 +141,7 @@
     </div>
     {% for choice in choiceArray %}
       <div class='span3 flex'style='justify-content: center;'>
-        <a href='{{ choice.partner_page }}' class='cta cta--cyan'>Learn More &rarr;</a>
+        <a href='{{ choice.partner_page }}' class='cta cta--cyan' target="_blank">Learn More &rarr;</a>
       </div>
     {% endfor %}
   </div>
@@ -166,7 +166,7 @@
       	<div class='border-box padding'>
         	<div class="container">
             <div class='span2 flex'><a href='http://{{ partner.website }}' target='_blank' rel="noopener"> <img alt="{{ partner.name }}" src="{{ partner.logo }}"></a></div>
-            <div class='span10 padding'><h2>What <a href='{{ partner.website }}'>{{ partner.name }}</a> has to say about your project</h2></div>
+            <div class='span10 padding'><h2>What <a href='{{ partner.website }}' target="_blank">{{ partner.name }}</a> has to say about your project</h2></div>
             <div class='span12'>{% rich_text "partner_comments" field="partner_comments" html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>", label="Partner Comments", unique_in_loop=True %}<p><a href='{{ choice.partner_page }}' class='cta cta--cyan'>Learn More &rarr;</a></p></div>
           </div>
         </div>

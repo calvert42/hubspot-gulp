@@ -1,0 +1,173 @@
+//ebook-cute
+.ebook-cute {   
+    z-index: 0;
+    background-color: $blue;
+    background-image: url('https://www.accelerance.com/hubfs/ebook-landing-pages/ebook-cute/icon-tile.png');
+    color: $white;
+    .header-container-wrapper {
+        background: none;
+        .logo {
+            float: none;
+            margin: 50px auto;
+            text-align: center;
+            max-width: 367px;
+            width: 367px;
+        }
+    }
+    .container {
+        @include ninesixty-margin(0px);
+        .image {
+            text-align: center;
+            margin: 0px auto;
+            height: 100%;
+            img {
+                max-width: 390px;
+                width: 100%;
+            }
+        }
+        h1, h2 {
+            font-weight: 800;
+            margin: 0px auto;
+        }
+        h4 {
+            margin: 0px;
+        }
+        .cta {
+            text-align: center;
+            margin: 50px auto;
+            .ebookcta {
+                background-color: #1FBDE5;
+                text-decoration: none;
+                color: #ffffff;
+                padding: 20px 60px;
+                border-radius: 3px;
+                transition: 0.5s;
+                    -webkit-transition: 0.5s;
+                    -moz-transition: 0.5s;
+                }
+                .ebookcta:hover {
+                background-color: #76CEE4;
+                cursor: pointer;
+                }
+        }
+    }
+    .popupoverlay {
+        overflow: scroll;
+        display: none;
+        text-align: center;
+        background-color: rgba(0,0,0,0.30);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        
+        .contactform {
+            margin: 20px 20px 50px 20px;
+            .hs-button.primary, input[type="submit"], input[type="button"] {
+                    display: inline;
+                    background-color: $purple;
+                    border: none;
+                    color: $white;
+                    float: none;
+                    padding: 10px 20px;
+                    text-align: center;
+                    width: 250px;
+                    max-width: 400px;
+                    margin: 0px auto;
+                    -webkit-appearance: none;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $purple-lighter;
+                    }
+    
+                }
+            .form-columns-1 {
+                max-width: 100%;
+            }
+            .hs-form {
+                margin: 0 auto;
+                max-width: 920px;
+                width: 100%;
+                label {
+                    font-size: 18px;
+                    font-weight: 500;
+    
+                }
+                fieldset {
+                    margin: 20px 0px;
+                }
+                ul input {
+                    width: unset;
+                }
+
+                input {
+                    border-radius: 3px;
+                    border: 1px solid $grey;
+                    font-size: 18px;
+                    line-height: 30px;
+                    padding: 5px 10px;
+                    margin: 20px auto;
+                    width: 80%;
+                    select {
+                        width: 80%;
+                        height: 35px;
+                    }
+                }
+
+                .hs-form-booleancheckbox {
+                    input {
+                        margin-right: 18px;
+                    }
+                }
+                ul {
+                    text-align: left;
+                    list-style: none;
+                    padding: 0px;
+                    margin: 15px 40px;
+                    li {
+                        font-size: 18px;
+                        margin: 0 auto;
+                        width: 70%;
+                    }
+                }
+                select {
+                    height: 48px;
+                    border: 1px solid #d8d8d8;
+                    font: {
+                        size: 18px;
+                    }
+                    margin: 20px auto;
+                }
+                textarea {
+                    width: 100%;
+                    border-radius: 3px;
+                    border: 1px solid $grey;
+                    font-size: 18px;
+                    line-height: 30px;
+                    padding: 5px 10px;
+                    margin: 20px auto;
+                }
+            }
+        }
+
+        .form-header {
+            h2 {
+                margin: 0px;
+            }
+        }
+
+        .popupform {
+            @include ninesixty-margin(0px);
+            border-radius: 0px 0px 3px 3px;
+            overflow: visible;
+            margin: 0px auto;
+            padding: 50px;
+            background: $white;
+            color: $black;
+
+        }
+        
+    }
+}

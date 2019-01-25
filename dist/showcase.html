@@ -311,7 +311,7 @@
 <!--#region hubL-->
 {% choice "partner_picker" 
 	label="Choose what partner this page will pull it's data from",
-	value="6178482816" 
+	value="5560039845" 
   choices='[
     [\"5560286413\", \"Arcanys\"], 
     [\"5560039842\", \"ArkusNexus\"], 
@@ -327,6 +327,7 @@
     [\"6119422514\", \"Q Software\"],
     [\"5560286418\", \"Skelia\"],
     [\"5560039875\", \"Tekton Labs\"],
+    [\"5560039872\", \"Scio\"],
     [\"6742893287\", \"Savvycom\"]
   ]', 
   export_to_template_context=true %}
@@ -465,12 +466,12 @@
                 <h4>High</h4>
               </div><!--end widget-span -->
               <div class="span7 border-box">
-                <script src="https://fast.wistia.com/embed/medias/{{ partner.overview_top_video_id }}.jsonp" async></script>
+                <script src="https://fast.wistia.com/embed/medias/{{ partner.overview_top_video_id ? partner.overview_top_video_id : 'b2ouws0yru' }}.jsonp" async></script>
                 <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
                   <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                    <div id="overview-top-video" class="wistia_embed wistia_async_{{ partner.overview_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                    <div id="overview-top-video" class="wistia_embed wistia_async_{{ partner.overview_top_video_id ? partner.overview_top_video_id : 'b2ouws0yru' }} videoFoam=true" style="height:100%;position:relative;width:100%">
                       <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                        <img src="https://fast.wistia.com/embed/medias/{{ partner.overview_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                        <img src="https://fast.wistia.com/embed/medias/{{ partner.overview_top_video_id ? partner.overview_top_video_id : 'b2ouws0yru' }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
                       </div>
                     </div>
                   </div>
@@ -592,12 +593,12 @@
                 <p>Rapid access to technologies, best practices and methodologies is a significant benefit of outsourcing software development. Our research analysts investigated and verified the technical and industry expertise of {{ partner.name }}.</p>
               </div><!--end widget-span -->
               <div class="span6 border-box">
-                  <script src="https://fast.wistia.com/embed/medias/{{ partner.capabilities_top_video_id }}.jsonp" async></script>
+                  <script src="https://fast.wistia.com/embed/medias/{{ partner.capabilities_top_video_id ? partner.capabilities_top_video_id : '9c3jg5ih4k' }}.jsonp" async></script>
                   <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
                     <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                      <div id="capabilities-top-video" class="wistia_embed wistia_async_{{ partner.capabilities_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                      <div id="capabilities-top-video" class="wistia_embed wistia_async_{{ partner.capabilities_top_video_id ? partner.capabilities_top_video_id : '9c3jg5ih4k' }} videoFoam=true" style="height:100%;position:relative;width:100%">
                         <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                          <img src="https://fast.wistia.com/embed/medias/{{ partner.capabilities_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                          <img src="https://fast.wistia.com/embed/medias/{{ partner.capabilities_top_video_id ? partner.capabilities_top_video_id : '9c3jg5ih4k' }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
                         </div>
                       </div>
                     </div>
@@ -767,12 +768,12 @@
      						<p>How an outsourcing company operates on a day-to-day basis defines its development culture and is an indicator of how well they’ll work with global clients. Accelerance looks for healthy hiring, training, and retention practices.</p>
               </div><!--end widget-span -->
               <div class="span6 border-box">
-                <script src="https://fast.wistia.com/embed/medias/{{ partner.people_top_video_id }}.jsonp" async></script>
+                <script src="https://fast.wistia.com/embed/medias/{{ partner.people_top_video_id ? partner.people_top_video_id : 'pnt1h6aarv' }}.jsonp" async></script>
                 <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
                   <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                    <div id="people-top-video" class="wistia_embed wistia_async_{{ partner.people_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                    <div id="people-top-video" class="wistia_embed wistia_async_{{ partner.people_top_video_id ? partner.people_top_video_id : 'pnt1h6aarv' }} videoFoam=true" style="height:100%;position:relative;width:100%">
                       <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                        <img src="https://fast.wistia.com/embed/medias/{{ partner.people_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                        <img src="https://fast.wistia.com/embed/medias/{{ partner.people_top_video_id ? partner.people_top_video_id : 'pnt1h6aarv' }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
                       </div>
                     </div>
                   </div>
@@ -902,12 +903,12 @@
               <p>Accelerance investigates methodologies and management styles of each Certified Partner in our Global Network. We look for best practices you’ll need for short-term wins and long-term success.</p>
             </div><!--end widget-span -->
             <div class="span6 border-box">
-              <script src="https://fast.wistia.com/embed/medias/{{ partner.processes_top_video_id }}.jsonp" async></script>
+              <script src="https://fast.wistia.com/embed/medias/{{ partner.processes_top_video_id ? partner.processes_top_video_id : 'f8c9mn0jzx' }}.jsonp" async></script>
               <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
                 <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                  <div id="process-top-video" class="wistia_embed wistia_async_{{ partner.processes_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                  <div id="process-top-video" class="wistia_embed wistia_async_{{ partner.processes_top_video_id ? partner.processes_top_video_id : 'f8c9mn0jzx' }} videoFoam=true" style="height:100%;position:relative;width:100%">
                     <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                      <img src="https://fast.wistia.com/embed/medias/{{ partner.processes_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                      <img src="https://fast.wistia.com/embed/medias/{{ partner.processes_top_video_id ? partner.processes_top_video_id : 'f8c9mn0jzx' }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
                     </div>
                   </div>
                 </div>
@@ -1113,12 +1114,12 @@
               </div><!--end widget-span -->
 
               <div class="span6 border-box">
-                <script src="https://fast.wistia.com/embed/medias/{{ partner.reviews_top_video_id }}.jsonp" async></script>
+                <script src="https://fast.wistia.com/embed/medias/{{ partner.reviews_top_video_id ? partner.reviews_top_video_id : 'urudv4sul1' }}.jsonp" async></script>
                 <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
                   <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                    <div id="reviews-top-video" class="wistia_embed wistia_async_{{ partner.reviews_top_video_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
+                    <div id="reviews-top-video" class="wistia_embed wistia_async_{{ partner.reviews_top_video_id ? partner.reviews_top_video_id : 'urudv4sul1' }} videoFoam=true" style="height:100%;position:relative;width:100%">
                       <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                        <img src="https://fast.wistia.com/embed/medias/{{ partner.reviews_top_video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
+                        <img src="https://fast.wistia.com/embed/medias/{{ partner.reviews_top_video_id ? partner.reviews_top_video_id : 'urudv4sul1' }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" />
                       </div>
                     </div>
                   </div>
@@ -1256,7 +1257,7 @@
     b.appendChild(s);
   }(window, document));
 
-  // ALL CAHRTS ARE CREATED WITH c3.js - https://c3js.org/
+  // ALL CHARTS ARE CREATED WITH c3.js - https://c3js.org/
   {% if partner.intermediate_developers %}
     //THIS IS THE VERSION FOR INTERMEDIATE DEV
     var chart = c3.generate({
@@ -1368,109 +1369,113 @@
     });
   {% endif %}
 
-  var total = {{ partner.projectManagerCount }} + {{ partner.productManagerCount }} + {{ partner.businessAnalystCount }} + {{ partner.devopsCount }} +  {{ partner.systemArchitectCount }} + {{ partner.uxUICount }} + {{ partner.qaTeamCount }} + {{ partner.developerEngineerCount }};
+  {% if partner.projectManagerCount %}
 
-  var columns = [
-    {% if partner.projectManagerCount %}
-    ["project_managers", 0],
-    {% endif %}
-    {% if partner.productManagerCount %}
-    ["product_managers", 0],
-    {% endif %}
-    {% if partner.businessAnalystCount %}
-    ["business_analysts", 0],
-    {% endif %}
-    {% if partner.devopsCount %}
-    ["devOps", 0],
-    {% endif %}
-    {% if partner.systemArchitectsCount %}
-    ["system_architects", 0],
-    {% endif %}
-    {% if partner.uxUICount %}
-    ["uxui", 0],
-    {% endif %}
-    {% if partner.qaTeamCount %}
-    ["qa_team", 0],
-    {% endif %}
-    {% if partner.developerEngineerCount %}
-    ["developers_engineers", 0]
-    {% endif %}
-  ];      
+    var total = {{ partner.projectManagerCount }} + {{ partner.productManagerCount }} + {{ partner.businessAnalystCount }} + {{ partner.devopsCount }} +  {{ partner.systemArchitectCount }} + {{ partner.uxUICount }} + {{ partner.qaTeamCount }} + {{ partner.developerEngineerCount }};
 
-  var donut = c3.generate({
-    bindto: '#employee-distribution',
-    transition: {
-      duration: 3000
-    },
-    data: {
-      columns: columns,
-      names: {
-        project_managers: 'Project Managers',
-        product_managers: 'Product Managers',
-        business_analysts: 'Business Analysts',
-        devOps: 'DevOps',
-        system_architects: 'System Architects',
-        uxui: 'UX/UI Designers',
-        qa_team: 'QA Team',
-        developers_engineers: 'Developer/Engineers'
+    var columns = [
+      {% if partner.projectManagerCount %}
+      ["project_managers", 0],
+      {% endif %}
+      {% if partner.productManagerCount %}
+      ["product_managers", 0],
+      {% endif %}
+      {% if partner.businessAnalystCount %}
+      ["business_analysts", 0],
+      {% endif %}
+      {% if partner.devopsCount %}
+      ["devOps", 0],
+      {% endif %}
+      {% if partner.systemArchitectsCount %}
+      ["system_architects", 0],
+      {% endif %}
+      {% if partner.uxUICount %}
+      ["uxui", 0],
+      {% endif %}
+      {% if partner.qaTeamCount %}
+      ["qa_team", 0],
+      {% endif %}
+      {% if partner.developerEngineerCount %}
+      ["developers_engineers", 0]
+      {% endif %}
+    ];      
+
+    var donut = c3.generate({
+      bindto: '#employee-distribution',
+      transition: {
+        duration: 3000
       },
-      type : 'donut'
-    },
-    legend: {
-        position: (screen.width < 767 ? 'bottom' : 'right')
-    },
-    donut: {
-      label: {
-        threshold: 0,
-        show: true,
-        format: function(v) {
-          return v;
+      data: {
+        columns: columns,
+        names: {
+          project_managers: 'Project Managers',
+          product_managers: 'Product Managers',
+          business_analysts: 'Business Analysts',
+          devOps: 'DevOps',
+          system_architects: 'System Architects',
+          uxui: 'UX/UI Designers',
+          qa_team: 'QA Team',
+          developers_engineers: 'Developer/Engineers'
+        },
+        type : 'donut'
+      },
+      legend: {
+          position: (screen.width < 767 ? 'bottom' : 'right')
+      },
+      donut: {
+        label: {
+          threshold: 0,
+          show: true,
+          format: function(v) {
+            return v;
+          }
+        }
+      },
+      color: {
+        pattern: ['#4170EB','#91BC63','#E5C95D', '#B73E43', '#8D2B7C', '#08374A', '#EB4155','#1FBDE5']
+      },
+      tooltip: {
+        show: false,
+        format: {
+          value: function (value, ratio, id, index) { return value; }
         }
       }
-    },
-    color: {
-      pattern: ['#4170EB','#91BC63','#E5C95D', '#B73E43', '#8D2B7C', '#08374A', '#EB4155','#1FBDE5']
-    },
-    tooltip: {
-      show: false,
-      format: {
-        value: function (value, ratio, id, index) { return value; }
-      }
-    }
-  });
+    });
 
-  var guage = c3.generate({
-    bindto: '#guage',
-    size: {
-      height: 180
-    },
-    data: {
-        columns: [
-            ['data', 0]
-        ],
+    var guage = c3.generate({
+      bindto: '#guage',
+      size: {
+        height: 180
+      },
+      data: {
+          columns: [
+              ['data', 0]
+          ],
+          label: {
+            show: false
+          },
+          type: 'gauge'
+      },
+      tooltip: {
+            show: false
+          },
+      legend: {
+        show: false
+      },
+      gauge: {
         label: {
           show: false
         },
-        type: 'gauge'
-    },
-    tooltip: {
-          show: false
-        },
-    legend: {
-      show: false
-    },
-    gauge: {
-      label: {
-        show: false
       },
-    },
-    color: {
-      pattern: ['#EB4155', '#E5C95D', '#91BC63'], // the three color levels for the percentage values.
-      threshold: {
-          values: [30, 70, 90]
+      color: {
+        pattern: ['#EB4155', '#E5C95D', '#91BC63'], // the three color levels for the percentage values.
+        threshold: {
+            values: [30, 70, 90]
+        }
       }
-    }
-  });
+    });
+
+  {% endif %}
 
   // LAUNCH ASSESMENT CHART
   $('#overview-button').click(function() {
