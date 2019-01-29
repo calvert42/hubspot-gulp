@@ -50,6 +50,13 @@ const files = [
       }
     },
     {
+      title: 'Generic Showcase (html)',
+      value: {
+        id: '7288843582',
+        source: 'showcase-generic.html'
+      }
+    },
+    {
       title: 'Menu (js)',
       value: {
         id: '6745581805',
@@ -68,6 +75,13 @@ const files = [
       value: {
         id: '7244532859',
         source: 'providers.html'
+      }
+    },
+    {
+      title: 'Testimonials Listing (html)',
+      value: {
+        id: '7262159262',
+        source: 'testimonials-listing.html'
       }
     }
   ];

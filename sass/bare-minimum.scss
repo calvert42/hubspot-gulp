@@ -5,6 +5,12 @@
 
 @import 'partials/pages/careers';
 
+@import 'partials/pages/testimonials';
+
+@import 'partials/pages/showcase-generic';
+
+@import 'partials/pages/providers';
+
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=3547a7c9-bc96-4a7c-bcb7-a2b26604d522");
     @font-face{
         font-family:"Avenir W01_n2";
@@ -23,6 +29,7 @@ font-style: normal;
     }
     @font-face{
         font-family:"Avenir W01";
+
         src:url("https://www.accelerance.com/hubfs/fonts/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix");
         src:url("https://www.accelerance.com/hubfs/fonts/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix") format("eot"),url("https://www.accelerance.com/hubfs/fonts/065a6b14-b2cc-446e-9428-271c570df0d9.woff2") format("woff2"),url("https://www.accelerance.com/hubfs/fonts/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff") format("woff"),url("https://www.accelerance.com/hubfs/fonts/c70e90bc-3c94-41dc-bf14-caa727c76301.ttf") format("truetype");
 font-weight: 300;
@@ -90,6 +97,12 @@ body {
         border: 0;
         height: 2px;
         background-color: $black;
+    }
+    .center {
+        text-align: center;
+    }
+    .zoom {
+        @include zoom(100ms);
     }
     .nav {
         background-color: white;
@@ -277,6 +290,8 @@ body {
     padding: 10px 40px;
     border-radius: 40px;
     text-decoration: none;
+    display: inline-block;
+    margin: 24px auto;
     &--red {
         background-color: $red;
         color: $white!important;

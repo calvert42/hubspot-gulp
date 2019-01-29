@@ -1,0 +1,35 @@
+.providers {
+    .container {
+        grid-gap: 10px;
+    }
+    .padding {
+        padding: 20px;
+    }
+    .border-box {
+        margin-bottom: unset;
+        a {
+            color: white;
+        }
+        h4 {
+            font-weight: 600;
+        }
+    }
+    .latin-america {
+        color:white;
+        background-image: linear-gradient(rgba(8, 55, 74, .70),rgba(8, 55, 74, .40)), url(https://www.accelerance.com/hubfs/Ebooks/latin%20america/bg.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .eastern-europe {
+        color:white;
+        background-image: linear-gradient(rgba(142, 43, 124, .70),rgba(142, 43, 124, .40)), url(https://www.accelerance.com/hubfs/ebook-landing-pages/form%20above/kafka.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .southeast-asia {
+        color:white;
+        background-image: linear-gradient(rgba(183, 62, 67, .70),rgba(183, 62, 67, .40)), url(https://www.accelerance.com/hubfs/Ebooks/Southeast%20Asia%20Region%20Guide/bg.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+}

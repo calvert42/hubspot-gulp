@@ -1,0 +1,17 @@
+.showcase-generic {
+    .header {
+        padding: 36px 0px;
+        .span4 {
+            padding-right: 36px;
+        }
+    }
+    .main-content {
+        margin: 48px auto;
+    }
+    .padding {
+        padding: 20px;
+    }
+    .container {
+        grid-column-gap: 20px;
+    }
+}
