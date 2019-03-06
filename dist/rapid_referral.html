@@ -75,6 +75,8 @@
         </g>
       </svg>
 
+      {% text "wistia_id" label="Enter wistia ID here", value="b2ouws0yru", export_to_template_context=true %}
+
       <i class="fas fa-bars mobile-menu"></i>
       {% menu "main-navigation" id="5641683778" extra_classes='nav-menu' overrideable=False %}
     </div>
@@ -89,61 +91,115 @@
     <div class='main span12'>
       <h2 class='red'>{% text 'section_header1' label='Section Header 1', value='Situational Summary' %}</h2>
       {% rich_text "section1" html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>", label="Section 1" %}
-      <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_iz8y40hbc7 videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/iz8y40hbc7/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+      <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ widget_data.wistia_id.value }} videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ widget_data.wistia_id.value }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
       <h2 class='red'>{% text 'section_header2' label='Section Header 2', value='Our Reccomendations' %}</h2>
       {% rich_text "our_recomendations" html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>", label="Section 2 (Above Grid)" %}
     </div>
   </div>
+
   {% module "picker" module_id="4332969" label="Partner Chooser", export_to_template_context=True %}
   {% set firstChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[0]) %}
   {% set secondChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[1]) %}
   {% set thirdChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[2]) %}
+  {% set fourthChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[3]) %}
   {% set choiceArray = [firstChoice, secondChoice, thirdChoice] %}
+  {% if widget_data.picker.partner_picks[3] %}
+    {% do choiceArray.append(fourthChoice) %}
+  {% endif %}
   
   <div class="container wider partner-grid" id='showcase-links'>
-    <div class='span3'>
-    </div>
-    {% for choice in choiceArray %}
-      <div class='span3'>
-        <p><strong>{{ choice.name }}</strong></p>
+
+   {% if widget_data.picker.partner_picks[3] %}
+      <div class='span4 tablet-hide tablet-hide'>
       </div>
-    {% endfor %}
-    
-    <div class='span3 row-title'>
-      <p>Location</p>
-    </div>
-    {% for choice in choiceArray %}
-      <div class='span3'>
-        <p>{{ choice.country}}</p>
+
+      {% for choice in choiceArray %}
+        <div class='span2 flex'>
+          <p><strong>{{ choice.name }}</strong></p>
+        </div>
+      {% endfor %}
+      
+      <div class='span4 row-title tablet-hide'>
+        <p>Location</p>
       </div>
-    {% endfor %}
-    
-    <div class='span3 row-title'>
-      <p>UTC Timezone</p>
-    </div>
-    {% for choice in choiceArray %}
-      <div class='span3 flex'>
-        <p>{% if choice.time_zone > 0 %} + {% endif %} {{ choice.time_zone }}</p>
+
+      {% for choice in choiceArray %}
+        <div class='span2 tablet-hide'>
+          <p>{{ choice.country}}</p>
+        </div>
+      {% endfor %}
+      
+      <div class='span4 row-title tablet-hide'>
+        <p>UTC Timezone</p>
       </div>
-    {% endfor %}
-    
-    <div class='span3 row-title'>
-      <p>Devloper Count</p>
-    </div>
-    {% for choice in choiceArray %}
-      <div class='span3'>
-        <p>{{ choice.number_of_developers }}</p>
+      {% for choice in choiceArray %}
+        <div class='span2 flex tablet-hide'>
+          <p>{% if choice.time_zone > 0 %} + {% endif %} {{ choice.time_zone }}</p>
+        </div>
+      {% endfor %}
+      
+      <div class='span4 row-title tablet-hide'>
+        <p>Developer Count</p>
       </div>
-    {% endfor %}
-    
-    <div class='span3 row-title'>
-      <p>Showcase Page</p>
-    </div>
-    {% for choice in choiceArray %}
-      <div class='span3 flex'style='justify-content: center;'>
-        <a href='{{ choice.partner_page }}' class='cta cta--cyan' target="_blank">Learn More &rarr;</a>
+      {% for choice in choiceArray %}
+        <div class='span2 tablet-hide'>
+          <p>{{ choice.number_of_developers }}</p>
+        </div>
+      {% endfor %}
+      
+      <div class='span4 row-title flex tablet-hide'>
+        <p>Showcase Page</p>
       </div>
-    {% endfor %}
+      {% for choice in choiceArray %}
+        <div class='span2 flex'style='justify-content: center;'>
+          <a href='{{ choice.partner_page }}' class='cta cta--cyan' target="_blank">View</a>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class='span3 tablet-hide'>
+        </div>
+        {% for choice in choiceArray %}
+          <div class='span3'>
+            <p><strong>{{ choice.name }}</strong></p>
+          </div>
+        {% endfor %}
+        
+        <div class='span3 row-title tablet-hide'>
+          <p>Location</p>
+        </div>
+        {% for choice in choiceArray %}
+          <div class='span3 tablet-hide'>
+            <p>{{ choice.country}}</p>
+          </div>
+        {% endfor %}
+        
+        <div class='span3 row-title tablet-hide'>
+          <p>UTC Timezone</p>
+        </div>
+        {% for choice in choiceArray %}
+          <div class='span3 flex tablet-hide'>
+            <p>{% if choice.time_zone > 0 %} + {% endif %} {{ choice.time_zone }}</p>
+          </div>
+        {% endfor %}
+        
+        <div class='span3 row-title tablet-hide'>
+          <p>Developer Count</p>
+        </div>
+        {% for choice in choiceArray %}
+          <div class='span3 tablet-hide'>
+            <p>{{ choice.number_of_developers }}</p>
+          </div>
+        {% endfor %}
+        
+        <div class='span3 row-title tablet-hide'>
+          <p>Showcase Page</p>
+        </div>
+        {% for choice in choiceArray %}
+          <div class='span3 flex'style='justify-content: center;'>
+            <a href='{{ choice.partner_page }}' class='cta cta--cyan' target="_blank">Learn More &rarr;</a>
+          </div>
+        {% endfor %}
+      {% endif %}
   </div>
   
   <div class='container skinny'>
@@ -165,16 +221,12 @@
       {% for partner in choiceArray %}
       	<div class='border-box padding'>
         	<div class="container">
-            <div class='span2 flex'><a href='http://{{ partner.website }}' target='_blank' rel="noopener"> <img alt="{{ partner.name }}" src="{{ partner.logo }}"></a></div>
-            <div class='span10 padding'><h2>What <a href='{{ partner.website }}' target="_blank">{{ partner.name }}</a> has to say about your project</h2></div>
-            <div class='span12'>{% rich_text "partner_comments" field="partner_comments" html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>", label="Partner Comments", unique_in_loop=True %}<p><a href='{{ choice.partner_page }}' class='cta cta--cyan'>Learn More &rarr;</a></p></div>
+            <div class='span2 flex'><a href='{{ partner.partner_page }}' target='_blank' rel="noopener"> <img alt="{{ partner.name }}" src="{{ partner.logo }}"></a></div>
+            <div class='span10 padding'><h2>What {{ partner.name }} has to say about your project</h2></div>
+            <div class='span12'>{% rich_text "partner_comments" field="partner_comments" html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>", label="Partner Comments", unique_in_loop=True %}<p><a href='{{ partner.partner_page }}' class='cta cta--cyan'>Learn More &rarr;</a></p></div>
           </div>
         </div>
       {% endfor %}
-      
-      <h3>The Showcase Page</h3>
-      <p>Above are our recommended outsourced software development companies for your project. Included in these reccomendations are links to our Showcase Pages. These pages are a wealth of information created from our trips to meet the partner in question. Be sure to visit these pages for an in depth look at each individual partner.</p>
-      <a href="#showcase-links"><div class="browser"><div class='top-bar'><div class='lights'><ul><li></li><li></li><li></li></ul></div></div><img src='https://www.accelerance.com/hubfs/Rapid_Referral_Images/page.jpg' width='100%'></div></a>
       
       <h2 class='red'>{% text 'section_header4' label='Section Header 4', value='Recommended Reading' %}</h2>
       {% rich_text "section4" label="Section 4", html="<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>" %}
@@ -188,11 +240,11 @@
     </div>
   </div>
   <footer>
-    &copy; Accelerance 2018
+    &copy; Accelerance 2019
   </footer>
   
   <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-  <script src="https://fast.wistia.com/embed/medias/iz8y40hbc7.jsonp" async></script>
+  <script src="https://fast.wistia.com/embed/medias/{{ widget_data.wistia_id.value }}.jsonp" async></script>
   <script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
   <script src="{{ get_public_template_url('ACC2018/js/menu.js') }}"></script>
   <script>

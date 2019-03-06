@@ -17,19 +17,8 @@
   	<!-- bare-minimum.css -->
     {{ require_css(get_public_template_url("ACC2018/Website_Pages/Rapid_Referral/New_Rapid_Referral/bare-minimum.css")) }}
 
-    {% module "header_image" module_id="4658961" label="Header Image 2019", export_to_template_context=true, overrideable=true %}
-    {% set headerBg = widget_data.header_image %}
-    {% if headerBg %}
-        <style>
-            .header {
-                background-image: linear-gradient(rgba( {{ headerBg.color }}{{ headerBg.opacity }}),rgba({{ headerBg.color }}{{ headerBg.opacity }})), url({{ headerBg.header_background_image.src }});
-                background-position: center;
-            }
-        </style>
-    {% endif %}
-
 </head>
-<body class='testimonials-listing'>
+<body>
 
     <div class="nav flex">
         <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 0 3025 353" width="300" preserveAspectRatio="xMidYMid meet">
@@ -85,30 +74,12 @@
     <div class="blue header">
         <div class='container wide'>
             <div class='header span12'>
-            {% rich_text 'header_content' html='<h1>Fortune 1000 Client Needed Effective Software Development Across 3 Continents</h1><p>Time is money for software solution providers in the retail space. Customers demand prompt service and financial transactions must be quick, stable, and secure. If you are a SAAS solution provider, continuous innovation of your product is imperative. This is the world of a Fortune 1000 Accelerance client.</p><a href="#" class="cta cta--header">Read their story</a>', label='Header Content' %}
+                {% rich_text 'header_content' html='<h1>Make Your Mark At Accelerance</h1><h2>Join the global leader for software outsourcing</h2>', label='Header Content' %}
             </div>
-        </div>
-    </div>
-    <div class='container wider'>
-        <div class='span12'>
-        {% rich_text 'listing_header' html='<h3>Read more testimonials from companies like yours</h3>', label='Testimonials Listing Header', extra_classes="center" %}
-        <ul style="display: none;" id='filter-buttons'>
-                <li><a onclick="activateFilter(event)" id="book" class="filter">Books</a></li>
-                <li><a onclick="activateFilter(event)" id="region-guide" class="filter">Region Guides</a></li>
-                <li><a onclick="activateFilter(event)" id="ebook" class="filter">eBooks</a></li>
-                <li><a onclick="activateFilter(event)" id="webinar" class="filter">Webinars</a></li>
-                <li><a onclick="activateFilter(event)" id="show-all" class="filter">Show All</a></li>
-              </ul>
-        {% module "module_1548446802801153" overrideable=True, name='Resources', module_id="5452550", resources='[{"image":{"src":"https://www.accelerance.com/hubfs/webinar-6.png","alt":"webinar-6","width":600,"height":314},"title":"Ask the Experts: Software Outsourcing Panel Discussion Webinar","landing_page":5938162869,"tags":["webinar"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/south%20asia/bookcover@620x.png","alt":"bookcover@620x","width":620,"height":470},"title":"Software Outsourcing in South Asia","landing_page":5647592089,"tags":["ebook","region-guide"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/Southeast%20Asia%20Region%20Guide/bookcover@620x.png","alt":"bookcover@620x","width":620,"height":470},"title":"Software Outsourcing In Southeast Asia","landing_page":2258498939,"tags":["region-guide","ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/latin%20america/bookcover@620x.png","alt":"bookcover@620x","width":620,"height":470},"title":"Software Outsourcing in Latin America","landing_page":2098586921,"tags":["ebook","region-guide"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/Eastern%20Europe%20Region%20Guide/EasternEurope620.png","alt":"EasternEurope620","width":620,"height":471},"title":"Software Outsourcing In Eastern Europe","landing_page":2137045616,"tags":["ebook","region-guide"]},{"image":{"src":"https://www.accelerance.com/hubfs/Landing_Page_Images/15%20risk%20indicators/15riskindicatorsscaled2.png","alt":"15riskindicatorsscaled2","width":600,"height":349},"title":"15 Potential Risk Areas in Software Development Outsourcing","landing_page":5583420652,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/SOR18/SOR18.png","alt":"The 2018 Guide to Global Software Outsourcing Rates","width":1207,"height":916},"title":"The 2018 Guide to Global Software Outsourcing Rates","landing_page":5501409281,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebooks/SoftwareSurvey@2x.png","alt":"Are You Winning Or Losing With Software Outsourcing?","width":467,"height":593},"title":"Are You Winning Or Losing With Software Outsourcing?","landing_page":5417614125,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebook_Renders/cto-cfo-ebook-render.png","alt":"What Your CFO Needs To Know About Outsourcing Software Development","width":453,"height":342},"title":"What Your CFO Needs To Know About Outsourcing Software Development","landing_page":5390286230,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/Landing_Page_Images/DueDiligence/SODD.png","alt":"SODD","width":933,"height":708},"title":"Software Outsourcing Due Diligence","landing_page":4654974314,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/7keys-3.png","alt":"7keys-3","width":508,"height":644},"title":"The 7 Keys to Outsourcing Success","landing_page":4489298977,"tags":[""]},{"image":{"src":"https://www.accelerance.com/hubfs/Ebook_Renders/outsourceorelseLP.png","alt":"Outsource or Else! How a VP of Software Saved His Company","width":747,"height":1100},"title":"Outsource or Else! How a VP of Software Saved His Company","landing_page":4697359423,"tags":["ebook","book"]},{"image":{"src":"https://www.accelerance.com/hs-fs/hub/396606/file-1261255542.png","alt":"Essential Guide to Outsourcing Software Development","width":800,"height":800},"title":"Essential Guide to Outsourcing Software Development","landing_page":1196859007,"tags":["ebook"]},{"image":{"src":"https://www.accelerance.com/hubfs/social-suggested-images/Fearless-Outsourcing.png","alt":"Fearless-Outsourcing","width":600,"height":689},"title":"Fearless Software Outsourcing","landing_page":1489307336,"tags":["ebook"]}]', label='Testimonials' %}
         </div>
     </div>
   
     <!-- hubspot needs this tag or won't publish this template -->
-    {{ require_js(get_public_template_url('ACC2018/Resources/resources.js'), "footer") }}
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="{{ get_public_template_url('ACC2018/js/menu.js') }}"></script>
-
     {{ standard_footer_includes }}
 </body>
 </html>

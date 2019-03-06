@@ -1,0 +1,36 @@
+.lander {
+    .blue {
+        padding: 24px 0px;
+        h1 {
+            font-size: 36px;
+        }
+    }
+    .header {
+        background-image: url(https://www.accelerance.com/hubfs/password-page/bg.svg);
+        background-size: 100% auto;
+        text-align: center;
+    }
+    .main  {
+        margin: 36px auto;
+    }
+    p {
+        line-height: 2;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .cards {
+        column-gap: 20px;
+        .border-box {
+            background-color: rgba(255,255,255,0.95);
+            padding: 20px;
+        }
+    }
+    .red {
+        background-image: url(https://www.accelerance.com/hubfs/password-page/bg-solid.svg);
+        background-size: 100% auto;
+    }
+    footer {
+        margin-top: 0px;
+    }
+}
