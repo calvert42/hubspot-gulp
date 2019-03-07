@@ -1,4 +1,12 @@
 const files = [
+  {
+    title: 'RR Variant (html)',
+    value: {
+      id: '7981322352',
+      source: 'RR-variant.html',
+      hs_path: 'ACC2018/Showcase/showcase.html'
+    }
+  },
   // {
   //   title: 'Showcase (html)',
   //   value: {
@@ -20,7 +28,7 @@ const files = [
   //     id: '6745581805',
   //     source: 'menu.js'
   //   }
-  // }
+  // },
   // {
   //   title: 'Master (css)',
   //   value: {
@@ -77,14 +85,14 @@ const files = [
   //     source: 'providers.html'
   //   }
   // },
-  // {
-  //   title: 'Testimonial (html)',
-  //   value: {
-  //     id: '7338751368',
-  //     source: 'testimonial.html',
-  //     hs_path: 'ACC2018/Website_Pages/Testimonials/testimonial.html'
-  //   }
-  // },
+  {
+    title: 'Testimonial (html)',
+    value: {
+      id: '7338751368',
+      source: 'testimonial.html',
+      hs_path: 'ACC2018/Website_Pages/Testimonials/testimonial.html'
+    }
+  },
   // {
   //   title: 'Lander (html)',
   //   value: {

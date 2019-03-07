@@ -85,15 +85,58 @@
     </div>
     <div class="container wider">
         <div class="span12">
-            <h3>The Accelerance model for custom software development gives you the advantage of local, dedicated software leadership coupled with the largest bench strength for software development in the world.</h3><h4>You get experienced, domestic delivery while Accelerance manages the offshore details and all the risk… all for a winning cost savings.</h4>
-        </div>
-        <div class="span12">
-            <p>Complete customer quote goes here</p>
-        </div>
-        <div class="span12">
+            
+            {% rich_text "lead_in"
+                html="<h3>The Accelerance model for custom software development gives you the advantage of local, dedicated software leadership coupled with the largest bench strength for software development in the world.</h3><h4>You get experienced, domestic delivery while Accelerance manages the offshore details and all the risk… all for a winning cost savings.</h4>"
+            %}
 
         </div>
+        <div class="span12 center">
+            {% rich_text "customer_quote"
+                html="<p>Complete customer quote goes here</p>"
+            %}
+        </div>
+        <div class="span4">
+            {% rich_text "benefits1"
+                html="html",
+                overrideable=True
+            %}
+        </div>
+        <div class="span4">
+            {% rich_text "benefits2"
+                html="html",
+                overrideable=True
+            %}
+        </div>
+        <div class="span4">
+            {% rich_text "benefits3"
+                html="html",
+                overrideable=True
+            %}
+        </div>
     </div>
+    <div class="grey">
+        <div class="container wider">
+            <div class="span12 center">
+                {% rich_text "cta_area"
+                    html="<a href='#' class='cta cta--red'>Get started</a>",
+                    overrideable=True
+                %}
+            </div>
+        </div>
+    </div>
+    <div class="cyan-light">
+        <div class="container skinny">
+            <div class="span12">
+                {% rich_text "acc_difference"
+                    html="<h2>The Accelerance Difference</h2><p>When it comes to custom software development, your options are overwhelming - from local software boutiques to offshore and nearshore vendors. So how do you choose? Accelerance offers the best of all worlds. Check it out in our 90 second video.</p>", 
+                    overrideable=True
+                %}
+            </div>
+        </div>
+    </div>
+
+    
   
     <script src="{{ get_public_template_url('ACC2018/js/menu.js') }}"></script>
     <!-- hubspot needs this tag or won't publish this template -->
