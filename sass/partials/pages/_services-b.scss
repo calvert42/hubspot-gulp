@@ -1,0 +1,75 @@
+.services-b {
+    .phase-control {
+        cursor: pointer;
+        border: 2px solid $cyan;
+        font-weight: 700;
+        padding: 10px 30px;
+        border-radius: 30px;
+
+    }
+    .border-box.blue {
+        background-color: $blue;
+        background-image: url(https://www.accelerance.com/hubfs/ACC2017/services/glyphwhite.svg);
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: 120% center;
+        color: white;
+    }
+    p, h4 {
+        line-height: 2;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .container {
+        grid-column-gap: 40px;
+    }
+    ul {
+        li {
+            line-height: 2;
+        }
+        &.big {
+            font-size: 20px;
+            li {
+                margin: 10px auto;
+                
+            }
+        }
+    }
+    .cyan-light {
+        padding-bottom: 64px;
+    }
+    .phase-title {
+        cursor: pointer;
+        &:hover {
+            path {
+                fill: $cyan;
+                @include transition(200ms);
+            } 
+            g {
+                path {
+                    fill: $cyan;
+                } 
+            }
+        }
+    }
+    .phase-circle {
+        fill: rgba(255,255,255,.50);
+    }
+    .sdlc-container {
+        border-bottom: 30px solid $cyan-hover;
+    }
+    .phases {        
+        h2 {
+            color: $red;
+        }
+        .phase {
+            display: none;
+            opacity: 0;
+            &.current {
+                display: inherit;
+                opacity: 0;
+            }
+        }
+    }
+}

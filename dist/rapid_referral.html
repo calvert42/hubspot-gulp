@@ -13,9 +13,9 @@
   <title>{{ page_meta.html_title }}</title>
 
   {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
-
-  {{ required_head_tags }}
   {{ standard_header_includes }}
+  {{ required_head_tags }}
+  
 
   <!-- master.css -->
   {{ require_css(get_public_template_url("ACC2018/Website_Pages/Rapid_Referral/New_Rapid_Referral/bare-minimum.css")) }}

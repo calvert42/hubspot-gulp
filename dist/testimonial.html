@@ -172,7 +172,7 @@
                     </ul>
                     <div class="resources">
                         {% for item in hubdb_table_rows(1035654) %}
-                            <a href="{{ item.hs_path }}">
+                            <a href="/testimonials/{{ item.hs_path }}">
                             <div class="border-box center zoom resource {% for tag in item.tags %}{{ tag }} {% endfor %}" data-order='{{ loop.index }}'>
                                 <div class="testimonial-content" style="background-image: linear-gradient(rgba({% cycle '31, 189, 229, .90','8, 55, 74,0.90','183, 62, 67, .90','142, 43, 124, .90' %}),rgba({% cycle '31, 189, 229, .35','8, 55, 74,0.35','183, 62, 67, .35','142, 43, 124, .35' %})), url({{ item.header_image.url }}); background-position: center; background-size: cover;">
                                     {% if item.white_logo %}

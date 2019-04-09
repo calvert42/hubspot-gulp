@@ -74,6 +74,12 @@ font-style: normal;
 
 @import 'partials/pages/services-a';
 
+@import 'partials/pages/services-b';
+
+@import 'partials/pages/contact';
+
+@import 'partials/pages/events-new';
+
 body {
     margin: 0;
     padding: 0;
@@ -86,8 +92,10 @@ body {
         font-size: 1.1em;
     }
     h1 {
-
         font-size: 3em;
+    }
+    h2 {
+        font-size: 2.5em;
     }
     h3 {
         font-size: 1.5em;
@@ -103,6 +111,9 @@ body {
         border: 0;
         height: 2px;
         background-color: $black;
+    }
+    .spacing {
+        padding: 40px 0px;
     }
     .center {
         text-align: center;
@@ -181,10 +192,18 @@ body {
     .blue {
         background-color: $blue;
         color: white;
+        &--bg {
+            background-image: url(https://www.accelerance.com/hubfs/password-page/bg.svg);
+            background-size: 100% auto;
+        }
     }
     .red {
         background-color: $red;
         color: white;
+        &--bg {
+            background-image: url(https://www.accelerance.com/hubfs/password-page/bg-solid.svg);
+            background-size: 100% auto;
+        }
     }
     .cyan {
         background-color: $cyan;
@@ -193,6 +212,8 @@ body {
     .cyan-light {
         background-color: $cyan-hover;
         color: white;
+        background-image: url(https://www.accelerance.com/hubfs/password-page/bg-solid.svg);
+        background-size: 100% auto;
     }
     .purple {
         background-color: $purple-lighter;
@@ -215,7 +236,7 @@ body {
                 }
                 img {
                     width: 100%;
-                }
+                }                
             }
         }
         // & div[class*="span"] {
@@ -246,6 +267,10 @@ body {
         }
         &.wider {
             max-width: 1080px;
+            margin: 0 auto;            
+        }
+        &.widest {
+            max-width: 1140px;
             margin: 0 auto;
         }
         @media screen and (max-width: 690px) {
@@ -283,6 +308,9 @@ body {
         }
         &--top-grey {
             border-top: 5px solid $grey;
+        }
+        &--top-cyan {
+            border-top: 30px solid $cyan-hover;
         }
         &--shadow {
             box-shadow: 10 10 10 10 $black;
@@ -393,5 +421,94 @@ footer {
 .tablet-hide {
     @media screen and (max-width:$tablet) {
         display: none!important;
+    }
+}
+
+// needs to be updated!
+.contactform {
+    margin: 60px auto;
+    .hs-button.primary, input[type="submit"], input[type="button"] {
+            display: inline;
+            background-color: $cyan;
+            border: none;
+            border-radius: 40px;
+            color: $white;
+            float: none;
+            padding: 10px 40px;
+            text-align: left;
+            margin: 0px auto;
+            &:hover {
+                background-color: $cyan-hover;
+            }
+
+        }
+    .form-columns-1 {
+        max-width: 100%;
+    }
+    .hs-form {
+        margin: 0 auto;
+        max-width: 920px;
+        width: 100%;
+        label {
+            font-size: 14px;
+            font-weight: 500;
+
+        }
+        fieldset {
+            margin: 20px 0px;
+        }
+        input {
+            border-radius: 3px;
+            border: 1px solid $grey;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 5px 10px;
+            margin: 5px auto;
+            select {
+                width: 100%;
+                height: 35px;
+            }
+        }
+        .hs-form-booleancheckbox {
+            input {
+                margin-right: 18px;
+            }
+        }
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin-top: 15px;
+
+        }
+        select {
+            font: {
+                size: 14px;
+            }
+            margin: 20px auto;
+        }
+        textarea {
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid $grey;
+            font-size: 14px;
+            line-height: 30px;
+            padding: 5px 10px;
+            margin: 20px auto;
+        }
+    }
+}
+
+.hs-form-checkbox {
+        span {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        input {
+            margin-right: 10px!important;
+    }
+    .inputs-list {
+        .multi-container {
+            margin-top: 20px !important;
+        }
     }
 }
