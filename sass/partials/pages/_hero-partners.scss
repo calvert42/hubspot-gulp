@@ -1,0 +1,167 @@
+.hero-partners {
+    .resource-filters {
+        ul.filters {
+            padding: 0px;
+            margin-bottom: 24px;
+            li {
+                display: inline;
+                margin: 0px;
+                padding: 5px 10px;
+                cursor: pointer;
+                border: 1px solid $grey;
+                border-radius: 30px;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                font-weight: 500;
+                color: $link-grey;
+                @media screen and (max-width: $tablet) {
+                    display: inline-flex!important;
+                    margin-bottom: 5px;
+                }
+                &.active {
+                    background-color: $cyan-hover;
+                    color: white;
+                    border: none;
+                }
+            }
+        }
+        ul.filters li::before  {
+            content: none;
+            margin: 0px;
+        }
+    }
+
+    .partners {
+        grid-column-gap: 20px;
+        text-align: center;
+    }
+
+    .resource {
+        width: 161px;
+        margin-bottom: 10px;
+        .mobile-filters {
+            display: none;
+            @media screen and (max-width: $tablet) {
+                display: block;
+            }
+        }
+        @media screen and (max-width: $tablet) {
+            width: 100%!important;
+        }
+        .content {
+            padding: 20px;
+            @media screen and (max-width: $tablet) {
+                padding: 10px;
+            }
+            .tag {
+                color: white;
+                display: inline-block;
+                border-radius: 30px;
+                font-size: 14px;
+                padding: 5px 10px;
+                font-weight: 600;
+                margin: 7px 0px 0px 0px;
+                &.ebook {
+                    background-color: $blue;
+                }
+                &.blog {
+                    background-color: $green;
+                }
+                &.guide {
+                    background-color: $cyan;
+                }
+                &.note {
+                    background-color: $red;
+                }
+                &.podcast {
+                    background-color: $purple;
+                }
+                &.proposal {
+                    background-color: tomato;
+                }
+                &.photo {
+                    background-color: goldenrod;
+                }
+                &.case-study {
+                    background-color: lightseagreen;
+                }
+                &.team {
+                    background-color: cornflowerblue; 
+                }
+            }
+            h4 {
+                margin: 10px auto;
+            }
+            .stamp-text {
+                @media screen and (max-width: $tablet) {
+                    width: 100%;    
+                }
+            }
+        }
+        .header-image-container {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            max-height: 350px;
+        }
+        &.meeting {
+            .header-image-container {
+                background-color: $cyan;
+                background-image: url(https://www.accelerance.com/hubfs/hero%20pages/meetings.svg);
+                background-size: 31%;
+                background-repeat: no-repeat;
+                height: 100px;
+                background-position: left center;
+            }
+        }
+        &--width2 {
+            width: 161px * 2;
+        }
+        &--width3 {
+            width: 161px * 3;
+        }
+        &--width4 {
+            width: 161px * 4;
+        }
+        &--width5 {
+            width: 161px * 5;
+        }
+        &--width6 {
+            width: (161px * 6) + 20px;
+        }
+    }
+    .resource.stamp {
+        display: inline-block;
+        .content {
+            display: flex;
+            align-items: center;
+            @media screen and (max-width: $tablet) {
+                justify-content: center;
+            }
+            img {
+                margin-right: 20px;
+            }
+            &.top-resource {
+                display: block;
+            }
+        }
+    }
+    .equal-heights {
+        display: flex;
+        flex-wrap: wrap;
+        .stamp {
+            margin-right: 15px;
+            @media screen and (max-width: $tablet) {
+                width: 100%!important;
+                margin: 0px 0px 10px 0px;
+            }
+        }
+      }
+      .content {
+          img.team-picture {
+              max-width: 180px;
+          }
+      }
+}

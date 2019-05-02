@@ -1,0 +1,23 @@
+.network {
+    .container {
+        grid-column-gap: 10px;
+    }
+    .country {
+        display: none;
+    }
+    .details {
+        display: none;
+        padding: 10px;
+    }
+    #map {
+        height: 700px;
+    }
+    .border-box {
+        .details {
+            padding: 10px 20px;
+        }
+    }
+    .border-box--top-blue {
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    }
+}

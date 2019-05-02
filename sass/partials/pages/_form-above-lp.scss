@@ -30,7 +30,7 @@
             }
             .hs-button.primary, input[type="submit"], input[type="button"] {
                     display: inline;
-                    background-color: $red;
+                    background-color: $purple;
                     border: none;
                     color: $white;
                     float: none;
@@ -42,7 +42,7 @@
                     -webkit-appearance: none;
                     &:hover {
                         cursor: pointer;
-                        background-color: $red-hover;
+                        background-color: $purple-lighter;
                     }
     
                 }
@@ -196,7 +196,7 @@
     }
     .redcta {
         padding: 10px 40px;
-        background-color: $red;
+        background-color: $purple;
         color: $white!important;
         border-radius: 40px;
         text-decoration: none;

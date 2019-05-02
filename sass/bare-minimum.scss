@@ -80,6 +80,14 @@ font-style: normal;
 
 @import 'partials/pages/events-new';
 
+@import 'partials/pages/network';
+
+@import 'partials/pages/hero-partners';
+
+@import 'partials/pages/events';
+
+@import 'partials/pages/form-in-header-lp';
+
 body {
     margin: 0;
     padding: 0;
@@ -114,6 +122,9 @@ body {
     }
     .spacing {
         padding: 40px 0px;
+    }
+    .spacing--top {
+        padding-top: 40px;;
     }
     .center {
         text-align: center;
@@ -273,6 +284,9 @@ body {
             max-width: 1140px;
             margin: 0 auto;
         }
+        &.full {
+            padding: 0px 20px;
+        }
         @media screen and (max-width: 690px) {
             padding: 0px 10px;
         }
@@ -343,12 +357,13 @@ body {
     text-decoration: none;
     display: inline-block;
     margin: 24px auto;
+    //not really any of the colors that are described here. they wanted me to change all the ctas at once and i'm tired of this.
     &--red {
-        background-color: $red;
+        background-color: $purple;
         color: $white!important;
         &:hover {
             @include transition(.2s);
-            background-color: $red-hover;
+            background-color: $purple-lighter;
         }
     }
     &--purple {
@@ -356,27 +371,21 @@ body {
         color: $white!important;
     }
     &--grey {
-        background-color: $cyan-hover;
+        background-color: $purple;
         color:$white!important;
     }
     &--cyan {
-        background-color: $cyan;
+        background-color: $purple;
         color:$white!important;
         &:hover {
             @include transition(.2s);
-            background-color: $cyan-hover;
+            background-color: $purple-lighter;
         }
     }
     &--header {
-        background-color: transparent;
+        background-color: $purple;
         color:$white!important;
         border: 3px solid white;
-        @include transition(.2s);
-        &:hover {
-            @include transition(.2s);
-            color: $black!important;
-            background-color: $white;
-        }
     }
 
 }
@@ -429,7 +438,7 @@ footer {
     margin: 60px auto;
     .hs-button.primary, input[type="submit"], input[type="button"] {
             display: inline;
-            background-color: $cyan;
+            background-color: $purple;
             border: none;
             border-radius: 40px;
             color: $white;
@@ -438,7 +447,7 @@ footer {
             text-align: left;
             margin: 0px auto;
             &:hover {
-                background-color: $cyan-hover;
+                background-color: $purple-lighter;
             }
 
         }

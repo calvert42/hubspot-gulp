@@ -18,7 +18,7 @@
         height: 45px;
         width: 150px;
         border-radius: 0px 40px 40px 0px;
-        background-color: $red;
+        background-color: $purple;
         color: white;
         font-size: 16px;
         font-family: $font-stack;
@@ -27,7 +27,7 @@
         @include transition(200ms);
         &:hover {
             @include transition(200ms);
-            background-color: $red-hover;
+            background-color: $purple-lighter;
         }
     }
 }

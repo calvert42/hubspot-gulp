@@ -89,8 +89,22 @@
                 html="you can put an introduction here",
                 extra_classes="spacing"
             %}
+            <h3>Current Events</h4>
             {% for row in hubdb_table_rows(1038936, '&orderBy=startDate') %}
                 {% if (row['startDate']|datetimeformat('%j')) >= (local_dt|datetimeformat('%j')) %}
+                    <div id="event{{ loop.index0 }}" class="border-box padding event">
+                        <div class="event-title flex">
+                            <h4>{{ row.title }} - {{ row.startDate|datetimeformat('%B %e, %Y') }} -	{{ row.location }}</h4><i id="button{{ loop.index0 }}" class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </div>
+                        <div id="event-description{{ loop.index0 }}" class="event-description">
+                            {{ row.description }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <h4>Past Events</h4>
+            {% for row in hubdb_table_rows(1038936, '&orderBy=-startDate') %}
+                {% if (row['startDate']|datetimeformat('%j')) <= (local_dt|datetimeformat('%j')) %}
                 <div id="event{{ loop.index0 }}" class="border-box padding event">
                     <div class="event-title flex">
                         <h4>{{ row.title }} - {{ row.startDate|datetimeformat('%B %e, %Y') }} -	{{ row.location }}</h4><i id="button{{ loop.index0 }}" class="fa fa-chevron-right" aria-hidden="true"></i>

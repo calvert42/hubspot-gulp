@@ -5,22 +5,6 @@ body {
 }
 
 .body-container-wrapper {
-    ul {
-        list-style: none;
-        li {
-            margin: 20px auto;
-            margin-left: 40px;
-            font-size: 20px;
-        }
-        li::before {
-            font-size: 24px;
-            content: "•"; 
-            color: $cyan;
-            width: 2em;
-            margin-left: -2em;
-            margin-right: 34px;
-        }
-    }
 }
 
 p a  {

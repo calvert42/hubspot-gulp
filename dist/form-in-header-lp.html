@@ -21,7 +21,7 @@
     {% module "module_1550087358342246" module_id="4658961" label="Header Image 2019" %}
 
 </head>
-<body>
+<body class="form-in-header-lp">
 
     <div class="nav flex">
         <a href="https://www.accelerance.com">
@@ -76,12 +76,29 @@
         <i class="fas fa-bars mobile-menu"></i>
         {% menu "main-navigation" id="5641683778" extra_classes='nav-menu' overrideable=False, flyouts=False%}
     </div>
-    <div class="blue header">
-        <div class='container wide'>
-            <div class='span12'>
-                {% rich_text 'header_content' html='<h1>Make Your Mark At Accelerance</h1><h2>Join the global leader for software outsourcing</h2>', label='Header Content' %}
+   <div class="blue header blue--bg">
+        <div class='container widest'>
+            <div class='contact-text span6 flex'>
+                {% rich_text 'header_content' html='<h1>Make Your Mark At Accelerance</h1><h2>Join the global leader for software outsourcing</h2>', label='Header Content', overrideable=true %}                
+                
+            </div>
+            <div id="form" class="span6 spacing">
+                {% form "my_form"
+                    form_key="form_key", 
+                    form_to_use="form_to_use", 
+                    title="title",
+                    extra_classes="contactform",
+                    overrideable=true,
+                    label="Form"
+                %}
             </div>
         </div>
+    </div>
+    <div class="container wide spacing">
+        <div class="span12 body-text">{% rich_text "my_rich_text"
+            html="<h1>Hello</h1>",
+            label="Body Text"
+        %}</div>
     </div>
 
     {% include "2019/html/Main-site/Footer.html" %}

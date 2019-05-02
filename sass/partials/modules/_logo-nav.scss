@@ -20,17 +20,10 @@
     margin: 8px 20px;
     float: right;
     padding: 5px 20px;
-    border: 3px solid $blue;
-    color: $blue;
+    border: 3px solid $purple;
+    color: $white;
     font-weight: 600;
     text-decoration: none;
-    @include transition(500ms);
-    &:hover {
-        border-radius: 40px;
-        background-color: $blue;
-        color: $white;
-        @include transition(500ms);
-
-    }
+    background-color: $purple;
 
 }

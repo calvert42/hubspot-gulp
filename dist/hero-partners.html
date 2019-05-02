@@ -21,7 +21,7 @@
     {% module "module_1550087358342246" module_id="4658961" label="Header Image 2019" %}
 
 </head>
-<body>
+<body class="hero-partners">
 
     <div class="nav flex">
         <a href="https://www.accelerance.com">
@@ -83,11 +83,177 @@
             </div>
         </div>
     </div>
+    <!-- choose which team member is going to be in the pic. -->
+    {% choice "team_member" value="Alex" label="Choose a team member" choices="Alex, Andy, Hugh, Kayla, Mike M, Mike K, Steve, Ryan, jim, martin", export_to_template_context=True %}
+    {% text "meetings_link" label="Your meeting link", export_to_template_context=True, no_wrapper=True, required=True %}
+    <div class="container wider">
+        <div class="span12 spacing--top">
+            <div class="equal-heights">
+                <div class='border-box resource stamp resource--width4 flex'>
+                    <div class='content'>
+                    <img class="team-picture" src='https://www.accelerance.com/hubfs/hero%20pages/{{ widget_data.team_member.value }}.jpg' width='180'>
+                    <div class='stamp-text'>{% rich_text "rich_text" field="my_text_field", label="Message", overrideable=True, no_wrapper=True %}</div>
+                    </div>
+                </div>
+                {% module "module_1542239454777222" module_id="4304279" label="Top Resource (next to team member pic)" no_wrapper=True %}
+            </div>
+        </div>
+    </div>
+    <div class="container wider partners" id='showcase-links'>
+        {% module "picker" module_id="4332969" label="Partner Chooser", export_to_template_context=True %}
+        {% set firstChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[0]) %}
+        {% set secondChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[1]) %}
+        {% set thirdChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[2]) %}
+        {% set fourthChoice = hubdb_table_row(677344, widget_data.picker.partner_picks[3]) %}
+        {% set choiceArray = [firstChoice, secondChoice, thirdChoice] %}
+        {% if widget_data.picker.partner_picks[3] %}
+            {% do choiceArray.append(fourthChoice) %}
+        {% endif %}
+        <div class="span12" style="text-align: left;">
+            {% rich_text "my_rich_text"
+                html="<h3>Your Partner Picks</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, temporibus eum laboriosam sit sunt earum facere rem similique aut mollitia iure nesciunt libero ducimus corporis quidem nisi omnis reiciendis officiis.</p>",
+                overrideable=true
+            %}
+        </div>
+            {% if widget_data.picker.partner_picks[3] %}
+                {% for choice in choiceArray %}
+                    <div class='span3 flex border-box padding'>
+                    <h3>{{ choice.name }}</h3>
+                    <a href='{{ choice.partner_page }}' class='cta cta--cyan' target="_blank">View</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                {% for choice in choiceArray %}
+                    <div class='span4 border-box padding'>
+                        <h3>{{ choice.name }}</h3>
+                        <a href='{{ choice.partner_page }}' class='cta cta--cyan' target="_blank">Learn More &rarr;</a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="span12" style="text-align: left;">
+                {% rich_text "my_rich_text"
+                    html="<h3>Additional Materials</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis labore nam aliquid! Voluptatem iure ut nobis quisquam suscipit adipisci debitis magni. Sunt minima perspiciatis saepe dolores facilis aspernatur nesciunt sint?</p>"
+                %}
+            </div>
+        </div>
+    <div class="container wider">
+        <div class="span12"> 
+            <div class='resource-filters'>
+                <ul class='filters'>
+                    <li id="filter-button"><i class="fas fa-filter"></i> Filters</li>
+                    <li class='filter-category'><a id="show-all-button">Show all</a></li>
+                    <li class='filter-category'><a id="ebook-button">Ebooks</a></li>
+                    <li class='filter-category'><a id="blog-button">Blogs</a></li>
+                    <li class='filter-category'><a id="guide-button">Guides</a></li>
+                    <li class='filter-category'><a id="video-button">Videos</a></li>
+                    <li class='filter-category'><a id="podcast-button">Podcasts</a></li>
+                    <li class='filter-category'><a id="note-button">Notes</a></li>
+                    <li class='filter-category'><a id="proposal-button">Proposals</a></li>
+                    <li class='filter-category'><a id="case-study-button">Case Studies</a></li>
+                    <li class='filter-category'><a id="photo-button">Photos</a></li>
+                    <li class='filter-category'><a id="team-button">Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="#resources" class='span12 resources'>
+            {% module "module_15414423552921554" module_id="3202185" label="Hero Page Resources" %}
+        </div>
+    </div>
 
     {% include "2019/html/Main-site/Footer.html" %}
   
     <script src="{{ get_public_template_url('ACC2018/js/menu.js') }}"></script>
     <!-- hubspot needs this tag or won't publish this template -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+    <script>
+            $( document ).ready(function() {
+              
+              var $resources = $('.resources');
+              
+              $resources.imagesLoaded(function() {
+                $resources.isotope({
+                  // options
+                  itemSelector: '.resource',
+                  stamp: '.stamp',
+                  stagger: 100,
+                  masonry: {
+                    columnWidth: 161,
+                    gutter: 5
+                  },
+                  getSortData: {
+                      category: '[data-order] parseInt'
+                  },
+                  sortBy : 'category'
+                  });
+              });
+  
+              $('#ebook-button').click(function() {
+                $resources.isotope({filter: '.ebook, .meeting'});
+              });
+  
+              $('#blog-button').click(function() {
+                $resources.isotope({filter: '.blog, .meeting'});
+              });
+  
+              $('#guide-button').click(function() {
+                $resources.isotope({filter: '.guide, .meeting'});
+              });
+              
+              $('#video-button').click(function() {
+                $resources.isotope({filter: '.video, .meeting'});
+              });
+              
+              $('#podcast-button').click(function() {
+                $resources.isotope({filter: '.podcast, .meeting'});
+              });
+  
+              $('#note-button').click(function() {
+                $resources.isotope({filter: '.note, .meeting'});
+              });
+              
+              $('#proposal-button').click(function() {
+                $resources.isotope({filter: '.proposal, .meeting'});
+              });
+              
+              $('#case-study-button').click(function() {
+                $resources.isotope({filter: '.case-study, .meeting'});
+              });
+              
+              $('#photo-button').click(function() {
+                $resources.isotope({filter: '.photo, .meeting'});
+              });
+              
+              $('#team-button').click(function() {
+                $resources.isotope({filter: '.team, .meeting'});
+              });
+              
+              $('#show-all-button').click(function() {
+                $resources.isotope({filter: ''});
+              });
+              
+              var categories = ['ebook', 'guide', 'video', 'note', 'blog', 'podcast', 'proposal', 'photo', 'case-study', 'team'];
+              $.each(categories, function(index, value) {
+                if ($('.' + value).length) {
+                    console.log(value + 'elements present');
+                } else {
+                    $('.filter-category').has('#' + value + '-button').remove();
+                }
+              });
+  
+              
+              $(function() {
+                 $("li:not(#filter-button)").click(function() {
+                    $("li").removeClass("active");
+                    $(this).addClass("active");
+                 });
+              });
+              
+            });
+            </script>
+
     {{ standard_footer_includes }}
 </body>
 </html>
