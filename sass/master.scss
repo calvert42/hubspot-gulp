@@ -92,7 +92,12 @@ font-weight: 800;
 font-style: normal;
     }
 
-
+.headercta {
+    @include transition(200ms);
+    &:hover {
+        border-radius: 30px;
+    }
+}
 
 .as-seen-in {
     @include teneighty-margin(36px);

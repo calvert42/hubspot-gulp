@@ -25,5 +25,9 @@
     font-weight: 600;
     text-decoration: none;
     background-color: $purple;
+    @include transition(200ms);
+    &:hover {
+        border-radius: 30px;
+    }
 
 }

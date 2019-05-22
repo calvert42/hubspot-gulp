@@ -383,9 +383,14 @@ body {
         }
     }
     &--header {
+        border-radius: 0px;
         background-color: $purple;
         color:$white!important;
         border: 3px solid white;
+        @include transition(200ms);
+        &:hover {
+            border-radius: 30px;
+        }
     }
 
 }
