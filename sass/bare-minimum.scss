@@ -395,6 +395,21 @@ body {
 
 }
 
+.nav {
+    .cta {
+        margin: 0px 0px 0px auto;
+        @include transition(200ms);
+        border-radius: 0px;
+        &:hover {
+            background-color: $purple-lighter;
+            border-radius: 30px;
+        }
+    }
+    li.hs-menu-depth-2 {
+        font-size: 16px;
+    }
+}
+
 footer {
     background-color: $dark-grey;
     color: white;
