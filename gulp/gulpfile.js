@@ -37,7 +37,9 @@ async function init(done) {
         throw err;
       }
       var source = data;
+      var urlRoot = 'http://api.hubapi.com/content/api/v2/templates/' + file.value.id;
       var options = {
+        url: (draft == true ? urlRoot + '/buffer' : urlRoot),
         qs: {
           "hapikey": process.env.HAPI_KEY
         },
@@ -64,7 +66,7 @@ async function init(done) {
         if (response.statusCode == 200) {
           livereload.reload();
           console.log((draft  == true ?  "Saved".bgYellow.grey : "Published".bgGreen.white));
-          console.log(draft == true ? "Saved" + file.title.yellow : "Publish" + file.title.green);
+          console.log(draft == true ? file.value.source.yellow : file.value.source.green);
         }
       });
     });

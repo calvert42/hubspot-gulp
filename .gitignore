@@ -4,7 +4,7 @@
 
 # .vscode personal stuff #
 .vscode/
-.vscode/
+node_modules/
 
 # OS generated files #
 ######################
