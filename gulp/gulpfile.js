@@ -14,9 +14,9 @@ var sourcemaps = require('gulp-sourcemaps');
 
 livereload({start: true});
 
-var write;
-function publish(done) {
-  return write = true;
+var draft;
+function draft(done) {
+  return draft = true;
 }
 
 
@@ -37,9 +37,7 @@ async function init(done) {
         throw err;
       }
       var source = data;
-      var urlRoot = 'http://api.hubapi.com/content/api/v2/templates/' + file.value.id;
       var options = {
-        url: (write == true ? urlRoot : urlRoot + '/buffer'),
         qs: {
           "hapikey": process.env.HAPI_KEY
         },
@@ -65,8 +63,8 @@ async function init(done) {
         console.log(colors.italic('Updated:' + formattedTime.toString()));
         if (response.statusCode == 200) {
           livereload.reload();
-          console.log((write  == true ? "Published".bgGreen.white : "Saved".bgYellow.grey));
-          console.log("https://preview.hs-sites.com/_hcms/preview/template/multi?portalId=396606&template_file_path=" + file.value.hs_path);
+          console.log((draft  == true ?  "Saved".bgYellow.grey : "Published".bgGreen.white));
+          console.log(draft == true ? "Saved" + file.title.yellow : "Publish" + file.title.green);
         }
       });
     });
@@ -90,7 +88,7 @@ watch(['../dist/*.css', '../dist/*.html', '../dist/*.js', '../dist/*/*.html'], i
   done();
 });
 
-exports.publish = publish;
+exports.draft = draft;
 exports.default = compile;
 exports.compile = compile;
 exports.init = init;
