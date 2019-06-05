@@ -1,5 +1,7 @@
+//can get info about a given HubDB table and write it to a new file
+
 var request = require('request');
-var fs = require('fs');
+//var fs = require('fs');
 
 var options = {
     url: 'https://api.hubapi.com/hubdb/api/v2/tables/1035654',

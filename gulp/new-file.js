@@ -1,3 +1,4 @@
+//trying to get a command line way to create new files, doesn't help too much
 require('dotenv').config();
 
 var request = require('request');
