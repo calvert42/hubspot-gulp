@@ -1,9 +1,9 @@
 # Hubspot Gulp
 
-This is a gulp file that allows you to save a running a list of files that you work with, and use Hubspot's API to publish them.
+This is a little gulp environment that allows you to save a running a list of files that you work with, and use Hubspot's API to publish them.
 
 ## Getting Started
-This recipe that watches any code changes in the `./dist` directory, compiles it with sourcemaps (if applicable) and then prompts the user to choose one of your files to send to Hubspot with their COS API.
+This recipe that watches any code changes in the `/dist` or `/sass` directory, compiles it with sourcemaps (if applicable) and then prompts the user to choose one of your files to send to Hubspot with their COS API.
 
 To start using this taskrunner, enter your HAPI key into the file named `.env` in the `/gulp` directory.
 

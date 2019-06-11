@@ -56,17 +56,19 @@ async function init(done) {
         if (error) {
           console.log('error:', error);
         }
-        console.log((response && response.statusCode).toString().green);
         var date = new Date(body.updated);
         var hours = date.getHours();
         var minutes = "0" + date.getMinutes();
         var seconds = "0" + date.getSeconds();
         var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-        console.log(colors.italic('Updated:' + formattedTime.toString()));
         if (response.statusCode == 200) {
           livereload.reload();
+          console.log((response && response.statusCode).toString().green);
+          console.log(colors.italic('Updated:' + formattedTime.toString()));
           console.log((draft  == true ?  "Saved".bgYellow.grey : "Published".bgGreen.white));
           console.log(draft == true ? file.value.source.yellow : file.value.source.green);
+        } else {
+          console.log('Response was ' + (response && response.statusCode).toString().red + ' - not published')
         }
       });
     });
