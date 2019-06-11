@@ -1,9 +1,9 @@
 # Hubspot Gulp
 
-This is a gulp file that allows you to save a running a list of files that you work with, and use Hubspot's API to publish
+This is a gulp file that allows you to save a running a list of files that you work with, and use Hubspot's API to publish them.
 
-## Gulp
-This recipe that watches any code changes in the `./dist` directory, compiles it with sourcemaps (if applicable) and then prompts the user to choose a file to send to Hubspot with their CMS API.
+## Getting Started
+This recipe that watches any code changes in the `./dist` directory, compiles it with sourcemaps (if applicable) and then prompts the user to choose one of your files to send to Hubspot with their COS API.
 
 To start using this taskrunner, enter your HAPI key into the file named `.env` in the `/gulp` directory.
 
@@ -19,19 +19,19 @@ npm install
 
 ### Sources
 
-If you're creating something new or not on the list, you'll need to link up your source files on your local machine to external files on our Hubspot site by using their ID's. Source files must be added to `/gulp/files.js`. You'll need to have created a file in the Hubspot Design manager to have a place for the API to send your saved or compiled file from `/dist`.
+You'll need to link up your source files on your local machine to external files on our Hubspot site by using their ID's. Source files must be added to `/gulp/files.js`. You'll need to have created a file in the Hubspot Design manager to have a place for the API to send your saved or compiled file from `/dist`.
 
 ```javascript
 var files = [{
-    title: 'Bare Minimum(css)',
+    title: 'An Internal Name',
     value: {
-        id: '6487193955',
-        source: 'bare-minimum.css'
+        id: '6437133935',
+        source: 'test.css'
     }
 }];
 ```
 `title` is the internal name for the asset that you're working with.
- Within `value` - you'll need to set the `id` to the corresponding Hubspot ID of the file you wish to connect in the Hubspot Design Manager. `source` should be the sourcefile name on your local machine that you wish to target to push to Hubspot.
+ Within `value` - you'll need to set the `id` to the corresponding Hubspot ID of the file you wish to connect in the Hubspot Design Manager. `source` should be the sourcefile name on your local machine within `/dist` that you wish to target to push to Hubspot.
 
 ### Usage
 Make sure that you're in the /gulp directory
